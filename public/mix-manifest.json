@@ -1,0 +1,15 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/klient.js": "/js/klient.js",
+    "/js/zamowienie.js": "/js/zamowienie.js",
+    "/js/towar.js": "/js/towar.js",
+    "/css/app.css": "/css/app.css",
+    "/css/towar.css": "/css/towar.css",
+    "/css/zamowienie.css": "/css/zamowienie.css",
+    "/css/klient.css": "/css/klient.css",
+    "/css/form.css": "/css/form.css",
+    "/resources/views/vendor/jsvalidation/bootstrap.php": "/resources/views/vendor/jsvalidation/bootstrap.php",
+    "/resources/views/vendor/jsvalidation/bootstrap4.php": "/resources/views/vendor/jsvalidation/bootstrap4.php",
+    "/resources/views/vendor/jsvalidation/bootstrap5.php": "/resources/views/vendor/jsvalidation/bootstrap5.php",
+    "/resources/views/vendor/jsvalidation/uikit.php": "/resources/views/vendor/jsvalidation/uikit.php"
+}
