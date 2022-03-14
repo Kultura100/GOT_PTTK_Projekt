@@ -1,29 +1,29 @@
 <x-app-layout>
     <x-slot name="styles">
-      <link rel="stylesheet" type="text/css" href="{{ asset('css/klient.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/uzytkownik.css') }}">
     </x-slot>
     <x-slot name="scripts">
-      <script type="text/javascript" src="{{ asset('js/klient.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/uzytkownik.js') }}"></script>
       {!!
-        JsValidator::formRequest('App\Http\Requests\Klient\KlientRequest')
+        JsValidator::formRequest('App\Http\Requests\Uzytkownik\UzytkownikRequest')
       !!}
     </x-slot>
     <div class="container">
-      <h1>{{ __('translations.klient.title') }}</h1>
+      <h1>{{ __('translations.uzytkownik.title') }}</h1>
       <div class="card">
           <div class="card-body">
                 <h5 class="card-title">
                     @if (isset($edit) && $edit === true)  
-                        {{ __('translations.klient.label.edit') }}
+                        {{ __('translations.uzytkownik.label.edit') }}
                     @else
-                        {{ __('translations.klient.label.create') }}
+                        {{ __('translations.uzytkownik.label.create') }}
                     @endif
                 </h5>
-              <form id="klient-form" method="POST"
+              <form id="uzytkownik-form" method="POST"
                 @if (isset($edit) && $edit === true) 
-                action="{{ route('klient.update', ['id' => $klient->id]) }}"
+                action="{{ route('uzytkownik.update', ['id' => $klient->id]) }}"
                 @else
-                action="{{ route('klient.store') }}"
+                action="{{ route('uzytkownik.store') }}"
                 @endif
               >
               @csrf
@@ -31,19 +31,19 @@
                 @method('PATCH')
               @endif
             <div class="row mb-3">
-                <label for="klient-imie" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.imie') }}
+                <label for="uzytkownik-imie" class="col-sm-2 col-form-label">
+                    {{ __('translations.uzytkownik.attribute.imie') }}
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Imie') is-invalid @enderror" name="Imie"
-                    id="klient-imie" 
+                    <input type="text" class="form-control @error('imie') is-invalid @enderror" name="imie"
+                    id="uzytkownik-imie" 
                     @if (isset($klient))
-                        Value="{{ $klient->Imie }}"
+                        Value="{{ $klient->imie }}"
                     @else
-                        value="{{ old ('Imie') }}"
+                        value="{{ old ('imie') }}"
                     @endif
                     >
-                    @error('Imie')
+                    @error('imie')
                     <span class="invalid-feedback" role="alert">
                         {{ $message }}
                     </span>
@@ -52,19 +52,41 @@
             </div>
 
             <div class="row mb-3">
-                <label for="klient-nazwisko" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.nazwisko') }}
+                <label for="uzytkownik-nazwisko" class="col-sm-2 col-form-label">
+                    {{ __('translations.uzytkownik.attribute.nazwisko') }}
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Nazwisko') is-invalid @enderror" name="Nazwisko"
-                    id="klient-nazwisko"
+                    <input type="text" class="form-control @error('nazwisko') is-invalid @enderror" name="nazwisko"
+                    id="uzytkownik-nazwisko"
                     @if (isset($klient))
-                        Value="{{ $klient->Nazwisko }}"
+                        Value="{{ $klient->nazwisko }}"
                     @else
-                        value="{{ old ('Nazwisko') }}"
+                        value="{{ old ('nazwisko') }}"
                     @endif
                     >
-                    @error('Nazwisko')
+                    @error('nazwisko')
+                    <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <label for="uzytkownik-telefon" class="col-sm-2 col-form-label">
+                    {{ __('translations.uzytkownik.attribute.telefon') }}
+                </label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control @error('telefon') is-invalid @enderror" name="telefon"
+                    id="uzytkownik-telefon"
+                    @if (isset($klient))
+                        Value="{{ $klient->telefon }}"
+                    @else
+                        value="{{ old ('telefon') }}"
+                    @endif
+                    >
+                    @error('telefon')
                     <span class="invalid-feedback" role="alert">
                         {{ $message }}
                     </span>
@@ -73,19 +95,41 @@
             </div>
 
             <div class="row mb-3">
-                <label for="klient-nazwa" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.nazwa') }}
+                <label for="uzytkownik-email" class="col-sm-2 col-form-label">
+                    {{ __('translations.uzytkownik.attribute.email') }}
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Nazwa') is-invalid @enderror" name="Nazwa"
-                    id="klient-nazwa"
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email"
+                    id="uzytkownik-email"
                     @if (isset($klient))
-                        Value="{{ $klient->Nazwa }}"
+                        Value="{{ $klient->email }}"
                     @else
-                        value="{{ old ('Nazwa') }}"
+                        value="{{ old ('email') }}"
                     @endif
                     >
-                    @error('Nazwa')
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <label for="uzytkownik-haslo" class="col-sm-2 col-form-label">
+                    {{ __('translations.uzytkownik.attribute.haslo') }}
+                </label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
+                    id="uzytkownik-password"
+                    @if (isset($klient))
+                        Value="{{ $klient->password }}"
+                    @else
+                        value="{{ old ('password') }}"
+                    @endif
+                    >
+                    @error('password')
                     <span class="invalid-feedback" role="alert">
                         {{ $message }}
                     </span>
@@ -94,187 +138,19 @@
             </div>
 
             <div class="row mb-3">
-                <label for="klient-NIP" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.NIP') }}
+                <label for="uzytkownik-haslo" class="col-sm-2 col-form-label">
+                   Potwierdz haslo
                 </label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control @error('NIP') is-invalid @enderror" name="NIP"
-                    id="klient-NIP"
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation"
+                    id="uzytkownik-password-confirmation"
                     @if (isset($klient))
-                        Value="{{ $klient->NIP }}"
+                        Value="{{ $klient->password }}"
                     @else
-                        value="{{ old ('NIP') }}"
+                        value="{{ old ('password') }}"
                     @endif
                     >
-                    @error('NIP')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-ulica" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.ulica') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Ulica') is-invalid @enderror" name="Ulica"
-                    id="klient-ulica"
-                    @if (isset($klient))
-                        Value="{{ $klient->Ulica }}"
-                    @else
-                        value="{{ old ('Ulica') }}"
-                    @endif
-                    >
-                    @error('Ulica')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-numerdomu" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.numerdomu') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('NumerDomu') is-invalid @enderror" name="NumerDomu"
-                    id="klient-numerdomu"
-                    @if (isset($klient))
-                        Value="{{ $klient->NumerDomu }}"
-                    @else
-                        value="{{ old ('NumerDomu') }}"
-                    @endif
-                    >
-                    @error('NumerDomu')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-numerlokalu" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.numerlokalu') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('NumerLokalu') is-invalid @enderror" name="NumerLokalu"
-                    id="klient-numerlokalu"
-                    @if (isset($klient))
-                        Value="{{ $klient->NumerLokalu }}"
-                    @else
-                        value="{{ old ('NumerLokalu') }}"
-                    @endif
-                    >
-                    @error('NumerLokalu')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-kodpocztowy" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.kodpocztowy') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('KodPocztowy') is-invalid @enderror" name="KodPocztowy"
-                    id="klient-kodpocztowy"
-                    @if (isset($klient))
-                        Value="{{ $klient->KodPocztowy }}"
-                    @else
-                        value="{{ old ('KodPocztowy') }}"
-                    @endif
-                    >
-                    @error('KodPocztowy')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-miejscowosc" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.miejscowosc') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Miejscowosc') is-invalid @enderror" name="Miejscowosc"
-                    id="klient-miejscowosc"
-                    @if (isset($klient))
-                        Value="{{ $klient->Miejscowosc }}"
-                    @else
-                        value="{{ old ('Miejscowosc') }}"
-                    @endif
-                    >
-                    @error('Miejscowosc')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-haslo" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.haslo') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control @error('Haslo') is-invalid @enderror" name="Haslo"
-                    id="klient-haslo"
-                    @if (isset($klient))
-                        Value="{{ $klient->Haslo }}"
-                    @else
-                        value="{{ old ('Haslo') }}"
-                    @endif
-                    >
-                    @error('Haslo')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-telefon" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.telefon') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Telefon') is-invalid @enderror" name="Telefon"
-                    id="klient-telefon"
-                    @if (isset($klient))
-                        Value="{{ $klient->Telefon }}"
-                    @else
-                        value="{{ old ('Telefon') }}"
-                    @endif
-                    >
-                    @error('Telefon')
-                    <span class="invalid-feedback" role="alert">
-                        {{ $message }}
-                    </span>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="klient-email" class="col-sm-2 col-form-label">
-                    {{ __('translations.klient.attribute.email') }}
-                </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control @error('Email') is-invalid @enderror" name="Email"
-                    id="klient-email"
-                    @if (isset($klient))
-                        Value="{{ $klient->Email }}"
-                    @else
-                        value="{{ old ('Email') }}"
-                    @endif
-                    >
-                    @error('Email')
+                    @error('password')
                     <span class="invalid-feedback" role="alert">
                         {{ $message }}
                     </span>
@@ -284,7 +160,7 @@
 
               <div class="d-flex justify-content-end mb-3 ">
                   <div class="btn-group" role="group" aria-label="Cancel or submit form">
-                      <a href="{{ route('klient.index') }}" type="submit" class="btn btn-danger">
+                      <a href="{{ route('uzytkownik.index') }}" type="submit" class="btn btn-danger">
                         {{ __('translations.buttons.cancel') }}
                       </a>
                       <button type="submit" class="btn btn-primary">

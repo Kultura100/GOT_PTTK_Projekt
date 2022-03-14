@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Database\QueryException;
 use Illuminate\Auth\Events\PasswordReset;
-use App\Http\Requests\Klient\KlientRequest;
+use App\Http\Requests\Uzytkownik\UzytkownikRequest;
 
 class KlientController extends Controller
 {
@@ -34,13 +34,13 @@ class KlientController extends Controller
 }
 
     public function create(){
-        return view('klient.create',
+        return view('uzytkownik.create',
         [
             'klienci' => User::all(),
         ]);
     }
 
-    public function store(KlientRequest $request)
+    public function store(UzytkownikRequest $request)
     {   
         try
         {
@@ -48,31 +48,25 @@ class KlientController extends Controller
             $request->all()
         );
 
-    $user = User::create([
-        'name' => $request->Imie.' '.$request->Nazwisko,
-        'email' => $request->Email,
-        'password' => Hash::make($request->Haslo),
-    ]);
-
     event(new Registered($user));
     
-     return redirect()->route('klient.index')
-        ->with('success', __('translations.klient.flashes.success.stored', [
-        'nazwisko' => $klienci->Imie." ".$klienci->Nazwisko,
+     return redirect()->route('uzytkownik.index')
+        ->with('success', __('translations.uzytkownik.flashes.success.stored', [
+        'nazwisko' => $klienci->imie." ".$klienci->nazwisko,
     ]));
     } catch (\Illuminate\Database\QueryException $e) {
         \Log::error($e);
         switch($e->getCode()){
             case '23000':
-                return redirect()->route('klient.index')
-                ->with('error', __('translations.klient.flashes.error.duplicate_entry', [
-                    'nazwisko' =>$request->Imie." ".$request->Nazwisko,
+                return redirect()->route('uzytkownik.index')
+                ->with('error', __('translations.uzytkownik.flashes.error.duplicate_entry', [
+                    'nazwisko' =>$request->imie." ".$request->nazwisko,
             ])); 
                 break;
                 default:
-                return redirect()->route('klient.index')
-                ->with('error', __('translations.klient.flashes.success.nothing-changed', [
-                    'nazwisko' => $request->Imie." ".$request->Nazwisko,
+                return redirect()->route('uzytkownik.index')
+                ->with('error', __('translations.uzytkownik.flashes.success.nothing-changed', [
+                    'nazwisko' => $request->imie." ".$request->nazwisko,
             ])); 
         }
     }
@@ -81,40 +75,23 @@ class KlientController extends Controller
     public function edit($id)
     {
         $edit = true;
-        $klient = Klient::where('id',$id)->firstOrFail();
-        return view('klient.create',compact('klient',['edit']));
+        $klient = User::where('id',$id)->firstOrFail();
+        return view('uzytkownik.create',compact('klient',['edit']));
     }
 
-    public function update(KlientRequest $request, $id)
+    public function update(UzytkownikRequest $request, $id)
     {
-        $klienci = Klient::findOrFail($id);
-        $haslo = $request->input('Haslo');
-        
-        if($haslo == $klienci->Haslo){
-            $user = User::where('email', $klienci->Email)->update(['name' => $request->input('Imie')." ".$request->input('Nazwisko') ,'email' => $request->input('Email')]);   
-        } else
-        $user = User::where('email', $klienci->Email)->update(['name' => $request->input('Imie')." ".$request->input('Nazwisko') ,'email' => $request->input('Email'), 'password' => Hash::make($haslo)]);
-        event(new PasswordReset($user));
-
-        
-        $klienci->Imie = $request->input('Imie');
-        $klienci->Nazwisko = $request->input('Nazwisko');
-        $klienci->Nazwa = $request->input('Nazwa');
-        $klienci->NIP = $request->input('NIP');
-        $klienci->Telefon = $request->input('Telefon');
-        $klienci->Ulica = $request->input('Ulica');
-        $klienci->NumerDomu = $request->input('NumerDomu');
-        $klienci->NumerLokalu = $request->input('NumerLokalu');
-        $klienci->KodPocztowy = $request->input('KodPocztowy');
-        $klienci->Miejscowosc = $request->input('Miejscowosc');
-        $klienci->Email = $request->input('Email');
-        $klienci->Haslo = Hash::make($request->input('Haslo'));
+        $klienci = User::findOrFail($id);
+        $klienci->email = $request->input('email');
+        $klienci->password = Hash::make($request->input('password'));
+        $klienci->imie = $request->input('imie');
+        $klienci->nazwisko = $request->input('nazwisko');
+        $klienci->telefon = $request->input('telefon');
         $klienci->save();
 
-
-     return redirect()->route('klient.index')
-        ->with('success', __('translations.klient.flashes.success.updated', [
-            'nazwisko' => $klienci->Imie." ".$klienci->Nazwisko,
+     return redirect()->route('uzytkownik.index')
+        ->with('success', __('translations.uzytkownik.flashes.success.updated', [
+            'nazwisko' => $klienci->imie." ".$klienci->nazwisko,
     ]));
 
     }

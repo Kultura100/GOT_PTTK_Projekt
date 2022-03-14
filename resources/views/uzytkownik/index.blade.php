@@ -7,13 +7,13 @@
     </x-slot>
     @if(Gate::check('log-viewer'))
     <div class="container">
-      <h1>{{ __('translations.klient.title') }}</h1>
+      <h1>{{ __('translations.uzytkownik.title') }}</h1>
       <div class="d-flex flex-row-reverse mb-4">
         <a href="{{ route('uzytkownik.create') }}"
         type="button"
         class="btn btn-light"
         role="button">
-        {{ __('translations.klient.label.create') }}
+        {{ __('translations.uzytkownik.label.create') }}
         </a>
       </div>
       <div id="no-more-tables">
@@ -21,20 +21,13 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>{{ __('translations.klient.attribute.imie') }}</th>
-          <th>{{ __('translations.klient.attribute.nazwisko') }}</th>
-          <th>{{ __('translations.klient.attribute.nazwa') }}</th>
-          <th>{{ __('translations.klient.attribute.NIP') }}</th>
-          <th>{{ __('translations.klient.attribute.ulica') }}</th>
-          <th>{{ __('translations.klient.attribute.numerdomu') }}</th>
-          <th>{{ __('translations.klient.attribute.numerlokalu') }}</th>
-          <th>{{ __('translations.klient.attribute.kodpocztowy') }}</th>
-          <th>{{ __('translations.klient.attribute.haslo') }}</th>
-          <th>{{ __('translations.klient.attribute.telefon') }}</th>
-          <th>{{ __('translations.klient.attribute.email') }}</th>
+          <th>{{ __('translations.uzytkownik.attribute.email') }}</th>
+          <th>{{ __('translations.uzytkownik.attribute.haslo') }}</th>
+          <th>{{ __('translations.uzytkownik.attribute.imie') }}</th>
+          <th>{{ __('translations.uzytkownik.attribute.nazwisko') }}</th>
+          <th>{{ __('translations.uzytkownik.attribute.telefon') }}</th>
           <th>{{ __('translations.attribute.created_at') }}</th>
           <th>{{ __('translations.attribute.updated_at') }}</th>
-          <th>{{ __('translations.attribute.deleted_at') }}</th>
           <th class="always-visible"></th>
         </tr>
       </thead>
@@ -42,20 +35,13 @@
         @foreach ($klienci as $klient)
         <tr>
           <td>{{ $klient->id }}</td>
-          <td>{{ $klient->Imie }}</td>
-          <td>{{ $klient->Nazwisko }}</td>
-          <td>{{ $klient->Nazwa }}</td>
-          <td>{{ $klient->NIP }}</td>
-          <td>{{ $klient->Ulica }}</td>
-          <td>{{ $klient->NumerDomu }}</td>
-          <td>{{ $klient->NumerLokalu }}</td>
-          <td>{{ $klient->KodPocztowy }}</td>
+          <td>{{ $klient->email }}</td>
           <td>*********</td>
-          <td>{{ $klient->Telefon }}</td>
-          <td>{{ $klient->Email }}</td>
+          <td>{{ $klient->imie }}</td>
+          <td>{{ $klient->nazwisko }}</td>
+          <td>{{ $klient->telefon }}</td>
           <td>{{ $klient->created_at }}</td>
           <td>{{ $klient->updated_at }}</td>
-          <td>{{ $klient->deleted_at }}</td>
           <td>
             <div class="btn-group" role="group" aria-label="action buttons">
               @can('klient.store')
@@ -98,20 +84,16 @@
                       <h4 class="text-right">Ustawienia Profilu</h4>
                   </div>
                   <div class="row mt-2">
-                      <div class="col-md-6"><label class="labels">Imie</label><input type="text" class="form-control" placeholder="Podaj imie" name="Imie" value="{{ $Klient->Imie }}"></div>
-                      <div class="col-md-6"><label class="labels">Nazwisko</label><input type="text" class="form-control" name="Nazwisko" value="{{ $Klient->Nazwisko }}" placeholder="Podaj nazwisko"></div>
-                      <div class="col-md-6"><label class="labels">Email</label><input type="text" class="form-control" name="Email" value="{{ $Klient->Email }}" placeholder="Podaj Email"></div>
+                      <div class="col-md-6"><label class="labels">Imie</label><input type="text" class="form-control" placeholder="Podaj imie" name="imie" value="{{ $Klient->imie }}"></div>
+                      <div class="col-md-6"><label class="labels">Nazwisko</label><input type="text" class="form-control" name="nazwisko" value="{{ $Klient->nazwisko }}" placeholder="Podaj nazwisko"></div>
+                      <div class="col-md-6"><label class="labels">Email</label><input type="text" class="form-control" name="email" value="{{ $Klient->email }}" placeholder="Podaj Email"></div>
                   </div>
-                  <input type="hidden" class="form-control" name="Nazwa" value="{{ $Klient->Imie }} {{ $Klient->Nazwisko }}">
+                  <input type="hidden" class="form-control" name="nazwa" value="{{ $Klient->imie }} {{ $Klient->nazwisko }}">
                   <div class="row mt-3">
-                      <div class="col-md-12"><label class="labels">NIP</label><input type="text" class="form-control" placeholder="Podaj NIP" name="NIP" value="{{ $Klient->NIP }}"></div>
-                      <div class="col-md-12"><label class="labels">Numer Telefonu</label><input type="text" class="form-control" placeholder="Podaj numer telefonu" name="Telefon" value="{{ $Klient->Telefon }}"></div>
-                      <div class="col-md-12"><label class="labels">Ulica</label><input type="text" class="form-control" placeholder="Podaj ulice" name="Ulica" value="{{ $Klient->Ulica }}"></div>
-                      <div class="col-md-12"><label class="labels">Numer Domu</label><input type="text" class="form-control" placeholder="Podaj Numer domu" name="NumerDomu" value="{{ $Klient->NumerDomu }}"></div>
-                      <div class="col-md-12"><label class="labels">Numer Lokalu</label><input type="text" class="form-control" placeholder="Podaj numer lokalu" name="NumerLokalu" value="{{ $Klient->NumerLokalu }}"></div>
-                      <div class="col-md-12"><label class="labels">KodPocztowy</label><input type="text" class="form-control" placeholder="Podaj kod pocztowy" name="KodPocztowy" value="{{ $Klient->KodPocztowy }}"></div>
-                      <div class="col-md-12"><label class="labels">Miejscowosc</label><input type="text" class="form-control" placeholder="Podaj miejscowosc" name="Miejscowosc" value="{{ $Klient->Miejscowosc }}"></div>
+                      <div class="col-md-12"><label class="labels">Numer Telefonu</label><input type="text" class="form-control" placeholder="Podaj numer telefonu" name="telefon" value="{{ $Klient->telefon }}"></div>
+                      <div class="col-md-12"><label class="labels">Punkty</label><input type="text" class="form-control" placeholder="Podaj ulice" name="punkty" value="{{ $Klient->punkty }}" disabled></div>
                   </div>
+                  <x-auth-validation-errors class="mb-4" :errors="$errors" />
                   <div class="mt-5 text-center">
                     <input class="btn btn-primary profile-button" type="submit" value="Zapisz Profil">
                   </div>
@@ -120,8 +102,8 @@
           <div class="col-md-4">
               <div class="p-3 py-5">
                   <div class="d-flex justify-content-between align-items-center experience"><span>Zmien Haslo</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Haslo</span></div><br>
-                  <div class="col-md-12"><label class="labels">Podaj haslo</label><input type="password" class="form-control" name="Haslo" placeholder="Podaj Haslo" value="{{ $Klient->Haslo }}"></div> <br>
-                  <div class="col-md-12"><label class="labels">Potworz haslo</label><input type="password" class="form-control" name="Haslo" placeholder="Potworz haslo" value="{{ $Klient->Haslo }}"></div>
+                  <div class="col-md-12"><label class="labels">Podaj haslo</label><input type="password" class="form-control" name="password" placeholder="Podaj Haslo" value="{{ $Klient->password }}"></div> <br>
+                  <div class="col-md-12"><label class="labels">Potworz haslo</label><input type="password" class="form-control" name="password_confirmation" placeholder="Potworz haslo" value="{{ $Klient->password }}"></div>
               </div>
           </div>
       </div>

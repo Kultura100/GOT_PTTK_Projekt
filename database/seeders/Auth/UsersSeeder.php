@@ -14,10 +14,13 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $user = User::create([
-            'name' => 'Admin testowy',
             'email' => 'admin.testowy@localhost',
+            'password' => Hash::make('12345678'),
+            'imie' => 'Admin',
+            'nazwisko' => 'testowy',
+            'telefon' => '123456789',
+            'punkty' => 0,
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'password' => Hash::make('12345678')
         ]);
 
 
@@ -27,13 +30,31 @@ class UsersSeeder extends Seeder
         }
 
         $user = User::create([
-            'name' => 'User Testowy',
             'email' => 'user.testowy@localhost',
+            'password' => Hash::make('12345678'),
+            'imie' => 'User',
+            'nazwisko' => 'Testowy',
+            'telefon' => '123456789',
+            'punkty' => 0,
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'password' => Hash::make('12345678')
         ]);
 
         $userRole = Role::findByName(config('app.user_role'));
+        if (isset($userRole)){
+            $user->assignRole($userRole);
+        }
+
+        $user = User::create([
+            'email' => 'przodownik@localhost',
+            'password' => Hash::make('12345678'),
+            'imie' => 'Janusz',
+            'nazwisko' => 'Szybki',
+            'telefon' => '123456789',
+            'punkty' => 0,
+            'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        $userRole = Role::findByName(config('app.przodownik_role'));
         if (isset($userRole)){
             $user->assignRole($userRole);
         }

@@ -22,7 +22,7 @@
             <li class="nav-item">
                 <x-nav-link :href="route('uzytkownik.index')" :active="request()->routeIs('uzytkownik.index')">
                     <!-- klient.index -->
-                    {{ __('translations.klient.title') }}
+                    {{ __('translations.uzytkownik.title') }}
                 </x-nav-link>
             </li>      
         </ul>
@@ -30,10 +30,7 @@
             <a href="#" class="nav-link dropdown-toggle" id="profile" 
                     data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{url('/images/avatars/blank.png')}}" alt="USER_NAME" width="32" height="32" class="rounded-circle">
-                @if(isset(Auth::user()->name))
-                {{ Auth::user()->name}}    
-                @else {{Auth::logout()}} 
-                @endif                              
+                {{ Auth::user()->imie}}     {{ Auth::user()->nazwisko}}                                
             </a>
             <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="profile">
                 <li><a class="dropdown-item" href="{{ route('uzytkownik.index')}}">Ustawienia</a></li>
