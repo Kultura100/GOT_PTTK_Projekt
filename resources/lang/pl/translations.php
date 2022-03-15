@@ -10,7 +10,7 @@ return [
         'update' => 'Aktualizuj'
     ],
     'attribute' => [
-        'created_at' => 'utworzono',
+        'created_at' => 'utworzono222',
         'updated_at' => 'zaktualizowano',
         'deleted_at' => 'usunięto',
     ],
