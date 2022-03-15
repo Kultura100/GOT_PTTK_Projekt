@@ -25,7 +25,7 @@ class UzytkownikRequest extends FormRequest
      */
     public function rules()
     {
-        //dd($_REQUEST);
+        //Testowanie zmian
         return [
             'imie' => ['required', 'string', 'max:255'],
             'nazwisko' => ['required', 'string', 'max:255'],
