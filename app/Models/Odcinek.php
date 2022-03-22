@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Odcinek extends Model
 {
+    protected $table = 'odcinek';
     use HasFactory;
 }

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wycieczka extends Model
 {
+    protected $table = 'wycieczka';
     use HasFactory;
 }

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grupa extends Model
 {
+    protected $table = 'grupa';
     use HasFactory;
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\TowarController;
 use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\ZamowienieController;
+use App\Http\Controllers\OsiagnieciaController;
 use App\Http\Controllers\RejestracjaZamowienieController;
 
 
@@ -27,7 +28,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-//Route::get('dashboard',[KokpitController::class, 'dashboard'])->name('dashboard');  
+//Route::get('osiagniecia',[OsiagnieciaController::class, 'index'])->name('index');  
 
 Route::get('/zarejestruj', function () {
     return view('rejestracja.index');
@@ -55,5 +56,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('update')
             ->where('id', '[0-9]+')
             ->middleware(['permission:klient.store']);    
+    });
+    Route::name('osiagniecia.')->prefix('osiagniecia')->group(function () {
+        Route::get('', [OsiagnieciaController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
     });
 });

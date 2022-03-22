@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grupa_Przodownik extends Model
 {
+    protected $table = 'grupa_przodownik';
     use HasFactory;
 }

@@ -25,6 +25,12 @@
                     {{ __('translations.uzytkownik.title') }}
                 </x-nav-link>
             </li>      
+            <li class="nav-item">
+                <x-nav-link :href="route('osiagniecia.index')" :active="request()->routeIs('osiagniecia.index')">
+                    <!-- osiagniecia.index -->
+                    {{ __('translations.osiagniecia.title') }}
+                </x-nav-link>
+            </li>     
         </ul>
         <div class="navbar-nav dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="profile" 

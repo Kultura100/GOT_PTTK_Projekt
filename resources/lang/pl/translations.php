@@ -47,4 +47,8 @@ return [
         ]
     ],
 
+    'osiagniecia' => 
+    [
+        'title' => 'Osiągnięcia',
+    ],
 ];
