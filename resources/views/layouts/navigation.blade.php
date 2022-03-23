@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('dashboard') }}">
-            <x-application-logo width=32 height=32/>
-            GotPTTK
-        </a>
+        <a class="navbar-brand" href="#">
+            <img src="{{ URL::asset('/images/logo-pttk.png')}}" width="50" height="50" alt="ikona">
+          </a>
         <button class="navbar-toggler" type="button" 
                 data-bs-toggle="collapse" data-bs-target="#navbar" 
                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
+
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         <li class="nav-item">
@@ -18,13 +18,13 @@
                 </x-nav-link>
             </li> 
         
-
             <li class="nav-item">
                 <x-nav-link :href="route('uzytkownik.index')" :active="request()->routeIs('uzytkownik.index')">
                     <!-- klient.index -->
                     {{ __('translations.uzytkownik.title') }}
                 </x-nav-link>
-            </li>      
+            </li>     
+             
             <li class="nav-item">
                 <x-nav-link :href="route('osiagniecia.index')" :active="request()->routeIs('osiagniecia.index')">
                     <!-- osiagniecia.index -->

@@ -48,8 +48,10 @@
 .media-comment {
     margin-top:20px
 }
-        </style>
-    <h1 class="display-6">GOT PTTK</h1>
-        <div class="container">
-            <img src="{{ URL::asset('/images/logoktg.png')}}" alt="logo">
+    </style>
+    
+        <div class="container text-center">
+            <h1 class="display-6">GOT PTTK</h1>
+            <img src="{{ URL::asset('/images/logoktg.png')}}" class="img-fluid" alt="logo">
+        </div>
 </x-app-layout>
