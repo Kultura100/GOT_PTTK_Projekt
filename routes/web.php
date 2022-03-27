@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TowarController;
 use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
+use App\Http\Controllers\RaportController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
 use App\Http\Controllers\RejestracjaZamowienieController;
@@ -62,4 +63,29 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('index')
             ->middleware(['permission:klient.index']);
     });
+
+    Route::name('raport.')->prefix('raport')->group(function () {
+        Route::get('raport', [RaportController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:raport.index']);
+          
+        Route::get('', [RaportController::class, 'create'])
+            ->name('create')
+            ->middleware(['permission:raport.create']);
+        Route::post('', [RaportController::class, 'store'])
+            ->name('store')
+            ->middleware(['permission:raport.store']);
+        Route::get('{raport}/edit', [RaportController::class, 'edit'])
+           ->where('raport', '[0-9]+')
+           ->name('edit')
+           ->middleware(['permission:raport.store']);
+        Route::patch('{raport}/edit', [RaportController::class, 'update'])
+            ->where('raport', '[0-9]+')
+            ->name('update')
+            ->middleware(['permission:raport.store']);
+        Route::get('', [RaportController::class, 'szczegoly'])
+            ->name('szczegoly')
+            ->middleware(['permission:raport.szczegoly']);
+    });
+    
 });

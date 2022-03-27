@@ -19,6 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/form.scss', 'public/css')
     .sass('resources/sass/klient.scss', 'public/css')
     .sass('resources/sass/osiagniecia.scss', 'public/css')
+    .sass('resources/sass/raport.scss', 'public/css')
     .copy('vendor/proengsoft/laravel-jsvalidation/resources/views', 'resources/views/vendor/jsvalidation')
     .copy('vendor/proengsoft/laravel-jsvalidation/public', 'resources/js/vendor/jsvalidation')
     .sourceMaps();

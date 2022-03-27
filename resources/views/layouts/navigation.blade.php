@@ -3,8 +3,8 @@
         <a class="navbar-brand" href="#">
             <img src="{{ URL::asset('/images/logo-pttk.png')}}" width="50" height="50" alt="ikona">
           </a>
-        <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#navbar" 
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbar"
                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,27 +16,34 @@
                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     Kokpit
                 </x-nav-link>
-            </li> 
-        
+            </li>
+
             <li class="nav-item">
                 <x-nav-link :href="route('uzytkownik.index')" :active="request()->routeIs('uzytkownik.index')">
                     <!-- klient.index -->
                     {{ __('translations.uzytkownik.title') }}
                 </x-nav-link>
-            </li>     
-             
+            </li>
+
             <li class="nav-item">
                 <x-nav-link :href="route('osiagniecia.index')" :active="request()->routeIs('osiagniecia.index')">
                     <!-- osiagniecia.index -->
                     {{ __('translations.osiagniecia.title') }}
                 </x-nav-link>
-            </li>     
+            </li>
+
+            <li class="nav-item">
+                <x-nav-link :href="route('raport.index')" :active="request()->routeIs('raport.index')">
+                    <!-- raport.index -->
+                    {{ __('translations.raport.title') }}
+                </x-nav-link>
+            </li>
         </ul>
         <div class="navbar-nav dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="profile" 
+            <a href="#" class="nav-link dropdown-toggle" id="profile"
                     data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{url('/images/avatars/blank.png')}}" alt="USER_NAME" width="32" height="32" class="rounded-circle">
-                {{ Auth::user()->imie}}     {{ Auth::user()->nazwisko}}                                
+                {{ Auth::user()->imie}}     {{ Auth::user()->nazwisko}}
             </a>
             <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="profile">
                 <li><a class="dropdown-item" href="{{ route('uzytkownik.index')}}">Ustawienia</a></li>
@@ -44,7 +51,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{{ route('logout') }}">{{ __('Wylogowanie') }}</a></li>
             </ul>
-          </div>        
+          </div>
         </div>
     </div>
   </nav>

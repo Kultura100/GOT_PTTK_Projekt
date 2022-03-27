@@ -51,4 +51,36 @@ return [
     [
         'title' => 'Osiągnięcia',
     ],
+    'raport' =>
+    [
+        'title' => 'Raporty',
+        'label' => 
+            [
+              'create' => 'Dodanie nowego raportu',
+              'edit' => 'Edycja raportu',
+            ],
+        'attribute' => 
+            [
+                'dataod' => 'Data początku wycieczki',
+                'datado' => 'Data końca wycieczki',
+                'pasmo' => 'Pasmo górskie',
+                'punkty' => 'Ilość zebranych punktów',
+                'maxpunkty' => 'Maxymalna liczba punktów do zebrania',
+                'odcinki' => 'Odcinki',
+                'zdjecia' => 'Zdjęcia'
+            ],
+        'flashes' => 
+        [
+            'success' => 
+            [
+                'stored' => 'Dodano raport o numerze :id',
+                'updated' => 'Zaktualizowano raport o numerze :id',
+                'nothing-changed' => 'Dane raportu o numerze :id nie zmieniły się'
+            ],
+            'error' =>
+            [
+                'duplicate_entry' => 'Dane raportu o numerze :id nie zmieniły się przez wzgląd na wystepowanie takiego numeru reportu',
+            ]
+        ]
+    ],
 ];
