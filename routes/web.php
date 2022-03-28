@@ -35,6 +35,7 @@ Route::get('/zarejestruj', function () {
     return view('rejestracja.index');
 })->name('home');
 
+
 require __DIR__ . '/auth.php';
 
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -62,6 +63,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('', [OsiagnieciaController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
+    });
+
+    Route::name('wycieczki.')->prefix('wycieczki')->group(function () {
+        Route::get('', [OsiagnieciaController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:wycieczki.index']);
     });
 
     Route::name('raport.')->prefix('raport')->group(function () {

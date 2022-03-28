@@ -38,6 +38,14 @@
                     {{ __('translations.raport.title') }}
                 </x-nav-link>
             </li>
+
+            <li class="nav-item">
+                <x-nav-link :href="route('wycieczki.index')" :active="request()->routeIs('wycieczki.index')">
+                    <!-- wycieczki.index -->
+                    {{ __('translations.wycieczki.title') }}
+                </x-nav-link>
+            </li>
+
         </ul>
         <div class="navbar-nav dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="profile"
