@@ -5,6 +5,7 @@ use App\Http\Controllers\TowarController;
 use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\RaportController;
+use App\Http\Controllers\WycieczkiController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
 use App\Http\Controllers\RejestracjaZamowienieController;
@@ -66,9 +67,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
     Route::name('wycieczki.')->prefix('wycieczki')->group(function () {
-        Route::get('', [OsiagnieciaController::class, 'index'])
+        Route::get('', [WycieczkiController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:wycieczki.index']);
+            ->middleware(['permission:klient.index']);
     });
 
     Route::name('raport.')->prefix('raport')->group(function () {

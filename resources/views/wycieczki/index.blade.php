@@ -8,7 +8,8 @@
     <div class="container">
       <h1>{{ __('translations.wycieczki.title') }}</h1>
       <div class="d-flex flex-row-reverse mb-4">
-        <a href="{{ route('wycieczki.create') }}"
+        <a href=""
+        {{-- {{ route('wycieczki.create') }} --}}
             type="button"
             class="btn btn-light"
             role="button">
@@ -21,9 +22,8 @@
           @endif
       </div>
       <div id="no-more-tables">
-        <div class="container">
-            <h2>Wycieczki</h2>
-            <h2><small>Wycieczki dodane</small></h2>
+        <div class="container">            
+            <h2><small>Wycieczki dodane:</small></h2>
             <ul class="responsive-table">
               <li class="table-header">
                 <div class="col col-1">Data początku</div>
@@ -45,9 +45,6 @@
               </li>
             </ul>
           </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        {{ $rezerwacja->links() }}
-      </div>
+      </div>      
     </div>
 </x-app-layout>

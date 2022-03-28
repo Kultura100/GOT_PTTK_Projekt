@@ -11,9 +11,10 @@ class WycieczkiController extends Controller
 {
     public function index()
     {
+        
         return view('wycieczki.index',
         [
-            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get(),paginate(config('app.default_page_size'))
+            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get()
         ]);
     }
 
