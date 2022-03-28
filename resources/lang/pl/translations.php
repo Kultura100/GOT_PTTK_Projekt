@@ -47,6 +47,36 @@ return [
         ]
     ],
 
+    'wycieczki' => 
+    [
+        'title' => 'Wycieczki',
+        'label' => 
+            [
+              'create' => 'Dodanie nowej wycieczki',
+              'edit' => 'Edycja aktualnej wycieczki',
+            ],
+        'attribute' => 
+            [
+                'id_turysty' => 'ID Turysty',
+                'dataod' => 'Data rozpoczęcia',
+                'datado' => 'Data zakończenia',
+                'punkty' => 'Punkty',                
+            ],
+        'flashes' => 
+        [
+            'success' => 
+            [
+                'stored' => 'Dodano wycieczke o numerze :id',
+                'updated' => 'Zaktualizowano wycieczke o numerze :id',
+                'nothing-changed' => 'Dane wycieczki :id nie zmieniły się'
+            ],
+            /*'error' =>
+            [
+                'duplicate_entry' => 'Dane Klienta :nazwisko nie zmieniły się przez wzgląd na wystepowanie takiego adresu Email.',
+            ]*/
+        ]
+    ],
+
     'osiagniecia' => 
     [
         'title' => 'Osiągnięcia',

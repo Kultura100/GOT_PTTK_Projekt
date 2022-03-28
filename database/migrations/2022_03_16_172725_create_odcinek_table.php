@@ -23,14 +23,8 @@ class CreateOdcinekTable extends Migration
             $table->foreign('id_punkt_koniec')
             ->references('id')
             ->on('punkt');
-            $table->unsignedBigInteger('punkty_od');
-            $table->foreign('punkty_od')
-            ->references('id')
-            ->on('punkt');
-            $table->unsignedBigInteger('punkty_do');
-            $table->foreign('punkty_do')
-            ->references('id')
-            ->on('punkt');
+            $table->integer('punkty_od');
+            $table->integer('punkty_do');
             $table->boolean('otwarty');
             $table->unsignedBigInteger('id_pasma');
             $table->foreign('id_pasma')

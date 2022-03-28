@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Punkt extends Model
 {
-    protected $table = 'punkt';
-    use HasFactory;
+    use HasFactory;    
+    protected $table = 'Punkt';
+    protected $fillable = 
+    [
+        'nazwa'
+    ]; 
+    public function punkt()
+    {
+        return $this->belongsTo('app\Models\Odcinek');        
+    }
 }

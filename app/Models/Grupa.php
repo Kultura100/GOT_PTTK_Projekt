@@ -7,6 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grupa extends Model
 {
+    use HasFactory;    
     protected $table = 'grupa';
-    use HasFactory;
+    protected $fillable = 
+    [
+        'nazwa'        
+    ]; 
+    public function grupa()
+    {
+        return $this->hasMany('app\Models\Pasmo');        
+    }
+    public function grupaprzodownik()
+    {
+        return $this->belongsTo('app\Models\Przodownik');
+    }
+
 }

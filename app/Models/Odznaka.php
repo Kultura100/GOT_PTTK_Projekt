@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Odznaka extends Model
 {
+    use HasFactory;    
     protected $table = 'odznaka';
-    use HasFactory;
+    protected $fillable = 
+    [
+        'nazwa',
+        'wymagane_punkty'
+    ]; 
+    public function wycieczkaturysta()
+    {
+        return $this->belongsToMany('app\Models\Odznaka_Turysty');        
+    }
 }
