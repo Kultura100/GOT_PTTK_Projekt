@@ -16,14 +16,13 @@ class WycieczkiController extends Controller
             'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get(),paginate(config('app.default_page_size'))
         ]);
     }
-}
+
     public function create()
     {
         return view('wycieczka.create',
         [
             'wycieczka' => Wycieczka::all(),
-        ]
-    );
+        ]);
     }
 
     public function store(WycieczkaRequest $request)
@@ -41,3 +40,4 @@ class WycieczkiController extends Controller
                 'numer' => $wycieczka->id
             ]));
     }
+}

@@ -21,11 +21,11 @@ class Wycieczka_odcinek extends Model
     {
         return $this->belongsTo('app\Models\Wycieczka');        
     }
-    public function wycieczka_odcinek()
+    public function wycieczka_odcinek2()
     {
         return $this->belongsTo('app\Models\Odcinek');        
     }
-    public function wycieczka_odcinek()
+    public function wycieczka_odcinek3()
     {
         return $this->hasOne('app\Models\Status');        
     }
