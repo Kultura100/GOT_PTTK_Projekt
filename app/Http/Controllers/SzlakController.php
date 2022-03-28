@@ -9,7 +9,7 @@ class SzlakController extends Controller
 {
     public function index()
     {
-        return view('szlak.index',[
+        return view('szlak.szczegoly',[
             
             
         ]);
