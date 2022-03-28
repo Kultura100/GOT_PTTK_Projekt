@@ -83,4 +83,31 @@ return [
             ]
         ]
     ],
+
+    'szlak' =>
+    [
+        'title' => 'Szlaki górskie',
+        'label' => 
+            [
+              'szczegoly' => 'Szczegóły szlaku :nazwa',
+            ],
+        'attribute' => 
+            [
+                'grupa_nazwa' => 'Nazwa grup górskich',
+                'pasmo_nazwa' => 'Nazwa pasma górskiego'
+            ],
+        'flashes' => 
+        [
+            'success' => 
+            [
+                'stored' => 'Dodano raport o numerze :id',
+                'updated' => 'Zaktualizowano raport o numerze :id',
+                'nothing-changed' => 'Dane raportu o numerze :id nie zmieniły się'
+            ],
+            'error' =>
+            [
+                'duplicate_entry' => 'Dane raportu o numerze :id nie zmieniły się przez wzgląd na wystepowanie takiego numeru reportu',
+            ]
+        ]
+    ],
 ];

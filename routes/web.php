@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TowarController;
+use App\Http\Controllers\SzlakController;
 use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\RaportController;
@@ -61,6 +62,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
     Route::name('osiagniecia.')->prefix('osiagniecia')->group(function () {
         Route::get('', [OsiagnieciaController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
+    });
+
+    Route::name('szlak.')->prefix('szlak')->group(function () {
+        Route::get('', [SzlakController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
     });

@@ -46,6 +46,13 @@
                 </x-nav-link>
             </li>
 
+            <li class="nav-item">
+                <x-nav-link :href="route('szlak.index')" :active="request()->routeIs('szlak.index')">
+                    <!-- szlak.index -->
+                    {{ __('translations.szlak.title') }}
+                </x-nav-link>
+            </li>
+
         </ul>
         <div class="navbar-nav dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="profile"
