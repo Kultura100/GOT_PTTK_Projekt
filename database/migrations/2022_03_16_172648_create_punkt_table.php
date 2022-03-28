@@ -16,7 +16,6 @@ class CreatePunktTable extends Migration
         Schema::create('punkt', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
-            $table->integer('id_grupa');
             $table->timestamps();
         });
     }

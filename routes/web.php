@@ -74,25 +74,25 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::name('raport.')->prefix('raport')->group(function () {
         Route::get('raport', [RaportController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:raport.index']);
+            ->middleware(['permission:klient.index']);
           
         Route::get('', [RaportController::class, 'create'])
             ->name('create')
-            ->middleware(['permission:raport.create']);
+            ->middleware(['permission:klient.create']);
         Route::post('', [RaportController::class, 'store'])
             ->name('store')
-            ->middleware(['permission:raport.store']);
+            ->middleware(['permission:klient.store']);
         Route::get('{raport}/edit', [RaportController::class, 'edit'])
            ->where('raport', '[0-9]+')
            ->name('edit')
-           ->middleware(['permission:raport.store']);
+           ->middleware(['permission:klient.store']);
         Route::patch('{raport}/edit', [RaportController::class, 'update'])
             ->where('raport', '[0-9]+')
             ->name('update')
-            ->middleware(['permission:raport.store']);
+            ->middleware(['permission:klient.store']);
         Route::get('', [RaportController::class, 'szczegoly'])
             ->name('szczegoly')
-            ->middleware(['permission:raport.szczegoly']);
+            ->middleware(['permission:klient.szczegoly']);
     });
     
 });

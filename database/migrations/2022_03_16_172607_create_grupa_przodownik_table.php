@@ -15,8 +15,14 @@ class CreateGrupaPrzodownikTable extends Migration
     {
         Schema::create('grupa_przodownik', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_przodownik');
-            $table->integer('id_grupa');
+            $table->unsignedBigInteger('id_przodownik');
+            $table->foreign('id_przodownik')
+            ->references('id')
+            ->on('users');
+            $table->unsignedBigInteger('id_grupa');
+            $table->foreign('id_grupa')
+            ->references('id')
+            ->on('grupa');
             $table->timestamps();
         });
     }

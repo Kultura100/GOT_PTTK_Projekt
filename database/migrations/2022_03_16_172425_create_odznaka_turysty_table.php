@@ -15,8 +15,14 @@ class CreateOdznakaTurystyTable extends Migration
     {
         Schema::create('odznaka_turysty', function (Blueprint $table) {
             $table->id(); //Powiazania porobic
-            $table->integer('id_turysty');
-            $table->integer('id_odznaki');
+            $table->unsignedBigInteger('id_turysty');
+            $table->foreign('id_turysty')
+            ->references('id')
+            ->on('users');
+            $table->unsignedBigInteger('id_odznaki');
+            $table->foreign('id_odznaki')
+            ->references('id')
+            ->on('odznaka');
             $table->timestamps();
         });
     }

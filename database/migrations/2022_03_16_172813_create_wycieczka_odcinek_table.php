@@ -15,10 +15,19 @@ class CreateWycieczkaOdcinekTable extends Migration
     {
         Schema::create('wycieczka_odcinek', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_wycieczka');
-            $table->integer('id_odcinek');
+            $table->unsignedBigInteger('id_wycieczka');
+            $table->foreign('id_wycieczka')
+            ->references('id')
+            ->on('wycieczka');
+            $table->unsignedBigInteger('id_odcinek');
+            $table->foreign('id_odcinek')
+            ->references('id')
+            ->on('odcinek');
             $table->date('data');
-            $table->integer('id_status');
+            $table->unsignedBigInteger('id_status');
+            $table->foreign('id_status')
+            ->references('id')
+            ->on('status');
             $table->integer('liczba_punktow');
             $table->timestamps();
         });

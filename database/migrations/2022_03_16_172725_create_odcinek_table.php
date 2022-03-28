@@ -15,11 +15,27 @@ class CreateOdcinekTable extends Migration
     {
         Schema::create('odcinek', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_punkt_poczatek');
-            $table->integer('id_punkt_koniec');
-            $table->integer('punkty_od');
-            $table->integer('punkty_do');
+            $table->unsignedBigInteger('id_punkt_poczatek');
+            $table->foreign('id_punkt_poczatek')
+            ->references('id')
+            ->on('punkt');
+            $table->unsignedBigInteger('id_punkt_koniec');
+            $table->foreign('id_punkt_koniec')
+            ->references('id')
+            ->on('punkt');
+            $table->unsignedBigInteger('punkty_od');
+            $table->foreign('punkty_od')
+            ->references('id')
+            ->on('punkt');
+            $table->unsignedBigInteger('punkty_do');
+            $table->foreign('punkty_do')
+            ->references('id')
+            ->on('punkt');
             $table->boolean('otwarty');
+            $table->unsignedBigInteger('id_pasma');
+            $table->foreign('id_pasma')
+            ->references('id')
+            ->on('pasmo');
             $table->timestamps();
         });
     }

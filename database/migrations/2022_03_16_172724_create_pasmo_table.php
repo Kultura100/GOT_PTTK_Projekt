@@ -16,7 +16,10 @@ class CreatePasmoTable extends Migration
         Schema::create('pasmo', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
-            $table->integer('id_grupa');
+            $table->unsignedBigInteger('id_grupa');
+            $table->foreign('id_grupa')
+            ->references('id')
+            ->on('grupa');
             $table->timestamps();
         });
     }
