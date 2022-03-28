@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pasmo extends Model
 {
+    use HasFactory;    
     protected $table = 'pasmo';
-    use HasFactory;
+    protected $fillable = 
+    [
+        'nazwa',
+        'id_grupa'
+    ]; 
+    public function pasmo()
+    {
+        return $this->hasMany('app\Models\Odcinek');        
+    }
 }

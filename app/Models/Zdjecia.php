@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Zdjecia extends Model
 {
-    protected $table = 'wycieczka_zdjecia';
-    use HasFactory;
+    use HasFactory;    
+    protected $table = 'zdjecia';
+    protected $fillable = 
+    [
+        'id_wycieczka',
+        'zrodlo_zdjecia',
+        'opis'
+    ]; 
+    public function zdjecia()
+    {
+        return $this->belongsTo('app\Models\Wycieczka');        
+    }
 }

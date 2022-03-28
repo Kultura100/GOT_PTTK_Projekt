@@ -11,9 +11,33 @@ class WycieczkiController extends Controller
 {
     public function index()
     {
-        return view('wycieczki.index',[
-            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get(),
-            'dataod' => Wycieczka::where('dataod',Auth::user()->id)->get()
+        return view('wycieczki.index',
+        [
+            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get(),paginate(config('app.default_page_size'))
         ]);
     }
 }
+    public function create()
+    {
+        return view('wycieczka.create',
+        [
+            'wycieczka' => Wycieczka::all(),
+        ]
+    );
+    }
+
+    public function store(WycieczkaRequest $request)
+    {
+      //ponizej      
+        $wycieczka = Wycieczka::create(
+        [
+            'id_turysty' => $request->input('id_turysty'),
+            'dataod' => $request->input('dataod'),
+            'datado' => $request->input('datado'),
+            'punkty' => $request->input('punkty')            
+        ]);
+        return redirect()->route('wycieczki.index')
+            ->with('success', __('translations.wycieczki', [
+                'numer' => $wycieczka->id
+            ]));
+    }

@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grupa_Przodownik extends Model
 {
+    use HasFactory;    
     protected $table = 'grupa_przodownik';
-    use HasFactory;
+    protected $fillable = 
+    [
+        'id_przodownik',
+        'id_grupa'
+    ]; 
+    public function grupaprzodownik()
+    {
+        return $this->hasOne('app\Models\Grupa');        
+    }
 }

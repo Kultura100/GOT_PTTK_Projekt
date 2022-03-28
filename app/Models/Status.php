@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status extends Model
 {
+    use HasFactory;    
     protected $table = 'status';
-    use HasFactory;
+    protected $fillable = 
+    [
+        'nazwa'
+    ]; 
+    public function wycieczkaturysta()
+    {
+        return $this->belongsTo('app\Models\Wycieczka_odcinek');        
+    }
 }
