@@ -14,6 +14,7 @@ class OdcinekSeeder extends Seeder
      */
     public function run()
     {
-        Odcinek::factory()->count(20)->create();
+        //Odcinek::factory()->count(20)->create();
+        
     }
 }
