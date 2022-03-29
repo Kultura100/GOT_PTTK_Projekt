@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupa;
 use App\Models\Pasmo;
+use App\Models\Punkt;
 use Illuminate\Http\Request;
 use App\Models\ListaPodpunkt;
 
@@ -25,9 +26,12 @@ class SzlakController extends Controller
         ]);
     }
 
-    public function szczegoly(){
-        return view('szlak.szczegoly',[
-            'listapunktow' => ListaPodpunkt::get(),
-        ]);
+    public function szczegoly($id)
+    {
+        $dopobrania = Punkt::take(0);
+        if($id == 1){
+            $dopobrania = Punkt::get();
+        }
+        return view('szlak.szczegoly',compact('dopobrania'));
     }
 }

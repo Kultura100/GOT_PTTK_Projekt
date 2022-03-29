@@ -37,20 +37,24 @@
         <!-- <h2>Grupy</h2> -->
         <!-- <h2><small>Grupy górskie</small></h2> -->
 
-        @dd($listapunktow);
-      @foreach($listapunktow as $punkty)
-     
-        @foreach($punkty->podpunkty as $punktinfo)
-        
-        @endforeach
-      @endforeach
   <ul class="list-group">
     {{-- dokonczyc zrobic zeby się wyswietlalo --}}
-  <li class="list-group-item active">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
+    @if($dopobrania->count())
+    @foreach($dopobrania as $punkty)
+ 
+  <li class="list-group-item active">{{$punkty->nazwa}}</li>
+    @foreach($punkty->punktnaliscie as $punkcik)
+      @foreach($punkcik->podpunkty as $pojedynczy)
+      <li class="list-group-item">{{$pojedynczy->nazwa}}</li>
+      @endforeach
+    @endforeach
+  @endforeach
+  @else
+  <ul class="list-group">
+   
+    <li class="list-group-item active"> Brak punktow</li>
+  </ul>
+  @endif
 </ul>
 
 

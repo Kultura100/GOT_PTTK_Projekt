@@ -18,8 +18,13 @@ class ListaPodpunkt extends Model
         'id_podpunkt',
     ]; 
 
-    public function podpunkty()
+    public function punkty()
     {
         return $this->hasMany(Punkt::class,'id','id_punkt');
+    }
+
+    public function podpunkty()
+    {
+        return $this->hasMany(Podpunkt::class,'id','id_podpunkt');
     }
 }
