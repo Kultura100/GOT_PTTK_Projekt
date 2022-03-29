@@ -13,7 +13,9 @@ class OsiagnieciaController extends Controller
     {
         return view('osiagniecia.index',[
             'wycieczki' => Wycieczka::where('id_turysty',Auth::user()->id)->get(),
-            'odznaka' => Odznaka_Turysty::where('id_turysty',Auth::user()->id)->get()
+            'odznaka' => Odznaka_Turysty::where('id_turysty',Auth::user()->id)->get(),
+            
+          
         ]);
     }
 }

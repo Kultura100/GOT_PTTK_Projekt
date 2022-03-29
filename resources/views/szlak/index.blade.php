@@ -7,59 +7,113 @@
       <script src="{{ asset('js/szlak.js') }}"></script>
     </x-slot>
     <div class="container">
-        <h2>Grupy</h2>
-        <h2><small>Grupy górskie</small></h2>
+        <h2>Grupy górskie</h2>
         <ul class="responsive-table">
-          
+            @foreach($grupy as $grupa)
+           
         <li class="table-header">
-            <div class="col col-t">TATRY I PODTATRZE</div>
+            <div class="col col-t">{{$grupa->nazwa}}</div>
        </li>
-          <li class="table-row">
-            <div class="col col-1">Tatry Wysokie</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>   
+       <h3 style="text-align:center;">Pasma górskie</h3>
+            @if($grupa->id == 1)
+                @foreach ($pasmo1 as $pasm)
+                <li class="table-row">
+                    <div class="col col-1">{{$pasm->nazwa}}</div>
+                    <div>
+                         <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+                            <x-button class="hover:bg-green-700">
+                                Szczegoly
+                            </x-button>
+                        </a> 
+                    </div>
+                  </li>     
+                @endforeach
+            @endif
+            @if($grupa->id == 2)
+            @foreach ($pasmo2 as $pasm)
             <li class="table-row">
-            <div class="col col-1">Tatry Zachodnie</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>   
+                <div class="col col-1">{{$pasm->nazwa}}</div>
+                <div>
+                    <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+                        <x-button class="hover:bg-green-700">
+                            Szczegoly
+                        </x-button>
+                    </a> 
+                </div>
+              </li>     
+            @endforeach
+            @endif
+            @if($grupa->id == 3)
+            @foreach ($pasmo3 as $pasm)
             <li class="table-row">
-            <div class="col col-1">Podtatrze</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>
-
-         <!-- <li class="table-header">
-            <div class="col col-t">TATRY SŁOWACKIE</div>
-       </li>
-          <li class="table-row">
-            <div class="col col-1">Zapadane Tatry - (Tatry Zachodnie - Słowacja) </div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>   
-            <li class="table-row">
-            <div class="col col-1">Vysoke Tatry - (Tatry Wysokie - Słowacja)</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>   
-            <li class="table-row">
-            <div class="col col-1">Belanske Tatry - (Tatry Bielskie - Słowacja)</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>
+                <div class="col col-1">{{$pasm->nazwa}}</div>
+                <div>
+                    <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+                        <x-button class="hover:bg-green-700">
+                            Szczegoly
+                        </x-button>
+                    </a> 
+                </div>
+              </li>     
+            @endforeach
+        @endif
+        @if($grupa->id == 4)
+        @foreach ($pasmo4 as $pasm)
         <li class="table-row">
-            <div class="col col-1">Tatry Słowackie - szlaki z przewodnikiem</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
+            <div class="col col-1">{{$pasm->nazwa}}</div>
+            <div>
+                <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+                    <x-button class="hover:bg-green-700">
+                        Szczegoly
+                    </x-button>
+                </a> 
             </div>
-        </li>
-        <li class="table-row">
-            <div class="col col-1">Niske Tatry - (Niskie Tatry - Słowacja)</div>
-            <div><a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-        </li>  -->
-
-
+          </li>     
+        @endforeach
+    @endif
+    @if($grupa->id == 5)
+    @foreach ($pasmo5 as $pasm)
+    <li class="table-row">
+        <div class="col col-1">{{$pasm->nazwa}}</div>
+        <div>
+            <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+                <x-button class="hover:bg-green-700">
+                    Szczegoly
+                </x-button>
+            </a> 
+        </div>
+      </li>     
+    @endforeach
+@endif
+@if($grupa->id == 6)
+@foreach ($pasmo6 as $pasm)
+<li class="table-row">
+    <div class="col col-1">{{$pasm->nazwa}}</div>
+    <div>
+        <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+            <x-button class="hover:bg-green-700">
+                Szczegoly
+            </x-button>
+        </a> 
+    </div>
+  </li>     
+@endforeach
+@endif
+@if($grupa->id == 7)
+@foreach ($pasmo7 as $pasm)
+<li class="table-row">
+    <div class="col col-1">{{$pasm->nazwa}}</div>
+    <div>
+        <a href="{{ route('szlak.szczegoly', ['id' => $pasm->id]) }}">
+            <x-button class="hover:bg-green-700">
+                Szczegoly
+            </x-button>
+        </a> 
+    </div>
+  </li>     
+@endforeach
+@endif
+        @endforeach
               
         </ul>
       </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOdznakaTable extends Migration
+class CreatePodpunktTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateOdznakaTable extends Migration
      */
     public function up()
     {
-        Schema::create('odznaka', function (Blueprint $table) {
+        Schema::create('podpunkt', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
-            $table->string('zrodlo');
-            $table->integer('wymaganepunkty');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateOdznakaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('odznaka');
+        Schema::dropIfExists('podpunkt');
     }
 }

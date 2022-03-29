@@ -71,6 +71,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('', [SzlakController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
+        Route::get('{id}/szczegoly',[SzlakController::class, 'szczegoly'])
+            ->where('id', '[0-9]+')
+            ->name('szczegoly')
+            ->middleware(['permission:klient.store']);
     });
 
     Route::name('wycieczki.')->prefix('wycieczki')->group(function () {

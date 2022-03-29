@@ -9,25 +9,37 @@
     <div class="container">
         <h2>Raporty</h2>
         <h2><small>Wykaz raportów utworzonych przez użytkownika</small></h2>
-        <ul class="responsive-table">
-          <li class="table-header">
-            <div class="col col-1">Data początku</div>
-            <div class="col col-2">Data końca</div>
-            <div class="col col-3">Pasmo</div>
-            <div class="col col-4">Ilość punktów</div>
-            <div class="col col-5">Status</div>
-            <div class="col col-6"></div>
-          </li>
-          <li class="table-row">
-            <div class="col col-1"><!-- data poczatku wycieczki --></div>
-            <div class="col col-2"><!-- data konca wycieczki --></div>
-            <div class="col col-3"><!-- nazwa pasma --></div>
-            <div class="col col-4"><!-- ilosc zebranych punktow --></div>
-            <div class="col col-5"><!-- status wycieczki --></div>
-            <div class="col col-6">
-                <a><button class="button-1" role="button">Szczegóły</button></a>
-            </div>
-          </li>
-        </ul>
+
+
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Data początku</th>
+              <th scope="col">Data końca</th>
+              <th scope="col">Pasmo</th>
+              <th scope="col">Ilość punktów</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th> Przesunięte w czasie do zrealizowania potrzebnych zmian bazy danych w celu zakończenia tego zadania (GP-7)</th>
+            </tr>
+            {{-- @foreach ($wycieczki as $wycieczka)
+            <tr>
+              <th scope="row">{{$wycieczka->id}}</th>
+              <td><!-- data poczatku wycieczki --> {{$wycieczka->dataod}}</td>
+              <td><!-- data konca wycieczki -->{{$wycieczka->datado}}</td>
+              <td><!-- nazwa pasma -->{{$pasmo}}</td>
+              <td><!-- ilosc zebranych punktow --> {{$wycieczka->punkty}}</td>
+              <td><!-- status wycieczki --></td>
+              <td> <a><button class="button-1" role="button">Szczegóły</button></a>
+              </td>
+            </tr>
+            @endforeach --}}
+          </tbody>
+        </table>
       </div>
 </x-app-layout>

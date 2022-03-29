@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Punkt extends Model
+class Podpunkt extends Model
 {
     use HasFactory;    
-    protected $table = 'punkt';
+    protected $table = 'podpunkt';
     protected $fillable = 
     [
         'nazwa'
     ]; 
-    public function punkt()
-    {
-        return $this->belongsTo('app\Models\Odcinek');        
-    }
 }

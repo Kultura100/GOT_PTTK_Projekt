@@ -7,7 +7,7 @@
       <script src="{{ asset('js/szlak.js') }}"></script>
     </x-slot>
 
-    <style> 
+<style> 
     
     .list-group-item.active {
       z-index: 2;
@@ -31,12 +31,21 @@
     font-size: 15px;
 
     }
-    </style>
+</style>
+
     <div class="container">
         <!-- <h2>Grupy</h2> -->
         <!-- <h2><small>Grupy górskie</small></h2> -->
 
-<ul class="list-group">
+        @dd($listapunktow);
+      @foreach($listapunktow as $punkty)
+     
+        @foreach($punkty->podpunkty as $punktinfo)
+        
+        @endforeach
+      @endforeach
+  <ul class="list-group">
+    {{-- dokonczyc zrobic zeby się wyswietlalo --}}
   <li class="list-group-item active">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>

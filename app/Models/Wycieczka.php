@@ -25,4 +25,8 @@ class Wycieczka extends Model{
     {
         return $this->hasMany('app\Models\Zdjecia');
     }
+
+    public function wieleodcinkow(){
+        return $this->hasMany(Wycieczka_odcinek::class,'id_wycieczka','id');
+    }
 }

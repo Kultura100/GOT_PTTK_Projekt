@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pasmo;
+use App\Models\Odcinek;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Wycieczka_odcinek extends Model
 {
@@ -23,7 +25,7 @@ class Wycieczka_odcinek extends Model
     }
     public function wycieczka_odcinek2()
     {
-        return $this->belongsTo('app\Models\Odcinek');        
+        return $this->hasOne(Odcinek::class,'id','id_odcinek');        
     }
     public function wycieczka_odcinek3()
     {

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Odznaka;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Odznaka_Turysty extends Model
 {
@@ -20,6 +21,6 @@ class Odznaka_Turysty extends Model
     }
     public function odznakaturysty_odznaka()
     {
-        return $this->hasMany('app\Models\Odznaka');
+        return $this->hasMany(Odznaka::class,'id','id_odznaki');
     }
 }

@@ -81,12 +81,19 @@ class PasmoSeeder extends Seeder
             59 => 'Pieniny - Słowacja',
 
         ];
-        
+        $grupaid =0;
         foreach($pasmo as $klucz => $pasma) {
+                if($klucz <= 3) $grupaid=1;
+                else if($klucz <= 8) $grupaid=2;
+                else if($klucz <= 20) $grupaid=3;
+                else if($klucz <= 26) $grupaid=4;
+                else if($klucz <= 31) $grupaid=5;
+                else if($klucz <= 52) $grupaid=6;
+                else if($klucz <= 59) $grupaid=7;
             DB::table('pasmo')->insert([
                 'id' => $klucz,
                 'nazwa' => $pasma,
-                'id_grupa' => $klucz,
+                'id_grupa' => $grupaid,
                 'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
                 'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
             ]);
