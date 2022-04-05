@@ -44,7 +44,13 @@
                 $('#punkty_label').show();  
             }
         });
-            });
+
+        $.validator.addMethod("endDate", function(value, element) {
+            var startDate = $('#wycieczki-dataod').val();
+            return Date.parse(startDate) <= Date.parse(value) || value == "";
+        }, "Data koncowa musi być pózniejsza niż początkowa");
+        $('#wycieczki-form').validate();
+    });
         </script>       
     </x-slot>
 
@@ -81,7 +87,7 @@
                             {{ __('translations.wycieczki.attribute.datado') }}
                     </label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control @error('datado') is-invalid @enderror" name="datado"
+                        <input type="date" class="form-control @error('datado') is-invalid @enderror endDate" name="datado"
                             id="wycieczki-datado" value="{{ old('datado') }}">
                         @error('datado')
                         <span class="invalid-feedback" role="alert">
