@@ -1,9 +1,9 @@
 <x-app-layout>
     <x-slot name="styles">
-      <link rel="stylesheet" type="text/css" href="{{ asset('css/wycieczki.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/raport.css') }}">
     </x-slot>
     <x-slot name="scripts">
-      <script src="{{ asset('js/wycieczki.js') }}"></script>
+      <script src="{{ asset('js/raport.js') }}"></script>
     </x-slot>
     <div class="container">
       <h1>{{ __('translations.wycieczki.title') }}</h1>
