@@ -8,8 +8,7 @@
     <div class="container">
       <h1>{{ __('translations.wycieczki.title') }}</h1>
       <div class="d-flex flex-row-reverse mb-4">
-        <a href=""
-        {{-- {{ route('wycieczki.create') }} --}}
+        <a href="{{ route('wycieczki.create') }}"
             type="button"
             class="btn btn-light"
             role="button">

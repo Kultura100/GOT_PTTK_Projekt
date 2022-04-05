@@ -81,6 +81,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('', [WycieczkiController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
+        Route::get('create',[WycieczkiController::class, 'create'])
+            ->where('id', '[0-9]+')
+            ->name('create')
+            ->middleware(['permission:klient.store']);
+        Route::get('create/{id}',[WycieczkiController::class, 'pokazPasma'])
+            ->where('id', '[0-9]+')
+            ->name('pokazPasma')
+            ->middleware(['permission:klient.store']);
     });
 
     Route::name('raport.')->prefix('raport')->group(function () {
