@@ -26,6 +26,7 @@ class GrupaSeeder extends Seeder
             4 => 'Beskidy Wschodnie',
             5 => 'Góry Swiętokrzyskie',
             6 => 'Sudety',
+            7 => 'Słowacja',
         ];
         
         foreach($Grupy as $klucz => $grupa) {

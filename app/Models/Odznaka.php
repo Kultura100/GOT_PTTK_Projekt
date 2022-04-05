@@ -12,7 +12,8 @@ class Odznaka extends Model
     protected $fillable = 
     [
         'nazwa',
-        'wymagane_punkty'
+        'wymaganepunkty',
+        'zrodlo',
     ]; 
     public function wycieczkaturysta()
     {

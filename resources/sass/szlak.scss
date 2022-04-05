@@ -50,6 +50,15 @@ body {
     .col-2 {
       flex-basis: 20%;
     }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #3490dc;
+      border-color: #3490dc;
+      text-align: center;
+
+    }
     
     
     @media all and (max-width: 767px) {
