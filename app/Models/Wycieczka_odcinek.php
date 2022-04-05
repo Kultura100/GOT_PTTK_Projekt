@@ -27,8 +27,8 @@ class Wycieczka_odcinek extends Model
     {
         return $this->hasOne(Odcinek::class,'id','id_odcinek');        
     }
-    public function wycieczka_odcinek3()
+    public function status()
     {
-        return $this->hasOne('app\Models\Status');        
+        return $this->hasOne(Status::class,'id','id_status');        
     }
 }

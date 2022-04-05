@@ -40,9 +40,9 @@
                 <div class="col col-2"><!-- data konca wycieczki -->{{$wycieczka->datado}}</div>
                 <div class="col col-3"><!-- nazwa pasma -->{{$wycieczkaa->wycieczka_odcinek2->pasmo->nazwa}}</div>
                 <div class="col col-4"><!-- ilosc zebranych punktow -->{{$wycieczka->punkty}}</div>
-                <div class="col col-5"><!-- status wycieczki -->{{$wycieczkaa}}</div>
+                <div class="col col-5 m-1"><!-- status wycieczki -->{{$wycieczkaa->status->nazwa}}</div>
                 <div class="col col-6">
-                    <a><button class="button-1" role="button">Szczegóły</button></a>
+                    <a><button class="button-1 m-2" role="button">Szczegóły</button></a>
                 </div>
               </li>
               @endforeach
