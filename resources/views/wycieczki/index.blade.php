@@ -33,16 +33,21 @@
                 <div class="col col-5">Status</div>
                 <div class="col col-6"></div>
               </li>
+            
+              @foreach($wycieczki as $wycieczka)
+              @foreach($wycieczka->wieleodcinkow as $wycieczkaa)
               <li class="table-row">
-                <div class="col col-1"><!-- data poczatku wycieczki --></div>
-                <div class="col col-2"><!-- data konca wycieczki --></div>
-                <div class="col col-3"><!-- nazwa pasma --></div>
-                <div class="col col-4"><!-- ilosc zebranych punktow --></div>
-                <div class="col col-5"><!-- status wycieczki --></div>
+                <div class="col col-1"><!-- data poczatku wycieczki -->{{$wycieczka->dataod}}</div>
+                <div class="col col-2"><!-- data konca wycieczki -->{{$wycieczka->datado}}</div>
+                <div class="col col-3"><!-- nazwa pasma -->{{$wycieczkaa->wycieczka_odcinek2->pasmo->nazwa}}</div>
+                <div class="col col-4"><!-- ilosc zebranych punktow -->{{$wycieczka->punkty}}</div>
+                <div class="col col-5"><!-- status wycieczki -->{{$wycieczkaa}}</div>
                 <div class="col col-6">
                     <a><button class="button-1" role="button">Szczegóły</button></a>
                 </div>
               </li>
+              @endforeach
+              @endforeach
             </ul>
           </div>
       </div>      

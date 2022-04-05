@@ -19,6 +19,10 @@ class CreateWycieczkaTable extends Migration
             $table->foreign('id_turysty')
             ->references('id')
             ->on('users');
+            $table->unsignedBigInteger('id_tworcy');
+            $table->foreign('id_tworcy')
+            ->references('id')
+            ->on('users');
             $table->date('dataod');
             $table->date('datado');
             $table->integer('punkty');
