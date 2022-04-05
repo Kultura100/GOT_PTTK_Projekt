@@ -39,7 +39,7 @@
             }
             });
             $('#wycieczki-pasmo').on('change', function() {
-            if($('#wycieczki-pasmo').css('display') == 'none')
+            if($('#wycieczki-pasmo').css('display') !== 'none')
             {
                 $('#punkty_label').show();  
             }
@@ -138,15 +138,15 @@
                         </div>
                     </div> 
 
-                    <div id="punkty_label">
+                    <div id="punkty_label" style="display: none;">
 
                     <div class="row mb-3">
-                        <label for="wycieczki-punktpocz" class="col-sm-2" id="punktpocz_label" style="display: none;">
+                        <label for="wycieczki-punktpocz" class="col-sm-2" id="punktpocz_label">
                             {{__('translations.wycieczki.attribute.punktpocz')}}
                         </label>
                     <div class="col-sm-10">
                             <select id="wycieczki-punktpocz" class="form-select @error('punktpocz') is-invalid @enderror " name="punktpocz"
-                            value="{{ old('punktpocz')}}" style="display: none;">
+                            value="{{ old('punktpocz')}}">
                             @forelse ($punkty as $punkt)
                                 <option name="punktpocz" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
                             @empty
@@ -164,12 +164,12 @@
                     </div>  
                     
                     <div class="row mb-3">
-                        <label for="wycieczki-punktkon" class="col-sm-2" style="display: none;">
+                        <label for="wycieczki-punktkon" class="col-sm-2">
                             {{__('translations.wycieczki.attribute.punktkon')}}
                         </label>
                     <div class="col-sm-10">
                             <select id="wycieczki-punktkon" class="form-select @error('punktkon') is-invalid @enderror " name="punktkon"
-                            value="{{ old('punktkon')}}" style="display: none;">
+                            value="{{ old('punktkon')}}">
                             @forelse ($punkty as $punkt)
                                 <option name="punktkon" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
                             @empty
