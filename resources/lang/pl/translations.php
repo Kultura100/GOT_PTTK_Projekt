@@ -140,4 +140,9 @@ return [
             ]
         ]
     ],
+
+    'odznaki' => 
+    [
+        'title' => 'Odznaki',
+    ]
 ];
