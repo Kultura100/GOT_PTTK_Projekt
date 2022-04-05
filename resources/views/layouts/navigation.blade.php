@@ -33,6 +33,13 @@
             </li>
 
             <li class="nav-item">
+                <x-nav-link :href="route('odznaki.index')" :active="request()->routeIs('odznaki.index')">
+                    <!-- odznaki.index -->
+                    {{ __('translations.odznaki.title') }}
+                </x-nav-link>
+            </li>
+
+            {{-- <li class="nav-item">
                 <x-nav-link :href="route('raport.index')" :active="request()->routeIs('raport.index')">
                     <!-- raport.index -->
                     {{ __('translations.raport.title') }}
@@ -44,7 +51,7 @@
                     <!-- wycieczki.index -->
                     {{ __('translations.wycieczki.title') }}
                 </x-nav-link>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <x-nav-link :href="route('szlak.index')" :active="request()->routeIs('szlak.index')">

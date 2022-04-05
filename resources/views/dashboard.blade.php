@@ -51,7 +51,7 @@
     </style>
     
         <div class="container text-center">
-            <h1 class="display-6">GOT PTTK</h1>
-            <img src="{{ URL::asset('/images/logoktg.png')}}" class="img-fluid" alt="logo">
+            {{-- <h1 class="display-6">GOT PTTK</h1> --}}
+            <img src="{{ URL::asset('/images/logoktg.png')}}" class="img-fluid" width="1000" alt="logo">
         </div>
 </x-app-layout>
