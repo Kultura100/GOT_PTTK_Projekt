@@ -11,7 +11,7 @@
         <section class="py-5 mb-5">
 
             <div class="container text-center py5">
-                <p class="display-3">Odznaki:</p>
+                <p class="display-4">Odznaki</p>
             </div>
             <div class="container">
                 <div class="row">
@@ -27,12 +27,6 @@
                     @endforeach
                 </div>
             </div>
-
         </section>
     </main>
-
-    <footer class="bg-dark text-light">
-        <p class="py-5 mb-0 text-center">&copy; Projekt Zespołowy</p>
-    </footer>
-
 </x-app-layout>
