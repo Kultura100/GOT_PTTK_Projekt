@@ -44,14 +44,14 @@
                     <!-- raport.index -->
                     {{ __('translations.raport.title') }}
                 </x-nav-link>
-            </li>
+            </li>--}}
 
             <li class="nav-item">
                 <x-nav-link :href="route('wycieczki.index')" :active="request()->routeIs('wycieczki.index')">
                     <!-- wycieczki.index -->
                     {{ __('translations.wycieczki.title') }}
                 </x-nav-link>
-            </li> --}}
+            </li> 
 
             <li class="nav-item">
                 <x-nav-link :href="route('szlak.index')" :active="request()->routeIs('szlak.index')">
