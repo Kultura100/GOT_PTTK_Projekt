@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grupa;
+use App\Models\Pasmo;
+use App\Models\Punkt;
 use App\Models\Wycieczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
@@ -14,16 +17,25 @@ class WycieczkiController extends Controller
         
         return view('wycieczki.index',
         [
-            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get()
+            'wycieczki' => Wycieczka::get()
         ]);
     }
 
     public function create()
     {
-        return view('wycieczka.create',
+        return view('wycieczki.create',
         [
-            'wycieczka' => Wycieczka::all(),
+            'wycieczka' => Wycieczka::get(),
+            'pasma' => Pasmo::get(),
+            'grupy' => Grupa::get(),
+            'punkty' => Punkt::get(),
         ]);
+    }
+
+    public function pokazPasma($id)
+    {
+        $pasma = Pasmo::where('id_grupa',$id)->get();
+        return response()->json($pasma);
     }
 
     public function store(WycieczkaRequest $request)

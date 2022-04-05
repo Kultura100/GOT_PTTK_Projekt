@@ -60,6 +60,12 @@ return [
                 'id_turysty' => 'ID Turysty',
                 'dataod' => 'Data rozpoczęcia',
                 'datado' => 'Data zakończenia',
+                'pasmo' => 'Pasmo',
+                'grupa' => 'Grupa',
+                'punktpocz' => 'Punkt początkowy',
+                'punktkon' => 'Punkt kończący',
+                'status' => 'Status',
+                'iloscpunktow' => 'Ilość Punktów',
                 'punkty' => 'Punkty',                
             ],
         'flashes' => 
