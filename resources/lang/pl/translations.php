@@ -150,5 +150,10 @@ return [
     'odznaki' => 
     [
         'title' => 'Odznaki',
+    ],
+
+    'ranking' => 
+    [
+        'title' => 'Ranking',
     ]
 ];
