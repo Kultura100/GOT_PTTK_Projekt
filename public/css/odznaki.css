@@ -1,0 +1,10 @@
+.OdznakiImg {
+  height: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.btn {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}

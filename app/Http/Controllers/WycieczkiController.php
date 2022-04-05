@@ -17,7 +17,7 @@ class WycieczkiController extends Controller
         
         return view('wycieczki.index',
         [
-            'wycieczka' => Wycieczka::where('id_turysty',Auth::user()->id)->get()
+            'wycieczki' => Wycieczka::get()
         ]);
     }
 

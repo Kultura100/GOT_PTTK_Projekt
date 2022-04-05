@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TowarController;
 use App\Http\Controllers\SzlakController;
+use App\Http\Controllers\TowarController;
 use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\RaportController;
+use App\Http\Controllers\OdznakaController;
 use App\Http\Controllers\WycieczkiController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
@@ -115,4 +116,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->middleware(['permission:klient.szczegoly']);
     });
     
+    Route::name('odznaki.')->prefix('odznaki')->group(function () {
+        Route::get('', [OdznakaController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
+    });
+
 });
