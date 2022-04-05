@@ -39,12 +39,12 @@
                 </x-nav-link>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <x-nav-link :href="route('ranking.index')" :active="request()->routeIs('ranking.index')">
                     <!-- ranking.index -->
                     {{ __('translations.ranking.title') }}
                 </x-nav-link>
-            </li>
+            </li> --}}
 
             {{-- <li class="nav-item">
                 <x-nav-link :href="route('raport.index')" :active="request()->routeIs('raport.index')">
