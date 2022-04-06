@@ -14,24 +14,13 @@ class SzlakController extends Controller
     public function index()
     {
         return view('szlak.index',[
-            'grupy' => Grupa::get(),
-            'pasmo1' => Pasmo::whereBetween('id',[1,3])->get(),
-            'pasmo2' => Pasmo::whereBetween('id',[4,8])->get(),
-            'pasmo3' => Pasmo::whereBetween('id',[9,20])->get(),
-            'pasmo4' => Pasmo::whereBetween('id',[21,26])->get(),
-            'pasmo5' => Pasmo::whereBetween('id',[27,31])->get(),
-            'pasmo6' => Pasmo::whereBetween('id',[32,52])->get(),
-            'pasmo7' => Pasmo::whereBetween('id',[53,59])->get()
-            
+            'grupy' => Grupa::get(),  
         ]);
     }
 
     public function szczegoly($id)
     {
-        $dopobrania = Punkt::take(0);
-        if($id == 1){
-            $dopobrania = Punkt::get();
-        }
-        return view('szlak.szczegoly',compact('dopobrania'));
+        $punkty = Punkt::get();
+        return view('szlak.szczegoly',compact('punkty'));
     }
 }

@@ -38,9 +38,10 @@ class DatabaseSeeder extends Seeder
         $this->call(Odznaka_TurystySeeder::class);
         $this->call(GrupaSeeder::class);
         $this->call(Grupa_PrzodownikSeeder::class);
-        $this->call(PodPunktSeeder::class);
         $this->call(PunktSeeder::class);
-        $this->call(ListaPodPunktSeeder::class);
+        $this->call(PodPunktSeeder::class);
+   
+        //$this->call(ListaPodPunktSeeder::class);
         $this->call(StatusSeeder::class);
         $this->call(PasmoSeeder::class);
         $this->call(OdcinekSeeder::class);

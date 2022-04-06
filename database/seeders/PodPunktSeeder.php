@@ -16,7 +16,6 @@ class PodPunktSeeder extends Seeder
     public function run()
     {
         $generator = Factory::create();
-
         $punkty = [
             1 => 'Dolina Filipka',
             2 => 'Wierch Porońca (1036 m)',
@@ -80,11 +79,14 @@ class PodPunktSeeder extends Seeder
             60 => 'Czarny Staw Gąsienicowy (1624 m)',
             61 => 'Czerwony Staw w Dolinie Pańszczyzny (1645 m)',
         ];
-        
+
+        $licznik = 1;
+
         foreach($punkty as $klucz => $punkt) {
+            if($klucz == 5 || $klucz == 7 || $klucz == 9 || $klucz == 13 || $klucz == 15 || $klucz == 18 || $klucz == 20 || $klucz == 23 || $klucz == 25 || $klucz == 28 || $klucz == 31 || $klucz == 33 || $klucz == 35 || $klucz == 38 || $klucz == 40 || $klucz == 42 || $klucz == 44 || $klucz == 46 || $klucz == 48 || $klucz == 51 || $klucz == 54 || $klucz == 57 || $klucz == 60  ) {$licznik++;}
             DB::table('podpunkt')->insert([
-                'id' => $klucz,
                 'nazwa' => $punkt,
+                'id_punkt' => $licznik,
                 'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
                 'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
             ]);

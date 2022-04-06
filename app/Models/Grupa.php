@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pasmo;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Grupa extends Model
 {
@@ -13,9 +14,9 @@ class Grupa extends Model
     [
         'nazwa'        
     ]; 
-    public function grupa()
+    public function pasma()
     {
-        return $this->hasMany('app\Models\Pasmo');        
+        return $this->hasMany(Pasmo::class,'id_grupa');        
     }
     public function grupaprzodownik()
     {
