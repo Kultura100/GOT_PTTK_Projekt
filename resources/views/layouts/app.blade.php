@@ -15,7 +15,7 @@
         {{ $slot }}
     </div>
 
-    <footer class="bg-dark text-light">
+    <footer class="bg-dark text-light fixed-bottom">
         <p class="py-5 mb-0 text-center">&copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz, Danielak Bartosz</p>
     </footer>
 
