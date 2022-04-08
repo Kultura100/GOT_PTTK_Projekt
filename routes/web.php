@@ -7,6 +7,7 @@ use App\Http\Controllers\KlientController;
 use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\RaportController;
 use App\Http\Controllers\OdznakaController;
+use App\Http\Controllers\RankingController;
 use App\Http\Controllers\WycieczkiController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
@@ -90,6 +91,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->where('id', '[0-9]+')
             ->name('pokazPasma')
             ->middleware(['permission:klient.store']);
+        Route::get('punkty/{id}',[WycieczkiController::class, 'pokazpunkty'])
+            ->where('id', '[0-9]+')
+            ->name('pokazpunkty')
+            ->middleware(['permission:klient.store']);
+    });
+
+    Route::name('ranking.')->prefix('ranking')->group(function () {
+        Route::get('', [RankingController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
     });
 
     Route::name('raport.')->prefix('raport')->group(function () {

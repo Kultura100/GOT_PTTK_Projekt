@@ -17,7 +17,7 @@ class Odznaka_Turysty extends Model
     ]; 
     public function odznakaturysty()
     {
-        return $this->belongsTo('app\Models\Turysta');        
+        return $this->belongsToMany(User::class);        
     }
     public function odznakaturysty_odznaka()
     {

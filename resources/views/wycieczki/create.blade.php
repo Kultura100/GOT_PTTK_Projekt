@@ -10,7 +10,8 @@
             $(document).ready(function() {
                 $('#pasmo_label').hide();
                 $('#wycieczki-pasmo').hide();  
-                $('#punkty_label').hide();              
+                $('#punkty_label').hide();   
+
             $('#wycieczki-grupa').on('change', function() {
             var grupa = $(this).val();
             if(grupa) {
@@ -38,6 +39,34 @@
                 $('#wycieczki-pasmo').empty();
             }
             });
+
+            $('#wycieczki-punktpocz').bind('load change', function() {
+            var id = $(this).val();
+
+            if(id) {
+                $.ajax({ 
+                    url: '/wycieczki/punkty/'+id,
+                    type: "GET",
+                    data : {"_token":"{{ csrf_token() }}"},
+                    dataType: "json",
+                    success:function(data)
+                    {
+                        if(data){                               
+                            $('#wycieczki-punktkon').empty();
+                            $('#wycieczki-punktkon').append('<option hidden>Wybierz punkt</option>'); 
+                            $.each(data, function(key, punktkon){
+                                $('select[name="punktkon"]').append('<option value="'+ key +'">' + punktkon.nazwa+ '</option>');
+                            });
+                        }else{
+                            $('#wycieczki-punktkon').empty();
+                        }
+                    }
+                });
+            }else{
+                $('#wycieczki-punktkon').empty();
+            }
+            });
+
             $('#wycieczki-pasmo').on('change', function() {
             if($('#wycieczki-pasmo').css('display') !== 'none')
             {
@@ -148,11 +177,12 @@
 
                     <div class="row mb-3">
                         <label for="wycieczki-punktpocz" class="col-sm-2" id="punktpocz_label">
-                            {{__('translations.wycieczki.attribute.punktpocz')}}
+                            {{__('translations.wycieczki.attribute.punktkon')}}
                         </label>
                     <div class="col-sm-10">
                             <select id="wycieczki-punktpocz" class="form-select @error('punktpocz') is-invalid @enderror " name="punktpocz"
                             value="{{ old('punktpocz')}}">
+                            <option hidden>Wybierz punkt</option>
                             @forelse ($punkty as $punkt)
                                 <option name="punktpocz" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
                             @empty
@@ -171,16 +201,12 @@
                     
                     <div class="row mb-3">
                         <label for="wycieczki-punktkon" class="col-sm-2">
-                            {{__('translations.wycieczki.attribute.punktkon')}}
+                    
+                            {{__('translations.wycieczki.attribute.punktpocz')}}
                         </label>
                     <div class="col-sm-10">
                             <select id="wycieczki-punktkon" class="form-select @error('punktkon') is-invalid @enderror " name="punktkon"
                             value="{{ old('punktkon')}}">
-                            @forelse ($punkty as $punkt)
-                                <option name="punktkon" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
-                            @empty
-                                
-                            @endforelse
                         
                             </select>
         

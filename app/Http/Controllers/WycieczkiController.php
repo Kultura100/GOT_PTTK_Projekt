@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Grupa;
 use App\Models\Pasmo;
 use App\Models\Punkt;
+use App\Models\Podpunkt;
 use App\Models\Wycieczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
@@ -36,6 +37,12 @@ class WycieczkiController extends Controller
     {
         $pasma = Pasmo::where('id_grupa',$id)->get();
         return response()->json($pasma);
+    }
+
+    public function pokazpunkty($id)
+    {
+        $podpunkty = Podpunkt::where('id_punkt',$id)->get();
+        return response()->json($podpunkty);
     }
 
     public function store(WycieczkaRequest $request)

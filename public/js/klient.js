@@ -15,7 +15,7 @@
   \********************************/
 /***/ (() => {
 
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXNDb250ZW50IjpbIiJdLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMva2xpZW50LmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/klient.js\n");
+eval("$(function () {\n  $('#tabelka').DataTable({\n    processing: true,\n    serverSide: false,\n    language: {\n      url: '//cdn.datatables.net/plug-ins/1.11.5/i18n/pl.json'\n    }\n  });\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMva2xpZW50LmpzP2Y0OTgiXSwibmFtZXMiOlsiJCIsIkRhdGFUYWJsZSIsInByb2Nlc3NpbmciLCJzZXJ2ZXJTaWRlIiwibGFuZ3VhZ2UiLCJ1cmwiXSwibWFwcGluZ3MiOiJBQUFBQSxDQUFDLENBQUMsWUFBVztBQUNUQSxFQUFBQSxDQUFDLENBQUMsVUFBRCxDQUFELENBQWNDLFNBQWQsQ0FBd0I7QUFDcEJDLElBQUFBLFVBQVUsRUFBRSxJQURRO0FBRXBCQyxJQUFBQSxVQUFVLEVBQUUsS0FGUTtBQUdwQkMsSUFBQUEsUUFBUSxFQUFFO0FBQ05DLE1BQUFBLEdBQUcsRUFBRTtBQURDO0FBSFUsR0FBeEI7QUFPSCxDQVJBLENBQUQiLCJzb3VyY2VzQ29udGVudCI6WyIkKGZ1bmN0aW9uKCkge1xyXG4gICAgJCgnI3RhYmVsa2EnKS5EYXRhVGFibGUoe1xyXG4gICAgICAgIHByb2Nlc3Npbmc6IHRydWUsXHJcbiAgICAgICAgc2VydmVyU2lkZTogZmFsc2UsXHJcbiAgICAgICAgbGFuZ3VhZ2U6IHtcclxuICAgICAgICAgICAgdXJsOiAnLy9jZG4uZGF0YXRhYmxlcy5uZXQvcGx1Zy1pbnMvMS4xMS41L2kxOG4vcGwuanNvbidcclxuICAgICAgICB9XHJcbiAgICB9KTtcclxufSk7Il0sImZpbGUiOiIuL3Jlc291cmNlcy9qcy9rbGllbnQuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/klient.js\n");
 
 /***/ })
 
