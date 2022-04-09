@@ -78,6 +78,7 @@ class PodPunktSeeder extends Seeder
             59 => 'Zielony Staw Gąsienicowy (1672 m)',
             60 => 'Czarny Staw Gąsienicowy (1624 m)',
             61 => 'Czerwony Staw w Dolinie Pańszczyzny (1645 m)',
+            
         ];
 
         $licznik = 1;
@@ -87,8 +88,8 @@ class PodPunktSeeder extends Seeder
             DB::table('podpunkt')->insert([
                 'nazwa' => $punkt,
                 'id_punkt' => $licznik,
-                'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
-                'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
+                'created_at' => $generator->dateTime(),
+                'updated_at' => $generator->dateTime(),
             ]);
         }
     }

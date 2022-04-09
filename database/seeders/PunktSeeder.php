@@ -52,8 +52,8 @@ class PunktSeeder extends Seeder
             DB::table('punkt')->insert([
                 'id' => $klucz,
                 'nazwa' => $punkt,
-                'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
-                'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
+                'created_at' => $generator->dateTime(),
+                'updated_at' => $generator->dateTime(),
             ]);
         }
     }

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Odcinek extends Model
 {
     use HasFactory;    
+    public $timestamps = false;
     protected $table = 'odcinek';
     protected $fillable = 
     [

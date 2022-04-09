@@ -71,8 +71,8 @@ class OdznakaSeeder extends Seeder
                 'nazwa' => $odznaka,
                 'zrodlo' => $zrodlo[$klucz],
                 'wymaganepunkty' => $punkty[$klucz],
-                'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
-                'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
+                'created_at' => $generator->dateTime(),
+                'updated_at' => $generator->dateTime(),
             ]);
         }
     }
