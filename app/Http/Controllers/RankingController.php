@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 class RankingController extends Controller
 {
 
-    
     public function index()
     {
         
@@ -20,14 +19,20 @@ class RankingController extends Controller
         $svalue=array_values($kwerenda);
         rsort($svalue);
         $posortowana=array();
-        foreach ($svalue as $key => $value) {
-           $kk=array_search($value,$kwerenda);
-           $posortowana[$kk]=$value;
-           unset($kwerenda[$kk]);
-        }
+            foreach ($svalue as $key => $value) {
+            $kk=array_search($value,$kwerenda);
+            $posortowana[$kk]=$value;
+            unset($kwerenda[$kk]);
+            }
         $kwerenda = $posortowana;
 
-        $uzytkownicy = User::get();
+        $bialalista = [];
+        $uzytkownicy = User::role(['user','przodownik'])->get();
+        foreach ($uzytkownicy as $uzytkownik) {
+        array_push($bialalista,$uzytkownik->id);
+        }
+        $lista = array_intersect_key($kwerenda, array_flip($bialalista));
+        $kwerenda=$lista;
         return view('ranking.index',compact('kwerenda','uzytkownicy'));
     }
 }

@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body no-padding">
                         {{-- poczatek --}}
-                        @foreach ($kwerenda as $miejsca)
+                        @foreach ($kwerenda as $miejsca)    
                             <div class="item d-flex align-items-center">
                                 <div class="image"><img src="https://bootdey.com/img/Content/avatar/avatar6.png"
                                         alt="..." class="img-fluid rounded-circle"></div>
@@ -31,8 +31,7 @@
                                     </h3>
                                     <small>Ilosc odznak: {{ $miejsca }}</small>
                                     <input type="hidden" value="{{ $miejsca }}" name="wynik">
-                                    <input type="hidden" value="{{ $imie }} {{ $nazwisko }}"
-                                        name="imieinazwisko">
+                                    <input type="hidden" value="{{ $imie }} {{ $nazwisko }}" name="imieinazwisko">
                                 </div>
                             </div>
                             {{-- koniec --}}

@@ -5,7 +5,7 @@
         <style type="text/css" media="screen">
             body {
                 padding-top: 4.5rem;
-                margin-bottom: 60px;
+                margin-bottom: 75px;
             }
             
         </style>
@@ -17,7 +17,7 @@
         {{ $slot }}
     </div>
 
-    <footer class="bg-dark text-light" style="position: fixed; bottom: 0; width:100%">
+    <footer class="bg-dark text-light" style="z-index:4; position: fixed; bottom: 0; width:100%">
         <p class="py-4 mb-0 text-center">2022 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz, Danielak Bartosz</p>
     </footer>
 
