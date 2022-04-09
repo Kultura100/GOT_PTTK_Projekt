@@ -20,7 +20,9 @@ class SzlakController extends Controller
 
     public function szczegoly($id)
     {
+        if($id == 1)
         $punkty = Punkt::get();
+        
         return view('szlak.szczegoly',compact('punkty'));
     }
 }
