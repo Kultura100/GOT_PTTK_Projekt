@@ -25,7 +25,7 @@
                                     <i class="fas fa-trophy"
                                         @if ($loop->iteration == 1) style="color:#ffbb00" @elseif ($loop->iteration == 2) style="color:#9c9c9c" @elseif($loop->iteration == 3) style="color:#b88700" @endif>
                                         {{ $loop->iteration }}</i>@else<div class="" style="font-weight: 900; font-family: 'Font Awesome 6 Free';">{{ $loop->iteration }}</div>@endif
-                                    <h3 class="h5">
+                                    <h3 class="h5" @if(Auth::user()->imie == $uzytkownicy->where('id', key($kwerenda))->first()->imie && Auth::user()->nazwisko == $uzytkownicy->where('id', key($kwerenda))->first()->nazwisko) style="font-weight:bold" @endif>
                                         {{ $imie = $uzytkownicy->where('id', key($kwerenda))->first()->imie }}
                                         {{ $nazwisko = $uzytkownicy->where('id', key($kwerenda))->first()->nazwisko }}
                                     </h3>
