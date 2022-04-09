@@ -53,3 +53,20 @@ const myChart = new Chart(
     document.getElementById('myChart'),
     config
 );
+
+$("#dropdownMenuButton").click(function() {
+    if ($(".dropdown.rozwijanemenu").hasClass("show")) {
+        $(".dropdown.rozwijanemenu").removeClass("show");
+        $(".dropdown-menu.rozwijanemenu").removeClass("show");
+    } else {
+        $(".dropdown.rozwijanemenu").addClass("show");
+        $(".dropdown-menu.rozwijanemenu").addClass("show");
+    }
+    // $("#drukowanko").click(function() {
+    //     $(".wykresowa").print();
+    // });
+});
+$('#drukowanko').click(function() {
+    printJS({ printable: ($('#myChart')[0]).toDataURL(), type: 'image', imageStyle: 'width:100%' });
+    $(".dropdown-menu.rozwijanemenu").removeClass("show");
+});
