@@ -57,7 +57,7 @@
                                     alt="{{ $odznaczka->nazwa }}">
                                 <div class="cart-body">
                                     <p class="p-3"><b>{{ $odznaczka->nazwa }}</b> <br>
-                                        {{ intval($odznaczka->wymaganepunkty)? 'Wymagane punkty: ' . $odznaczka->wymaganepunkty: 'Wymagania: ' . $odznaczka->wymaganepunkty }}
+                                        {{-- {{ intval($odznaczka->wymaganepunkty)? 'Wymagane punkty: ' . $odznaczka->wymaganepunkty: 'Wymagania: ' . $odznaczka->wymaganepunkty }} --}}
                                     </p>
                                 </div>
                             </div>
