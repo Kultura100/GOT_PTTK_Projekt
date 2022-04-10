@@ -323,14 +323,372 @@ class PodPunktSeeder extends Seeder
             267 => 'z Latiborska Hola',
             268 => 'z Przełęczy Zamostskej Hole (1591 m)',
             269 => 'z Magurka (1035 m)',
+
+            270 => 'z Cieszyna przez Mniszewo',
+            271 => 'z Bażantowic',
+            272 => 'z Lesznej Górnej',
+            273 => 'z Goleszowa',
+
+            274 => 'z Bażantowic',
+            275 => 'z Dzięgielowa - Zamek',
+            276 => 'z Goleszowa',
+            277 => 'z Cisownicy',
+            
+            278 => 'z Jasieniowej (521 m)',
+            279 => 'z Goleszowa',
+            280 => 'z Lesznej Górnej',
+            281 => 'z Cisownicy',
+            282 => 'z Ustronia',
+            
+            283 => 'z Lesznej Górnej',
+            284 => 'ze Schroniska PTTK Tuł (621 m)',
+
+            285 => 'ze Schroniska PTTK Tuł (621 m)',
+            286 => 'z Ostrego (712 m)',
+            287 => 'z Cisownicy',
+            288 => 'z Ustronia',
+            289 => 'z Dziędielowa - Zamku',
+            290 => 'z Lesznej Górnej',
+
+            291 => 'z Małej Czantorii (864 m)',
+            292 => 'z Ustronia przez Poniwiec',
+            293 => 'z Ustronia - Polany',
+            294 => 'z Przełęczy Beskidek (684 m)',
+
+            295 => 'ze Zwardonia (Górka Gomółka)',
+            296 => 'z Kiczory',
+            297 => 'z Lalik',
+            298 => 'z Soli',
+            
+            299 => 'ze Zwardonia (Górka Gomółka',
+            300 => 'z Magury (1073 m)',
+            301 => 'z Ożnej (1073 m)',
+
+            302 => 'ze Zwardonia (Górka Gomółka)',
+            303 => 'z Soli',
+            304 => 'z Łysicy (704 m)',
+            305 => 'z Rycerki Górnej',
+            306 => 'z Rycerki Górnej Kolonia',
+
+            307 => 'z Soli',
+            308 => 'z Rycerki Dolnej',
+            309 => 'z Oźnej (952 m)',
+
+            310 => 'z Rycerki Górnej',
+            311 => 'z Rycerki Górnej Kolonia',
+
+            312 => 'z Magury (1073 m)',
+            313 => 'z Rycerki Górnej Kolonia',
+            314 => 'ze Schroniska PTTK Przegibek',
+
+            315 => 'z Porąbki',
+            316 => 'z Kóz',
+            317 => 'z Bujakowa',
+
+            318 => 'z Bujakowskiego Gronia (749 m)',
+            319 => 'z Porąbki',
+            320 => 'z Kóz',
+            321 => 'z Lipnika',
+            322 => 'z Przełęczy między Gaikami (809 m) a Groniczkami (839m)',
+            323 => 'z Międzybrodzia Bialskiego',
+
+            324 => 'z Porąbki',
+            325 => 'Międzybrodzia Bialskiego',
+            326 => 'z Lipnika',
+            327 => 'ze Straconki',
+
+            328 => 'z  Przełęczy między Gaikami (809 m) a Groniczkami (839 m)',
+            329 => 'z Magurki Wilkowickiej (909 m) - Schronisko PTTK',
+            330 => 'z Podlasu',
+
+            331 => 'ze Straconki',
+            332 => 'z Mikuszowic Krakowskich',
+            333 => 'ze Stalownika przez Łysą Przełęcz (563 m)',
+            334 => 'ze Stalownika przez Rogacz (828 m)',
+            335 => 'z Wilkowic',
+            336 => 'z Ponikwi',
+            337 => 'z Czupla (933 m)',
+            338 => 'z Międzybrodzia Bialskiego',
+
+            339 => 'z Międzybrodzia Bialskiego',
+            340 => 'z Łodygowic',
+            341 => 'z Czernichowa przez Suchy Wierch (799 m)',
+            342 => 'z Przyszopu (601 m)',
+
+            343 => 'z Moszczanicy',
+            344 => 'z Rychwałdu',
+            345 => 'z Pewli Małej',
+
+            346 => 'z Rychwałdu',
+            347 => 'z Pewli Małej',
+            348 => 'z Gilowic',
+            349 => 'z Pewli Ślemieńskiej',
+
+            350 => 'z Jeleśni',
+            351 => 'z Pewli Ślemieńskiej',
+            352 => 'z Pewli Małej',
+            353 => 'ze Ślemienia',
+            354 => 'z Gachowizny (758 m)',
+            355 => 'z Huciska',
+            356 => 'z Pewli Wielkiej',
+
+            357 => 'z Huciska',
+            358 => 'ze Ślemienia',
+            359 => 'z Koconia',
+            360 => 'z Kurowa',
+            361 => 'z Gronia Wajdów (677 m)',
+
+            362 => 'z Nad Płonem (BZ.03)',
+            363 => 'z Koconia',
+
+            364 => 'z Lasu',
+            365 => 'z Kukowa',
+
+            366 => 'z Rabki Zdroju',
+            367 => 'z Rokicin (PKP)',
+            368 => 'z Rdzawki',
+
+            369 => 'z Rokicin (PKP)',
+            370 => 'z Raby Wyżnej',
+            371 => 'z Sieniawy',
+            372 => 'z  Obidowej - PKS Rdzawka II',
+            373 => 'z Piątkowej (715 m)',
+
+            374 => 'z Sieniawy',
+            375 => 'z Rdzawki',
+            376 => 'z Przełęczy Sieniawskiej',
+            
+            377 => 'z Przełęczy Sieniawskiej',
+            378 => 'z Lasku',
+            
+            379 => 'z Bacówki PTTK Maciejowa',
+            380 => 'z Rdzawki',
+
+            381 => 'z Rabki Zdroju',
+            382 => 'z Rabki Słone (tama)',
+            383 => 'z Olszówki',
+            384 => 'z Poręby Górnej',
+
+            385 => 'Jordanowa',
+            386 => 'Łętowni',
+            387 => 'Tokarni',
+            388 => 'Tenczyna',
+            389 => 'Krzczonowa',
+            390 => 'Lubienia',
+            391 => 'Krzeczowa',
+
+            392 => 'Krzeczowa',
+            393 => 'Tenczyna',
+            394 => 'Przełęczy Glisne (634 m)',
+            395 => 'Raby Niżnej',
+            396 => 'Rabki Zarytego',
+            397 => 'Rabki Zdrój',
+            398 => 'Skomielnej Białej',
+            399 => 'Skawa (PKP) (BZ.07) - Rabka Zdrój przez Zbójecką Górę',
+
+            400 => 'Jordanowa',
+            401 => 'Schroniska PTTK Luboń Wielki (1022 m)',
+
+            402 => 'Raby Niżnej',
+            403 => 'Mszany Dolnej',
+
+            404 => 'Przełęczy Glisne (634 m)',
+            405 => 'Kasinki Małej',
+            406 => 'Lubienia przez Mały Szczebel (776 m)',
+            407 => 'Lubienia',
+
+            408 => 'Lubogoszczy (968 m)',
+            409 => 'Mszany Dolnej',
+
+            410 => 'Leśniczowki Stańcowa',
+            411 => 'Jabłonki',
+            412 => 'Lipnicy Malej Zagrody',
+            413 => 'Babiej Góry (1725 m) (BZ.02)',
+            414 => 'Leśniczówka Stańcowa - TPG Przywarówka',
+
+            415 => 'Lipnicy Małej Mentele',
+            416 => 'Sidziny Wielkiej - Polana',
+            417 => 'Podwilka',
+
+            418 => 'Zubrzycy Górnej',
+            419 => 'Sidziny',
+            420 => 'Policy (1369 m) (BZ.02',
+            421 => 'Schroniska na Hali Krupowej (1152 m) (BZ.02)',
+            422 => 'Podwilka',
+
+            423 => 'Sidziny Wielkiej - Polana',
+            424 => 'Sidziny',
+            425 => 'Sidziny Małej',
+            426 => 'Sidziny dom dziecka (BZ.02)',
+
+            427 => 'przełęczy między Sidziną a Zubrzycą Górną (757 m) (Nad Wąwozem)',
+            428 => 'Sidziny',
+            429 => 'Sidziny Małej',
+            430 => 'Spytkowic',
+            431 => 'przełęczy Bory (Spytkowicka)',
+            432 => 'Podwilka',
+
+            433 => 'Sidziny Małej',
+            434 => 'Sidziny',
+            435 => 'Bystrej',
+            436 => 'Jordanowa',
+            437 => 'Wysokiej',
+
+            438 => 'Szaflar (T.03)',
+            439 => 'Nowego Targu (T.03)',
+            440 => 'Nowej Białej',
+            441 => 'Krempachy',
+
+            442 => 'Łopusznej',
+            443 => 'Dębna',
+            444 => 'Frydman',
+            445 => 'Trybsz',
+            446 => 'Czarnej Góry',
+            447 => 'Białki',
+
+            448 => 'Bukowiny Tatrzańskiej Dolnej',
+            449 => 'Czarnej Góry',
+
+            450 => 'Bukowiny Tatrzańskiej Dolnej',
+            451 => 'Rzepisk',
+
+            452 => 'Łopusznej',
+            453 => 'Dębna',
+            454 => 'Frydman',
+            455 => 'Czarnej Góry',
+            456 => 'Białki',
+            457 => 'Trybsza',
+
+            458 => 'Dębna',
+            459 => 'Falsztyna',
+
+            460 => 'Tylmanowej Rzeka',
+            461 => 'Zabrzeża',
+            462 => 'Łącka (BZ.06)',
+            463 => 'Jazowska',
+
+            464 => 'Krościenka nad Dunajcem',
+            465 => 'Jaworzynki',
+            466 => 'Jazowska',
+            467 => 'Schroniska na Bereśniku (843 m)',
+
+            468 => 'Bryjarki (679 m)',
+            469 => 'Szczawnicy Niżnej',
+
+            470 => 'Szczawnicy (PKS)',
+            471 => 'Szczawnicy Zdroju',
+            472 => 'Szczawnica (PKS) - Szczawnica Zdrój',
+
+            473 => 'Dzwonkówki (983 m)',
+            474 => 'Jazowska przez Obidzę',
+            475 => 'Rytra',
+            476 => 'Jazowska',
+            477 => 'Gabonia (PKS)',
+            478 => 'Jaworek',
+            479 => 'Starego Sącza',
+            480 => 'Barcic',
+            481 => 'Polany Konieczna',
+            482 => 'Szlachtowej',
+            483 => 'Szczawnicy Zdroju',
+            484 => 'Szczawnicy (PKS)',
+            485 => 'Radziejowej',
+            486 => 'Rytro - Polana Konieczna',
+
+            487 => 'Szczawnicy (PKS)',
+            488 => 'Jaworek',
+            489 => 'Jaworki - Przełęcz Rozdziela (802 m)',
+
+            490 => 'Wadowic',
+            491 => 'Brzeźnicy',
+            492 => 'Draboża',
+            493 => 'Stanisławia Górnego',
+            494 => 'Barwałdu Górnego',
+            495 => 'Wysokiej',
+            496 => 'Kleczy Górnej',
+            
+            497 => 'Brzeźnicy',
+            498 => 'Jaśkowic',
+            499 => 'Przytkowic (PKP)',
+            500 => 'Stanisławia Górnego',
+
+            501 => 'Przytkowic (PKP)',
+            502 => 'Radziszowa (PKP)',
+
+            503 => 'Biertowic',
+            504 => 'Rudnika',
+            505 => 'Krzywaczki',
+            506 => 'Bęczarki',
+            507 => 'Krzyszkowic',
+            508 => 'Jawornika',
+            509 => 'Sułkowic (BZ.04)',
+
+            510 => 'Rajbrotu przez Paprotną (Kamienie Brodzińskie)',
+            511 => 'Bochni',
+
+            512 => 'Rajbrotu',
+            513 => 'Lipnicy Murowanej',
+            514 => 'Szpilówki (Śpilówka) (516 m)',
+
+            515 => 'Dominicznej Góry (468 m)',
+            516 => 'Rajbrotu - tartak',
+            517 => 'Lipnicy Murowanej',
+            518 => 'Szpilówki (Śpilówka) (516 m)',
+            519 => 'Iwkowej',
+            520 => 'Wojakowej',
+            521 => 'Poręby Iwkowskiej (BZ.06)',
+
+            522 => 'Lipnicy Murowanej',
+            523 => 'Iwkowej',
+            524 => 'Czchowa',
+
+            525 => 'Melsztyna',
+            526 => 'Dębna',
+
+            527 => 'Wielkiej Wsi',
+            528 => 'Wojnicza',
+
+            529 => 'Nowego Sącza',
+            530 => 'Gródka nad Dunajcem',
+            531 => 'Przyrodnicy',
+            532 => 'Miłkowej',
+
+            533 => 'Gródka nad Dunajcem',
+            534 => 'Posiadowej',
+            535 => 'Przełęczy Pod Kobylnicą',
+            536 => 'Przyrodnicy',
+            537 => 'Bartkowej',
+
+            538 => 'Gródka nad Dunajcem',
+            539 => 'Paleśnicy',
+            540 => 'Rożnowa',
+            541 => 'Bacówki na Jamnej (490 m)',
+            542 => 'Bartkowej',
+
+            543 => 'Nowego Sącza',
+            544 => 'Mogilna',
+
+            545 => 'Jodłowej',
+            546 => 'Krużlowej Wyżniej',
+            547 => 'Ptaszkowej (BW.02)',
+
+            548 => 'Przyrodnicy',
+            549 => 'Bobowej',
+            550 => 'Podola Górowej',
+            551 => 'Bacówki na Jamnej (490 m)',
+            552 => 'Siekierczyny',
+            553 => 'Falkowej (506 m)',
+            554 => 'Jasiennej',
+
         ];
 
         $licznik = 1;
 
         foreach($punkty as $klucz => $punkt) {
-            if($klucz == 5 || $klucz == 7 || $klucz == 9 || $klucz == 13 || $klucz == 15 || $klucz == 18 || $klucz == 20 || $klucz == 23 || $klucz == 25 || $klucz == 28 || $klucz == 31 || $klucz == 33 || $klucz == 35 || $klucz == 38 || $klucz == 40 || $klucz == 42 || $klucz == 44 || $klucz == 46 || $klucz == 48 || $klucz == 51 || $klucz == 54 || $klucz == 57 || $klucz == 60  || $klucz == 70 || $klucz == 71 || $klucz == 72 || $klucz == 74 || $klucz == 77 || $klucz ==80 || $klucz == 83 
-            || $klucz == 86 || $klucz == 91 || $klucz == 99 || $klucz == 105 || $klucz == 108 || $klucz == 111 || $klucz == 115  || $klucz == 121 || $klucz == 124 || $klucz == 127 || $klucz == 130 || $klucz == 133 || $klucz == 149 || $klucz == 179 || $klucz == 190 || $klucz == 204  || $klucz == 208 || $klucz == 211 || $klucz == 215 || $klucz == 220 || $klucz == 226 || $klucz == 233 || $klucz == 235 || $klucz == 244 || $klucz == 247 || $klucz == 252 || $klucz == 259  || $klucz == 261  || $klucz == 263 || $klucz == 265 
-            || $klucz == 268) {$licznik++;}
+            if($klucz == 5 || $klucz == 7 || $klucz == 9 || $klucz == 13 || $klucz == 15 || $klucz == 18 || $klucz == 20 || $klucz == 23 || $klucz == 25 || $klucz == 28 || $klucz == 31 || $klucz == 33 || $klucz == 35 || $klucz == 38 || $klucz == 40 || $klucz == 42 || $klucz == 44 || $klucz == 46 || $klucz == 48 || $klucz == 51 || $klucz == 54 || $klucz == 57 || $klucz == 60 || $klucz == 62  || $klucz == 72 || $klucz == 73 ||  $klucz == 76 || $klucz == 79 || $klucz ==82 || $klucz == 85 
+            || $klucz == 88 || $klucz == 93 || $klucz == 101 || $klucz == 107 || $klucz == 110 || $klucz == 113 || $klucz == 117  || $klucz == 123 || $klucz == 126 || $klucz == 129 || $klucz == 132 || $klucz == 135 || $klucz == 151 || $klucz == 181 || $klucz == 192 || $klucz == 206  || $klucz == 210 || $klucz == 213 || $klucz == 217 || $klucz == 222 || $klucz == 228 || $klucz == 235 || $klucz == 237 || $klucz == 246 || $klucz == 249 || $klucz == 254 || $klucz == 261  || $klucz == 263  || $klucz == 265 || $klucz == 267 
+            || $klucz == 270 || $klucz == 274 || $klucz == 278 || $klucz == 283 || $klucz == 285 || $klucz == 291 || $klucz == 295 || $klucz == 299 || $klucz == 302 || $klucz == 307 || $klucz == 310 || $klucz == 312 || $klucz == 315 || $klucz == 318 || $klucz == 324 || $klucz == 328 || $klucz == 331 || $klucz == 339 || $klucz == 343|| $klucz == 346|| $klucz == 350|| $klucz == 357|| $klucz == 362 || $klucz == 364 || $klucz == 366 || $klucz == 369 || $klucz == 374 || $klucz == 377 || $klucz == 379 || $klucz == 381 || $klucz == 385
+            || $klucz == 392 || $klucz == 400|| $klucz == 402|| $klucz == 404 || $klucz == 408 || $klucz == 410 || $klucz == 415 || $klucz == 418 || $klucz == 423 || $klucz == 427 || $klucz == 433 || $klucz == 438 || $klucz == 442 || $klucz == 448 || $klucz == 450 || $klucz == 452 || $klucz == 458 || $klucz == 460 || $klucz == 464 || $klucz == 468 || $klucz == 470 || $klucz == 473 || $klucz == 487 || $klucz == 490 || $klucz == 497 || $klucz == 501 || $klucz == 503 || $klucz == 510
+            || $klucz == 512 || $klucz == 515 || $klucz == 522 || $klucz == 525 || $klucz == 527 || $klucz == 529 || $klucz == 533 || $klucz == 538 || $klucz == 543 || $klucz == 545 || $klucz == 548 || $klucz == 555) {$licznik++;}
             DB::table('podpunkt')->insert([
                 'nazwa' => $punkt,
                 'id_punkt' => $licznik,
