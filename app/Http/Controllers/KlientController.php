@@ -42,6 +42,7 @@ class KlientController extends Controller
 
     public function store(UzytkownikRequest $request)
     {   
+
         try
         {
         $klienci = User::create(

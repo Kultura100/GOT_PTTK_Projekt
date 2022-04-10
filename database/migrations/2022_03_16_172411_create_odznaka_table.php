@@ -17,7 +17,7 @@ class CreateOdznakaTable extends Migration
             $table->id();
             $table->string('nazwa');
             $table->string('zrodlo');
-            $table->string('wymaganepunkty');
+            $table->longText('wymaganepunkty');
             $table->timestamps();
         });
     }

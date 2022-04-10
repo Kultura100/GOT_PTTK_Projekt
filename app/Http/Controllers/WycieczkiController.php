@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Grupa;
 use App\Models\Pasmo;
 use App\Models\Punkt;
+use App\Models\Odcinek;
 use App\Models\Podpunkt;
 use App\Models\Wycieczka;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class WycieczkiController extends Controller
             'wycieczka' => Wycieczka::get(),
             'pasma' => Pasmo::get(),
             'grupy' => Grupa::get(),
-            'punkty' => Punkt::get(),
+            'odcinki' => Odcinek::get(),
         ]);
     }
 

@@ -18,11 +18,11 @@ class CreateOdcinekTable extends Migration
             $table->unsignedBigInteger('id_punkt_poczatek');
             $table->foreign('id_punkt_poczatek')
             ->references('id')
-            ->on('punkt');
+            ->on('podpunkt');
             $table->unsignedBigInteger('id_punkt_koniec');
             $table->foreign('id_punkt_koniec')
             ->references('id')
-            ->on('podpunkt');
+            ->on('punkt');
             $table->integer('punkty_od');
             $table->integer('punkty_do');
             $table->boolean('otwarty')->default(true);
