@@ -34,46 +34,30 @@
                   </tr>     
               </thead>   
                   <tbody>
-                      <tr>        
-                          {{-- @dd($wycieczki->uzytkownikWycieczka);                   --}}
-                          {{-- <th scope='row'>{{ $wycieczki->uzytkownikWycieczka->imie}} {{ $wycieczki->uzytkownikWycieczka->nazwisko}}</th> --}}
-                          <th scope='row'>{{ $wycieczki->wieleodcinkow->wycieczka_odcinek2->punktpocz->nazwa}}</th>
+                      <tr>     
+                          <th scope='row'>{{ $wycieczki->uzytkownikWycieczka->imie}} {{ $wycieczki->uzytkownikWycieczka->nazwisko}}</th>
+                          <th scope='row'>
+                            {{-- @foreach($wycieczki->wieleodcinkow as $odcinek)
+                              {{$odcinek->wycieczka_odcinek2->punktpocz->nazwa}}
+                            @endforeach --}}
+                            {{ $wycieczki->wieleodcinkow->first()->wycieczka_odcinek2->punktpocz->nazwa}}
+                          </th>
                           <th scope='row'>
                             @foreach($wycieczki->wieleodcinkow as $odcineczek)
-                                @foreach($odcineczek as $odcinek)
-                                    @if($odcinek->otwarty == 1)
-                                        {{ $odcinek->punktpocz->nazwa }} {{ $odcinek->punktkoncz->nazwa}}
+                                    @if($odcineczek->wycieczka_odcinek2->otwarty == true)
+                                        {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}
                                     @endif
-                                @endforeach
                             @endforeach
                         </th>
                         <th scope='row'>
-                            @foreach($wycieczki->wieleodcinkow as $odcineczek)
-                                @foreach($odcineczek as $odcinek)
-                                    @if($odcinek->otwarty == 0)
-                                        {{ $odcinek->punktpocz->nazwa }} {{ $odcinek->punktkoncz->nazwa}}
-                                    @endif
-                                @endforeach
-                            @endforeach
+                          @foreach($wycieczki->wieleodcinkow as $odcineczek)
+                          @if($odcineczek->wycieczka_odcinek2->otwarty == false)
+                              {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}
+                          @endif
+                  @endforeach
                         </th>                          
-                          <th scope='row'>{{ $wycieczki->wieleodcinkow->wycieczka_odcinek2->punktkoncz->nazwa}}</th>
+                          <th scope='row'>{{  $wycieczki->wieleodcinkow->last()->wycieczka_odcinek2->punktpocz->nazwa}}</th>
                           </tbody>                              
-              
-            
-              @foreach($wycieczki as $wycieczka)
-              @foreach($wycieczka->wieleodcinkow as $wycieczkaa)
-              <li class="table-row">
-                <div class="col col-1"><!-- data poczatku wycieczki -->{{$wycieczka->dataod}}</div>
-                <div class="col col-2"><!-- data konca wycieczki -->{{$wycieczka->datado}}</div>
-                <div class="col col-3"><!-- nazwa pasma -->{{$wycieczkaa->wycieczka_odcinek2->pasmo->nazwa}}</div>
-                <div class="col col-4"><!-- ilosc zebranych punktow -->{{$wycieczka->punkty}}</div>
-                <div class="col col-5 m-1"><!-- status wycieczki -->{{$wycieczkaa->status->nazwa}}</div>
-                <div class="col col-6">
-                    <a><button class="button-1 m-2" role="button">Szczegóły</button></a>
-                </div>
-              </li>
-              @endforeach
-              @endforeach
             </ul>
           </div>
       </div>      
