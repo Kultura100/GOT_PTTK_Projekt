@@ -98,6 +98,7 @@ class OdcinekSeeder extends Seeder
             ['id_punkt_koniec' => 23,'id_punkt_poczatek' => 59,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 1],
 
             ['id_punkt_koniec' => 24,'id_punkt_poczatek' => 60,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 1],
+            ['id_punkt_poczatek' => 61,'id_punkt_koniec' => 24,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 1]
             //Pasmo 1
 
             // ['id_punkt_poczatek' => 61,'id_punkt_koniec' => 24,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 1],
