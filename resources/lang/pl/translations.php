@@ -55,6 +55,7 @@ return [
             [
               'create' => 'Dodanie nowej wycieczki',
               'edit' => 'Edycja aktualnej wycieczki',
+              'back' => 'Powrót',
             ],
         'attribute' => 
             [
