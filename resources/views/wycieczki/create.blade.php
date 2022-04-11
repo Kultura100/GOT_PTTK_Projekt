@@ -64,25 +64,25 @@
 
             const dragArea = document.querySelector(".wrapper");
             new Sortable(dragArea, {
-                animation: 350
+                animation: 350,
+                removeOnSpill: true
             });
 
             $("#guziczek").click(function() {
                 var nazwa = $("#wycieczki-odcinek option:selected").text();
                 var tmp;
-                if($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione')
-                {
-                tmp = "<input type='hidden' value='1' name='zmienione'>" 
-                }
-                else
-                tmp = "<input type='hidden' value='0' name='zmienione'>" 
+                if ($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione') {
+                    tmp = "<input type='hidden' value='1' name='zmienione'>"
+                } else
+                    tmp = "<input type='hidden' value='0' name='zmienione'>"
                 var idodcinka = $("#wycieczki-odcinek").val();
-                var tekst = "<input type='hidden' value='" + idodcinka + "' name='odcinek'>" 
+                var tekst = "<input type='hidden' value='" + idodcinka + "' name='odcinek'>"
                 tekst += tmp;
                 $(".wrapper").append(
-                    "<div class='item' id='"+idodcinka+"'>" + tekst + "<span class='text'>" + nazwa +
+                    "<div class='item' id='" + idodcinka + "'>" + tekst + "<span class='text'>" + nazwa +
                     "</span></i> <i class='fas fa-bars'></i></div>"
                 );
+                $("#wycieczki-odcinek option:selected").remove();
             });
         </script>
     </x-slot>
@@ -105,7 +105,7 @@
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control @error('dataod') is-invalid @enderror"
                                         name="dataod" id="wycieczki-dataod"
-                                        value="@if (null !== old('dataod')) {{ old('dataod') }}@else{{ date('Y-m-d') }} @endif"
+                                        value="@if(null !== old('dataod')){{old('dataod')}}@else{{date('Y-m-d')}}@endif"
                                         min="{{ date('Y-m-d') }}">
                                     @error('dataod')
                                         <span class="invalid-feedback" role="alert">
@@ -174,7 +174,8 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="wycieczki-odcinek" class="col-sm-2" id="odcinek_label">
+                                <label for="wycieczki-odcinek" class="col-sm-2" id="odcinek_label"
+                                    style="display: none;">
                                     Odcinek
                                 </label>
                                 <div class="col-sm-10">
@@ -182,7 +183,7 @@
                                         <div class="col">
                                             <select id="wycieczki-odcinek"
                                                 class="form-select @error('odcinek') is-invalid @enderror "
-                                                name="odcinek" value="{{ old('odcinek') }}">
+                                                name="odcinek" value="{{ old('odcinek') }}" style="display: none;">
                                                 <option hidden>Wybierz punkt</option>
                                                 @forelse ($odcinki as $odcinek)
                                                     <option name="odcinek" value="{{ $odcinek->id }}">
@@ -203,7 +204,8 @@
                                             @enderror
                                         </div>
                                         <div class="col">
-                                            <a href="#" class="btn btn-primary m-1" id="guziczek">Dodaj Odcinek</a>
+                                            <a href="#" class="btn btn-primary m-1" id="guziczek"
+                                                style="display: none;">Dodaj Odcinek</a>
                                         </div>
                                     </div>
                                 </div>
