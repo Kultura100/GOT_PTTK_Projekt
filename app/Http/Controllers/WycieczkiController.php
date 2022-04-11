@@ -56,7 +56,9 @@ class WycieczkiController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+        $przetestuj = $request->input('odcinekid');
+        if(isset($przetestuj)){
+
         $wycieczka = Wycieczka::create(
         [
             'id_turysty' => Auth::user()->id,
@@ -66,10 +68,20 @@ class WycieczkiController extends Controller
             'punkty' => 0,            
         ]);
 
-        $przetestuj = $request->input('odcinekid');
-        if(isset($przetestuj)){
+        $licznikpunktow = 0;
+        $aktualnypunkt = 0;
+        $zmienionykierunek;
+        for ($i=0; $i < count($request->input('odcinekid')) ; $i++) { 
 
-        for ($i=0; $i < $request->input('odcinekid') ; $i++) { 
+            $odcinekpunkty = Odcinek::find($request->input('odcinekid')[$i]);
+            if($request->input('zmienione')[$i] == 1){
+                $zmienionykierunek = 1;
+                $licznikpunktow += $odcinekpunkty->punkty_od;
+                $aktualnypunkt =  $odcinekpunkty->punkty_do;
+                } else {$zmienionykierunek = 0;
+                    $licznikpunktow += $odcinekpunkty->punkty_do;
+                    $aktualnypunkt =  $odcinekpunkty->punkty_od;
+                }
 
             $wycieczka_odcinek = Wycieczka_odcinek::create(
                 [
@@ -77,20 +89,19 @@ class WycieczkiController extends Controller
                     'id_odcinek' => $request->input('odcinekid')[$i],
                     'data' => $request->input('dataod'),
                     'id_status' => 3,
-                    'liczba_punktow' => 2,
-                    // 'odwrocony' => if($request->input('zmienione')[$i] == 1){ 1 },
-                ]
-            );
+                    'liczba_punktow' => $aktualnypunkt,
+                    'odwrocony' => $zmienionykierunek,
+                ]);
+
+                $wycieczka->update([
+                    'punkty' => $licznikpunktow,
+                ]);
         }
-
     }
-       
-
-
 
         return redirect()->route('wycieczki.index')
-            ->with('success', __('translations.wycieczki', [
-                'numer' => $wycieczka->id
+            ->with('success', __('translations.wycieczki.success',[
+                'name' => $wycieczka->id,
             ]));
     }
 }

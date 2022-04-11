@@ -30,7 +30,6 @@ class CreateWycieczkaOdcinekTable extends Migration
             ->on('status');
             $table->integer('liczba_punktow');
             $table->boolean('odwrocony');
-            $table->timestamps();
         });
     }
 

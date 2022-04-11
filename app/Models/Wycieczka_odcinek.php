@@ -9,11 +9,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Wycieczka_odcinek extends Model
 {
-    use HasFactory;    
+    use HasFactory;  
+    public $timestamps = false;  
     protected $table = 'wycieczka_odcinek';
     protected $fillable = 
     [
         'id_wycieczka',
+        'odwrocony',
         'id_odcinek',
         'data',
         'id_status',
