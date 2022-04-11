@@ -87,6 +87,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->where('id', '[0-9]+')
             ->name('create')
             ->middleware(['permission:klient.store']);
+        Route::get('szczegoly/{id}',[WycieczkiController::class, 'szczegoly'])
+            ->where('id', '[0-9]+')
+            ->name('szczegoly')
+            ->middleware(['permission:klient.store']);
         Route::get('create/{id}',[WycieczkiController::class, 'pokazPasma'])
             ->where('id', '[0-9]+')
             ->name('pokazPasma')

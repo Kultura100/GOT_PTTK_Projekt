@@ -29,4 +29,9 @@ class Wycieczka extends Model{
     public function wieleodcinkow(){
         return $this->hasMany(Wycieczka_odcinek::class,'id_wycieczka','id');
     }
+
+    public function uzytkownikWycieczka(){
+        return $this->belongsTo(User::class,'id_tworcy', 'id');
+    }
+    
 }
