@@ -33,7 +33,8 @@
                                         '<option hidden>Wybierz pasmo</option>');
                                     $.each(data, function(key, pasmo) {
                                         $('select[name="pasmo"]').append('<option value="' +
-                                            key + '">' + pasmo.nazwa + '</option>');
+                                            (key + 1) + '">' + pasmo.nazwa + '</option>'
+                                            );
                                     });
                                 } else {
                                     $('#wycieczki-pasmo').empty();
@@ -49,7 +50,7 @@
                     var pasmo = $(this).val();
                     if (pasmo) {
                         $.ajax({
-                            url: '/wycieczki/create/' + pasmo,
+                            url: '/wycieczki/odcinki/' + pasmo,
                             type: "GET",
                             data: {
                                 "_token": "{{ csrf_token() }}"
@@ -57,22 +58,28 @@
                             dataType: "json",
                             success: function(data) {
                                 if (data) {
-                                    $('#pasmo_label').show();
-                                    $('#wycieczki-pasmo').show();
-                                    $('#wycieczki-pasmo').empty();
-                                    $('#wycieczki-pasmo').append(
-                                        '<option hidden>Wybierz pasmo</option>');
-                                    $.each(data, function(key, pasmo) {
-                                        $('select[name="pasmo"]').append('<option value="' +
-                                            key + '">' + pasmo.nazwa + '</option>');
+                                    $('#wycieczki-odcinek').empty();
+                                    $('#wycieczki-odcinek').append(
+                                        '<option hidden>Wybierz odcinek</option>');
+                                    $.each(data, function(key, odcinek) {
+                                        $('select[name="odcinek"]').append(
+                                            '<option value="' + (key +
+                                            1) + '"> z ' + odcinek.punktpocz.nazwa +
+                                            ' do ' + odcinek.punktkoncz.nazwa +
+                                            '</option>' +
+                                            '<option name="zmienione" value="' + (key +
+                                                1) + '"> z ' + odcinek.punktkoncz
+                                            .nazwa + ' do ' + odcinek.punktpocz.nazwa +
+                                            '</option>'
+                                        );
                                     });
                                 } else {
-                                    $('#wycieczki-pasmo').empty();
+                                    $('#wycieczki-odcinek').empty();
                                 }
                             }
                         });
                     } else {
-                        $('#wycieczki-pasmo').empty();
+                        $('#wycieczki-odcinek').empty();
                     }
                 });
 
@@ -103,17 +110,18 @@
                 var nazwa = $("#wycieczki-odcinek option:selected").text();
                 var tmp;
                 if ($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione') {
-                    tmp = "<input type='hidden' value='1' name='zmienione'>"
+                    tmp = "<input type='hidden' name='zmienione[]' value='1'>"
                 } else
-                    tmp = "<input type='hidden' value='0' name='zmienione'>"
-                var idodcinka = $("#wycieczki-odcinek").val();
-                var tekst = "<input type='hidden' value='" + idodcinka + "' name='odcinek'>"
+                    tmp = "<input type='hidden' name='zmienione[]' value='0'>"
+                var idodcinka = $("#wycieczki-odcinek option:selected").val();
+                var tekst = "<input type='hidden' name='odcinekid[]' value='" + idodcinka + "' >"
                 tekst += tmp;
+                $(".doformy").append(tekst);
                 $(".wrapper").append(
-                    "<div class='item' id='" + idodcinka + "'>" + tekst + "<span class='text'>" + nazwa +
+                    "<div class='item' id='" + idodcinka + "'><span class='text'>" + nazwa +
                     "</span></i> <i class='fas fa-bars'></i></div>"
                 );
-                $("#wycieczki-odcinek option:selected").remove();
+                //$("#wycieczki-odcinek option:selected").remove();
             });
         </script>
     </x-slot>
@@ -126,8 +134,9 @@
                         <h2 class="h3">Tworzenie Wycieczki</h2>
                     </div>
                     <div class="card-body no-padding">
-                        <form id="wycieczki-form" method="POST" action="">
-                            {{-- {{ route('wycieczki.store') }} --}}
+                        <form id="wycieczki-form" method="POST" action="{{ route('wycieczki.store') }}">
+                            <div class="doformy">
+                            </div>
                             @csrf
                             <div class="row mb-3">
                                 <label for="wycieczki-dataod" class="col-sm-2 col-form-label">
@@ -215,18 +224,6 @@
                                             <select id="wycieczki-odcinek"
                                                 class="form-select @error('odcinek') is-invalid @enderror "
                                                 name="odcinek" value="{{ old('odcinek') }}" style="display: none;">
-                                                <option hidden>Wybierz odcinek</option>
-                                                @forelse ($odcinki as $odcinek)
-                                                    <option name="odcinek" value="{{ $odcinek->id }}">
-                                                        z {{ $odcinek->punktpocz->nazwa }} do
-                                                        {{ $odcinek->punktkoncz->nazwa }}
-                                                    </option>
-                                                    <option name="zmienione" value="{{ $odcinek->id }}">
-                                                        z {{ $odcinek->punktkoncz->nazwa }} do
-                                                        {{ $odcinek->punktpocz->nazwa }}
-                                                    </option>
-                                                @empty
-                                                @endforelse
                                             </select>
                                             @error('odcinek')
                                                 <div class="" role="alert">
@@ -243,6 +240,7 @@
                             </div>
                     </div>
                 </div>
+
                 <div class="d-flex justify-content-end mb-3 ">
                     <div class="btn-group" role="group" aria-label="Cancel or submit form">
                         {{-- {{ route('wycieczki.index') }} --}}

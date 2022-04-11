@@ -91,9 +91,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->where('id', '[0-9]+')
             ->name('pokazPasma')
             ->middleware(['permission:klient.store']);
-        Route::get('punkty/{id}',[WycieczkiController::class, 'pokazpunkty'])
+        Route::get('odcinki/{id}',[WycieczkiController::class, 'pokazodcinki'])
             ->where('id', '[0-9]+')
-            ->name('pokazpunkty')
+            ->name('pokazodcinki')
+            ->middleware(['permission:klient.store']);
+        Route::post('',[WycieczkiController::class, 'store'])
+            ->name('store')
             ->middleware(['permission:klient.store']);
     });
 
