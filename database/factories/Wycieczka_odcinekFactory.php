@@ -24,6 +24,7 @@ class Wycieczka_odcinekFactory extends Factory
             'data' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'id_status' => Status::select('id')->orderByRaw("RAND()")->first()->id,
             'liczba_punktow' => $this->faker->numberBetween($min = 1, $max = 10),
+            'odwrocony' => $this->faker->boolean,
         ];
     }
 }

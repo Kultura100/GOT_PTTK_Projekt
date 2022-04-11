@@ -41,15 +41,17 @@
             {{-- dokonczyc zrobic zeby się wyswietlalo --}}
             @if ($punkty->count())
                 @foreach ($punkty as $punkt)
-                    <li class="list-group-item active"><?php
-                    if(strpos($punkt->nazwa, "(") !== false){
+                    <li class="list-group-item active">
+                    @php
+                    if( strpos($punkt->nazwa, '(') !== false){
                         $tablice = explode("(", $punkt->nazwa, strlen($punkt->nazwa));
-                        print("<div class='text-left'>$tablice[0]</div> <div class='text-right'>$tablice[1]</div>");
+                        print("<div class='text-left'>$tablice[0]</div> <div class='text-right'>($tablice[1]</div>");
                     } 
                     else{
-                        $punkt->nazwa
-                        } 
-                    ?></li>
+                        print($punkt->nazwa);
+                    }
+                    @endphp
+                    </li>
                     @foreach (App\Models\Punkt::find($punkt->id)->punktnaliscie as $punkcik)
                         <li class="list-group-item">{{ $punkcik->nazwa }}</li>
                     @endforeach
