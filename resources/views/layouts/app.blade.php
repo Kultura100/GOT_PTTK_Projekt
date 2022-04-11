@@ -77,7 +77,7 @@
                 font-size: 25pt;
                 padding-bottom: 10px;
                 color: black;
-                font-size:28px;
+                font-size: 28px;
                 margin-right: 10px;
                 margin-left: 40px;
             }
@@ -188,7 +188,7 @@
 
     @include('layouts.navigation')
     <div class="container">
-        {{ $slot }}
+    {{ $slot }}
     </div>
 
     <footer class="bg-dark text-light">
