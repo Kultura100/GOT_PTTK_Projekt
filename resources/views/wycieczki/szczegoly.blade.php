@@ -29,19 +29,24 @@
                           <th scope='row'>
                             @foreach($wycieczki->wieleodcinkow as $odcineczek)
                                     @if($odcineczek->wycieczka_odcinek2->otwarty == true)
-                                        {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}
+                                        {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} - {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}, 
                                     @endif
                             @endforeach
                         </th>
                         <th scope='row'>
                           @foreach($wycieczki->wieleodcinkow as $odcineczek)
                           @if($odcineczek->wycieczka_odcinek2->otwarty == false)
-                              {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}
+                              {{$odcineczek->wycieczka_odcinek2->punktpocz->nazwa }} - {{ $odcineczek->wycieczka_odcinek2->punktkoncz->nazwa}}
                           @endif
                   @endforeach
                         </th>                          
                           <th scope='row'>{{  $wycieczki->wieleodcinkow->last()->wycieczka_odcinek2->punktkoncz->nazwa}}</th>
+<<<<<<< HEAD
                           </tbody>
             </table>                              
+=======
+                          </tbody>                              
+            </ul>
+>>>>>>> 2c48ab745610d79825567a0d43bdbe0f40af6a0c
           </div>
 </x-app-layout>
