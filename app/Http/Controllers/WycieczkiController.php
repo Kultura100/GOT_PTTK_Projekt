@@ -10,6 +10,7 @@ use App\Models\Podpunkt;
 use App\Models\Wycieczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
+use App\Models\Wycieczka_odcinek;
 use Illuminate\Support\Facades\Auth;
 
 class WycieczkiController extends Controller
@@ -40,22 +41,46 @@ class WycieczkiController extends Controller
         return response()->json($pasma);
     }
 
-    public function pokazpunkty($id)
+    public function pokazodcinki($id)
     {
-        $podpunkty = Podpunkt::where('id_punkt',$id)->get();
-        return response()->json($podpunkty);
+        $odcinek = Odcinek::where('id_pasma',$id)->get()->load('punktpocz', 'punktkoncz');
+        return response()->json($odcinek);
     }
 
-    public function store(WycieczkaRequest $request)
+    public function store(Request $request)
     {
-      //ponizej      
+        dd($request);
         $wycieczka = Wycieczka::create(
         [
-            'id_turysty' => $request->input('id_turysty'),
+            'id_turysty' => Auth::user()->id,
+            'id_tworcy' => Auth::user()->id,
             'dataod' => $request->input('dataod'),
             'datado' => $request->input('datado'),
-            'punkty' => $request->input('punkty')            
+            'punkty' => 0,            
         ]);
+
+        $przetestuj = $request->input('odcinekid');
+        if(isset($przetestuj)){
+
+        for ($i=0; $i < $request->input('odcinekid') ; $i++) { 
+
+            $wycieczka_odcinek = Wycieczka_odcinek::create(
+                [
+                    'id_wycieczka' => $wycieczka->id,
+                    'id_odcinek' => $request->input('odcinekid')[$i],
+                    'data' => $request->input('dataod'),
+                    'id_status' => 3,
+                    'liczba_punktow' => 2,
+                    // 'odwrocony' => if($request->input('zmienione')[$i] == 1){ 1 },
+                ]
+            );
+        }
+
+    }
+       
+
+
+
         return redirect()->route('wycieczki.index')
             ->with('success', __('translations.wycieczki', [
                 'numer' => $wycieczka->id
