@@ -184,7 +184,7 @@
                                             <select id="wycieczki-odcinek"
                                                 class="form-select @error('odcinek') is-invalid @enderror "
                                                 name="odcinek" value="{{ old('odcinek') }}" style="display: none;">
-                                                <option hidden>Wybierz punkt</option>
+                                                <option hidden>Wybierz odcinek</option>
                                                 @forelse ($odcinki as $odcinek)
                                                     <option name="odcinek" value="{{ $odcinek->id }}">
                                                         z {{ $odcinek->punktpocz->nazwa }} do
