@@ -46,6 +46,37 @@
                 });
 
                 $('#wycieczki-pasmo').on('change', function() {
+                    var pasmo = $(this).val();
+                    if (pasmo) {
+                        $.ajax({
+                            url: '/wycieczki/create/' + pasmo,
+                            type: "GET",
+                            data: {
+                                "_token": "{{ csrf_token() }}"
+                            },
+                            dataType: "json",
+                            success: function(data) {
+                                if (data) {
+                                    $('#pasmo_label').show();
+                                    $('#wycieczki-pasmo').show();
+                                    $('#wycieczki-pasmo').empty();
+                                    $('#wycieczki-pasmo').append(
+                                        '<option hidden>Wybierz pasmo</option>');
+                                    $.each(data, function(key, pasmo) {
+                                        $('select[name="pasmo"]').append('<option value="' +
+                                            key + '">' + pasmo.nazwa + '</option>');
+                                    });
+                                } else {
+                                    $('#wycieczki-pasmo').empty();
+                                }
+                            }
+                        });
+                    } else {
+                        $('#wycieczki-pasmo').empty();
+                    }
+                });
+
+                $('#wycieczki-pasmo').on('change', function() {
                     if ($('#wycieczki-pasmo').css('display') !== 'none') {
                         $('#wycieczki-odcinek').show();
                         $('#odcinek_label').show();
