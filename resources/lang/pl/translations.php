@@ -50,6 +50,7 @@ return [
     'wycieczki' => 
     [
         'title' => 'Wycieczki',
+        'success' => 'Poprawnie utworzono wycieczke o id :name !',
         'label' => 
             [
               'create' => 'Dodanie nowej wycieczki',

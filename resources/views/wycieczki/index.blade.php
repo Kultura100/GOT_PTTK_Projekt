@@ -42,7 +42,11 @@
                 <div class="col col-4"><!-- ilosc zebranych punktow -->{{$wycieczka->punkty}}</div>
                 <div class="col col-5 m-1"><!-- status wycieczki -->{{$wycieczkaa->status->nazwa}}</div>
                 <div class="col col-6">
-                    <a><button class="button-1 m-2" role="button">Szczegóły</button></a>
+                  <a href="{{ route('wycieczki.szczegoly', ['id' => $wycieczka->id]) }}">
+                    <x-button class="hover:bg-green-700">
+                        Szczegóły
+                    </x-button>
+                </a>
                 </div>
               </li>
               @endforeach
