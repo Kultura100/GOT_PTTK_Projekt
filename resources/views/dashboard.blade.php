@@ -1,7 +1,7 @@
 <style>
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 section{
     display: flex;
@@ -31,6 +31,12 @@ header{
     background-color: (0, 0, 0, 0.6);
     z-index: -1;
 }
+
+.container {
+  /* margin-right: 0;
+  margin-left: 0; */
+  padding: 0;
+}
 </style>
 
 
@@ -38,11 +44,11 @@ header{
     <x-slot name="styles">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
       </x-slot>
-<header>
+{{-- <header>
     <div class="container-fluid text-center mt-3 mb-3">
             <img src="{{ URL::asset('/images/logo-pttk.png')}}" class="img-fluid fixed" width=20% height=20% alt="logo">
     </div>
-</header>
+</header> --}}
 
 <section>
 <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-left">
@@ -59,19 +65,11 @@ header{
     </div>
 </div>
 
-<div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center">
-    <p class="display-4">Test</p>
-    <p class="header-text mb-5"></p>
+{{-- <div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center"> --}}
+  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="120%" alt="szlaki">
     
     
-</div> 
-
-<div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center">
-    <p class="display-4">Test</p>
-    <p class="header-text mb-5"></p>
-    
-    
-</div> 
+{{-- </div>  --}}
 
 {{-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">

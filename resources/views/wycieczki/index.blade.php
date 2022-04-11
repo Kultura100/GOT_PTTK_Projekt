@@ -21,8 +21,8 @@
           @endif
       </div>
       <div id="no-more-tables">
-        <div class="container">            
-            <h2><small>Wycieczki dodane:</small></h2>
+        <div class="container">
+          <h2><small>Wycieczki dodane:</small></h2>            
             <ul class="responsive-table">
               <li class="table-header">
                 <div class="col col-1">Data początku</div>

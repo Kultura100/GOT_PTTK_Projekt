@@ -17,6 +17,7 @@
             text-align: left;
             font-size: 20px;
             font-weight: bold;
+
         }
 
         .list-group-item {
@@ -32,6 +33,10 @@
 
         }
 
+        #prawo{
+            float: right;
+        }
+
     </style>
 
     <div class="container">
@@ -45,7 +50,7 @@
                     @php
                     if( strpos($punkt->nazwa, '(') !== false){
                         $tablice = explode("(", $punkt->nazwa, strlen($punkt->nazwa));
-                        print("<div class='text-left'>$tablice[0]</div> <div class='text-right'>($tablice[1]</div>");
+                        print("<div class='text-left'>$tablice[0] <span id='prawo'>($tablice[1]</span></div>");
                     } 
                     else{
                         print($punkt->nazwa);
@@ -62,9 +67,6 @@
                     <li class="list-group-item active"> Brak punktow</li>
                 </ul>
             @endif
-        </ul>
-
-
         </ul>
     </div>
 </x-app-layout>

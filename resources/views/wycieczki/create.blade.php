@@ -244,7 +244,7 @@
                 <div class="d-flex justify-content-end mb-3 ">
                     <div class="btn-group" role="group" aria-label="Cancel or submit form">
                         {{-- {{ route('wycieczki.index') }} --}}
-                        <a href="{{ route('wycieczki.index') }}" type="submit" class="btn btn-primary m-1">
+                        <a href="{{ route('wycieczki.index') }}" type="submit" class="btn btn-danger m-1">
                             {{ __('translations.buttons.cancel') }}
                         </a>
                         <button type="submit" class="btn btn-primary m-1">
