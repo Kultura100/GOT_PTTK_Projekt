@@ -59,8 +59,15 @@ header{
     </div>
 </div>
 
- <div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center">
-    <p class="display-1">Test</p>
+<div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center">
+    <p class="display-4">Test</p>
+    <p class="header-text mb-5"></p>
+    
+    
+</div> 
+
+<div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center">
+    <p class="display-4">Test</p>
     <p class="header-text mb-5"></p>
     
     
