@@ -30,8 +30,8 @@ class StatusSeeder extends Seeder
         foreach($statusy as $klucz => $status) {
             DB::table('status')->insert([
                 'nazwa' => $status,
-                'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
-                'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
+                'created_at' => $generator->dateTime(),
+                'updated_at' => $generator->dateTime(),
             ]);
         }
     }

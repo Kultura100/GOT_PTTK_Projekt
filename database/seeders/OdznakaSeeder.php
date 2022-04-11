@@ -39,12 +39,17 @@ class OdznakaSeeder extends Seeder
             2 =>120,
             3 =>360,
             4 =>720,
-            5 =>999,
-            6 =>999,
-            7 =>"",
-            8 =>999,
-            9 =>999,
-            10 =>999,
+            5 =>"Odbycie dwóch regulaminowych wycieczek wielodniowych w dwóch wybranych terenach górskich I-VI",
+            6 =>"Odbycie dwóch regulaminowych wycieczek wielodniowych w dwóch wybranych terenach górskich I–VI, z pominięciem tych ze stopnia brązowego.
+            Dodatkowo należy zdobyć 100 punktów w Górach Świętokrzyskich.",
+            7 =>"Odbycie dwóch regulaminowych wycieczek wielodniowych w dwóch pozostałych terenach górskich I–VI.
+            W Tatrach i na Podtatrzu 150 punktów,60 punktów w Tatrach Zachodnich, 60 punktów w Tatrach Wysokich, 30 punktów na Podtatrzu.",
+            8 =>"Posiadacz dużego złotego stopnia GOT PTTK musi uzyskać siedmiokrotnie, a posiadacz małego złotego stopnia GOT PTTK dziesięciokrotnie normę konieczną do zdobycia któregokolwiek małego stopnia GOT PTTK.
+            Jeśli posiadacz małego złotego stopnia GOT PTTK, który zdobywa którąkolwiek normę do odznaki „Za wytrwałość” chce zdobyć duże stopnie GOT PTTK, to zgodnie z § 8 pkt 1 regulaminu nie może równocześnie w latach ich zdobywania uzyskiwać norm do GOT PTTK „Za wytrwałość”.
+            Nadwyżek punktów nie zalicza się do kolejnej zdobywanej normy.",
+            9 =>"Kandydat na przodownika powinien spełniać następujące warunki: 
+            ukończone 18 lat,minimum średnie wykształcenie,co najmniej cztery lata stażu w PTTK,GOT małą w stopniu złotym,pisemną rekomendację macierzystego Oddziału PTTK",
+            10 =>"Kandydat mianowany na wniosek własny albo Komisji Egzaminacyjnej",
             11 => 15,
             12 => 30,
             13 => 45,
@@ -71,8 +76,8 @@ class OdznakaSeeder extends Seeder
                 'nazwa' => $odznaka,
                 'zrodlo' => $zrodlo[$klucz],
                 'wymaganepunkty' => $punkty[$klucz],
-                'created_at' => $generator->dateTimeBetween('-20 days','-10 days'),
-                'updated_at' => rand(0,9) < 5 ? null : $generator->dateTimeBetween('-10 days','-5 days'),
+                'created_at' => $generator->dateTime(),
+                'updated_at' => $generator->dateTime(),
             ]);
         }
     }

@@ -2,232 +2,270 @@
     <x-slot name="styles">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/raport.css') }}">
     </x-slot>
-    <x-slot name="scripts">               
-        {!!
-            JsValidator::formRequest('App\Http\Requests\wycieczki\WycieczkiRequest')
-        !!}
-        <script>            
+    <x-slot name="scripts">
+        {!! JsValidator::formRequest('App\Http\Requests\wycieczki\WycieczkiRequest') !!}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
+        <script>
             $(document).ready(function() {
                 $('#pasmo_label').hide();
-                $('#wycieczki-pasmo').hide();  
-                $('#punkty_label').hide();              
-            $('#wycieczki-grupa').on('change', function() {
-            var grupa = $(this).val();
-            if(grupa) {
-                $.ajax({ 
-                    url: '/wycieczki/create/'+grupa,
-                    type: "GET",
-                    data : {"_token":"{{ csrf_token() }}"},
-                    dataType: "json",
-                    success:function(data)
-                    {
-                        if(data){
-                            $('#pasmo_label').show();
-                            $('#wycieczki-pasmo').show();                                   
-                            $('#wycieczki-pasmo').empty();
-                            $('#wycieczki-pasmo').append('<option hidden>Wybierz pasmo</option>'); 
-                            $.each(data, function(key, pasmo){
-                                $('select[name="pasmo"]').append('<option value="'+ key +'">' + pasmo.nazwa+ '</option>');
-                            });
-                        }else{
-                            $('#wycieczki-pasmo').empty();
-                        }
+                $('#wycieczki-pasmo').hide();
+                $('#punkty_label').hide();
+                $('#wycieczki-odcinek').hide();
+                $('#odcinek_label').hide();
+                $('#guziczek').hide();
+
+                $('#wycieczki-grupa').on('change', function() {
+                    var grupa = $(this).val();
+                    if (grupa) {
+                        $.ajax({
+                            url: '/wycieczki/create/' + grupa,
+                            type: "GET",
+                            data: {
+                                "_token": "{{ csrf_token() }}"
+                            },
+                            dataType: "json",
+                            success: function(data) {
+                                if (data) {
+                                    $('#pasmo_label').show();
+                                    $('#wycieczki-pasmo').show();
+                                    $('#wycieczki-pasmo').empty();
+                                    $('#wycieczki-pasmo').append(
+                                        '<option hidden>Wybierz pasmo</option>');
+                                    $.each(data, function(key, pasmo) {
+                                        $('select[name="pasmo"]').append('<option value="' +
+                                            key + '">' + pasmo.nazwa + '</option>');
+                                    });
+                                } else {
+                                    $('#wycieczki-pasmo').empty();
+                                }
+                            }
+                        });
+                    } else {
+                        $('#wycieczki-pasmo').empty();
                     }
                 });
-            }else{
-                $('#wycieczki-pasmo').empty();
-            }
-            });
-            $('#wycieczki-pasmo').on('change', function() {
-            if($('#wycieczki-pasmo').css('display') !== 'none')
-            {
-                $('#punkty_label').show();  
-            }
-        });
 
-        $.validator.addMethod("endDate", function(value, element) {
-            var startDate = $('#wycieczki-dataod').val();
-            return Date.parse(startDate) <= Date.parse(value) || value == "";
-        }, "Data koncowa musi być pózniejsza niż początkowa");
-        $('#wycieczki-form').validate();
-    });
-        </script>       
+                $('#wycieczki-pasmo').on('change', function() {
+                    var pasmo = $(this).val();
+                    if (pasmo) {
+                        $.ajax({
+                            url: '/wycieczki/create/' + pasmo,
+                            type: "GET",
+                            data: {
+                                "_token": "{{ csrf_token() }}"
+                            },
+                            dataType: "json",
+                            success: function(data) {
+                                if (data) {
+                                    $('#pasmo_label').show();
+                                    $('#wycieczki-pasmo').show();
+                                    $('#wycieczki-pasmo').empty();
+                                    $('#wycieczki-pasmo').append(
+                                        '<option hidden>Wybierz pasmo</option>');
+                                    $.each(data, function(key, pasmo) {
+                                        $('select[name="pasmo"]').append('<option value="' +
+                                            key + '">' + pasmo.nazwa + '</option>');
+                                    });
+                                } else {
+                                    $('#wycieczki-pasmo').empty();
+                                }
+                            }
+                        });
+                    } else {
+                        $('#wycieczki-pasmo').empty();
+                    }
+                });
+
+                $('#wycieczki-pasmo').on('change', function() {
+                    if ($('#wycieczki-pasmo').css('display') !== 'none') {
+                        $('#wycieczki-odcinek').show();
+                        $('#odcinek_label').show();
+                        $('#guziczek').show();
+                    }
+                });
+
+
+
+                $.validator.addMethod("endDate", function(value, element) {
+                    var startDate = $('#wycieczki-dataod').val();
+                    return Date.parse(startDate) <= Date.parse(value) || value == "";
+                }, "Data koncowa musi być pózniejsza niż początkowa");
+                $('#wycieczki-form').validate();
+            });
+
+            const dragArea = document.querySelector(".wrapper");
+            new Sortable(dragArea, {
+                animation: 350,
+                removeOnSpill: true
+            });
+
+            $("#guziczek").click(function() {
+                var nazwa = $("#wycieczki-odcinek option:selected").text();
+                var tmp;
+                if ($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione') {
+                    tmp = "<input type='hidden' value='1' name='zmienione'>"
+                } else
+                    tmp = "<input type='hidden' value='0' name='zmienione'>"
+                var idodcinka = $("#wycieczki-odcinek").val();
+                var tekst = "<input type='hidden' value='" + idodcinka + "' name='odcinek'>"
+                tekst += tmp;
+                $(".wrapper").append(
+                    "<div class='item' id='" + idodcinka + "'>" + tekst + "<span class='text'>" + nazwa +
+                    "</span></i> <i class='fas fa-bars'></i></div>"
+                );
+                $("#wycieczki-odcinek option:selected").remove();
+            });
+        </script>
     </x-slot>
 
-    
-    
-    
     <div class="container">
-        <h1>{{ __('translations.wycieczki.title') }}</h1>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ __('translations.wycieczki.label.create') }}</h5>
-                <form id="wycieczki-form" method="POST"
-                    action="">
-                    {{-- {{ route('wycieczki.store') }} --}}
-                    @csrf
-
-                    <div class="row mb-3">
-                        <label for="wycieczki-dataod" class="col-sm-2 col-form-label">
-                            {{ __('translations.wycieczki.attribute.dataod') }}
-                    </label>
-                    <div class="col-sm-10">
-                        <input type="date" class="form-control @error('dataod') is-invalid @enderror" name="dataod"
-                            id="wycieczki-dataod" value="@if (null !== old('dataod')){{ old('dataod') }}@else{{date('Y-m-d')}}@endif" min="{{date('Y-m-d')}}">
-                        @error('dataod')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>                    
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="articles card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h3">Tworzenie Wycieczki</h2>
                     </div>
-                    
-                    <div class="row mb-3">
-                        <label for="wycieczki-datado" class="col-sm-2 col-form-label">
-                            {{ __('translations.wycieczki.attribute.datado') }}
-                    </label>
-                    <div class="col-sm-10">
-                        <input type="date" class="form-control @error('datado') is-invalid @enderror endDate" name="datado"
-                            id="wycieczki-datado" value="{{ old('datado') }}">
-                        @error('datado')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>                    
-                    </div> 
-
-                    <div class="row mb-3">
-                        <label for="wycieczki-grupa" class="col-sm-2">
-                            {{__('translations.wycieczki.attribute.grupa')}}
-                        </label>
-                    <div class="col-sm-10">
-                            <select id="wycieczki-grupa" class="form-select @error('grupa') is-invalid @enderror " name="grupa"
-                            value="{{ old('grupa')}}">
-                            <option hidden>Wybierz grupe</option>
-                            @forelse ($grupy as $grupa)
-                                <option name="grupa" value="{{ $grupa->id }}">{{ $grupa->nazwa }}</option>  
-                            @empty
-                                
-                            @endforelse
-                        
-                            </select>
-        
-                            @error('grupa')
-                            <div class="" role="alert">
-                                <strong> {{$message}}</strong>
+                    <div class="card-body no-padding">
+                        <form id="wycieczki-form" method="POST" action="">
+                            {{-- {{ route('wycieczki.store') }} --}}
+                            @csrf
+                            <div class="row mb-3">
+                                <label for="wycieczki-dataod" class="col-sm-2 col-form-label">
+                                    {{ __('translations.wycieczki.attribute.dataod') }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control @error('dataod') is-invalid @enderror"
+                                        name="dataod" id="wycieczki-dataod"
+                                        value="@if(null !== old('dataod')){{old('dataod')}}@else{{date('Y-m-d')}}@endif"
+                                        min="{{ date('Y-m-d') }}">
+                                    @error('dataod')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                            @enderror
-                        </div>
-                    </div> 
-                
-                    
-                    <div class="row mb-3">
-                        <label for="wycieczki-pasmo" class="col-sm-2" id="pasmo_label" style="display: none;">
-                            {{__('translations.wycieczki.attribute.pasmo')}}
-                        </label>
-                    <div class="col-sm-10">
-                            <select id="wycieczki-pasmo" class="form-select @error('pasmo') is-invalid @enderror " name="pasmo" 
-                            value="{{ old('pasmo')}}" style="display: none;">  
-                            <option hidden>Wybierz pasmo</option>                                                   
-                            @foreach ($pasma as $pasmo)                            
-                                <option name="pasmo" value="{{$pasmo->id}}" >{{$pasmo->nazwa}}</option> 
-                            @endforeach
-                        
-                            </select>
-        
-                            @error('pasmo')
-                            <div class="" role="alert">
-                                <strong> {{$message}}</strong>
+                            <div class="row mb-3">
+                                <label for="wycieczki-datado" class="col-sm-2 col-form-label">
+                                    {{ __('translations.wycieczki.attribute.datado') }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="date"
+                                        class="form-control @error('datado') is-invalid @enderror endDate" name="datado"
+                                        id="wycieczki-datado" value="{{ old('datado') }}">
+                                    @error('datado')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                            @enderror
-                        </div>
-                    </div> 
-
-                    <div id="punkty_label" style="display: none;">
-
-                    <div class="row mb-3">
-                        <label for="wycieczki-punktpocz" class="col-sm-2" id="punktpocz_label">
-                            {{__('translations.wycieczki.attribute.punktpocz')}}
-                        </label>
-                    <div class="col-sm-10">
-                            <select id="wycieczki-punktpocz" class="form-select @error('punktpocz') is-invalid @enderror " name="punktpocz"
-                            value="{{ old('punktpocz')}}">
-                            @forelse ($punkty as $punkt)
-                                <option name="punktpocz" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
-                            @empty
-                                
-                            @endforelse
-                        
-                            </select>
-        
-                            @error('punktpocz')
-                            <div class="" role="alert">
-                                <strong> {{$message}}</strong>
+                            <div class="row mb-3">
+                                <label for="wycieczki-grupa" class="col-sm-2">
+                                    {{ __('translations.wycieczki.attribute.grupa') }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <select id="wycieczki-grupa"
+                                        class="form-select @error('grupa') is-invalid @enderror " name="grupa"
+                                        value="{{ old('grupa') }}">
+                                        <option hidden>Wybierz grupe</option>
+                                        @forelse ($grupy as $grupa)
+                                            <option name="grupa" value="{{ $grupa->id }}">{{ $grupa->nazwa }}
+                                            </option>
+                                        @empty
+                                        @endforelse
+                                    </select>
+                                    @error('grupa')
+                                        <div class="" role="alert">
+                                            <strong> {{ $message }}</strong>
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
-                            @enderror
-                        </div>
-                    </div>  
-                    
-                    <div class="row mb-3">
-                        <label for="wycieczki-punktkon" class="col-sm-2">
-                            {{__('translations.wycieczki.attribute.punktkon')}}
-                        </label>
-                    <div class="col-sm-10">
-                            <select id="wycieczki-punktkon" class="form-select @error('punktkon') is-invalid @enderror " name="punktkon"
-                            value="{{ old('punktkon')}}">
-                            @forelse ($punkty as $punkt)
-                                <option name="punktkon" value="{{ $punkt->id }}">{{ $punkt->nazwa }}</option>  
-                            @empty
-                                
-                            @endforelse
-                        
-                            </select>
-        
-                            @error('punktkon')
-                            <div class="" role="alert">
-                                <strong> {{$message}}</strong>
+                            <div class="row mb-3">
+                                <label for="wycieczki-pasmo" class="col-sm-2" id="pasmo_label"
+                                    style="display: none;">
+                                    {{ __('translations.wycieczki.attribute.pasmo') }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <select id="wycieczki-pasmo"
+                                        class="form-select @error('pasmo') is-invalid @enderror " name="pasmo"
+                                        value="{{ old('pasmo') }}" style="display: none;">
+                                        <option hidden>Wybierz pasmo</option>
+                                        @foreach ($pasma as $pasmo)
+                                            <option name="pasmo" value="{{ $pasmo->id }}">{{ $pasmo->nazwa }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                    @error('pasmo')
+                                        <div class="" role="alert">
+                                            <strong> {{ $message }}</strong>
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
-                            @enderror
-                        </div>
+                            <div class="row mb-3">
+                                <label for="wycieczki-odcinek" class="col-sm-2" id="odcinek_label"
+                                    style="display: none;">
+                                    Odcinek
+                                </label>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col">
+                                            <select id="wycieczki-odcinek"
+                                                class="form-select @error('odcinek') is-invalid @enderror "
+                                                name="odcinek" value="{{ old('odcinek') }}" style="display: none;">
+                                                <option hidden>Wybierz odcinek</option>
+                                                @forelse ($odcinki as $odcinek)
+                                                    <option name="odcinek" value="{{ $odcinek->id }}">
+                                                        z {{ $odcinek->punktpocz->nazwa }} do
+                                                        {{ $odcinek->punktkoncz->nazwa }}
+                                                    </option>
+                                                    <option name="zmienione" value="{{ $odcinek->id }}">
+                                                        z {{ $odcinek->punktkoncz->nazwa }} do
+                                                        {{ $odcinek->punktpocz->nazwa }}
+                                                    </option>
+                                                @empty
+                                                @endforelse
+                                            </select>
+                                            @error('odcinek')
+                                                <div class="" role="alert">
+                                                    <strong> {{ $message }}</strong>
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div class="col">
+                                            <a href="#" class="btn btn-primary m-1" id="guziczek"
+                                                style="display: none;">Dodaj Odcinek</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
+                </div>
+                <div class="d-flex justify-content-end mb-3 ">
+                    <div class="btn-group" role="group" aria-label="Cancel or submit form">
+                        {{-- {{ route('wycieczki.index') }} --}}
+                        <a href="{{ route('wycieczki.index') }}" type="submit" class="btn btn-primary m-1">
+                            {{ __('translations.buttons.cancel') }}
+                        </a>
+                        <button type="submit" class="btn btn-primary m-1">
+                            {{ __('translations.buttons.store') }}
+                        </button>
                     </div>
-                    {{-- <div class="row mb-3">
-                        <label for="wycieczki-status" class="col-sm-2 col-form-label">
-                            {{ __('translations.wycieczki.attribute.status') }}
-                    </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control @error('status') is-invalid @enderror" name="status"
-                            id="wycieczki-status" value="{{ old('status') }}">
-                        @error('status')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>                    
-                    </div>   --}}
-
-                </select>
-                        @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>                    
-                    </div>
-
-                    <div class="d-flex justify-content-end mb-3 ">
-                        <div class="btn-group" role="group" aria-label="Cancel or submit form">
-                            {{-- {{ route('wycieczki.index') }} --}}
-                            <a href="{{ route('wycieczki.index') }}" type="submit" class="btn btn-primary m-1">
-                                {{ __('translations.buttons.cancel') }}
-                            </a>
-                            <button type="submit" class="btn btn-primary m-1">
-                                {{ __('translations.buttons.store') }}
-                            </button>
-                        </div>
-                    </div>
+                </div>
                 </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="articles card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h3">Odcinki</h2>
+                    </div>
+                    <div class="card-body no-padding">
+                        <div class="wrapper">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

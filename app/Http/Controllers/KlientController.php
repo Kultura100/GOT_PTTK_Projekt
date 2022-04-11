@@ -42,13 +42,14 @@ class KlientController extends Controller
 
     public function store(UzytkownikRequest $request)
     {   
+
         try
         {
         $klienci = User::create(
             $request->all()
         );
 
-    event(new Registered($user));
+    event(new Registered($klienci));
     
      return redirect()->route('uzytkownik.index')
         ->with('success', __('translations.uzytkownik.flashes.success.stored', [

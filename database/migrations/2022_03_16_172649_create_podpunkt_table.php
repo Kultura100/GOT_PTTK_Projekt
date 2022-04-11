@@ -16,6 +16,10 @@ class CreatePodpunktTable extends Migration
         Schema::create('podpunkt', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
+            $table->unsignedBigInteger('id_punkt');
+            $table->foreign('id_punkt')
+            ->references('id')
+            ->on('punkt');
             $table->timestamps();
         });
     }

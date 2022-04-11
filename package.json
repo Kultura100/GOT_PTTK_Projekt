@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^6.1.1",
         "alpinejs": "^2.8.2",
         "axios": "^0.21.1",
         "laravel-mix": "^6.0.6",
@@ -23,6 +24,7 @@
         "@popperjs/core": "^2.10.1",
         "bootstrap": "^5.0.0-beta3",
         "bootstrap-icons": "^1.5.0",
+        "datatables.net-bs5": "^1.11.5",
         "jquery": "^3.6.0",
         "sweetalert": "^2.1.2"
     }

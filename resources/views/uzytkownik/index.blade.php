@@ -17,7 +17,7 @@
         </a>
       </div>
       <div id="no-more-tables">
-      <table class="table" style="width: 100%;">
+      <table class="table" style="width: 100%;" id="tabelka">
       <thead>
         <tr>
           <th>#</th>
