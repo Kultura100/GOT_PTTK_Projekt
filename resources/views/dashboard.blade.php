@@ -37,6 +37,7 @@ header{
   margin-left: 0 !important; 
   padding: 0;
   box-sizing: 0 !important;
+  max-width: 100% !important;
 } 
 </style>
 
@@ -67,7 +68,7 @@ header{
 </div>
 
 {{-- <div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center"> --}}
-  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="100%" alt="szlaki">
+  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="80%" alt="szlaki">
     
     
 {{-- </div>  --}}

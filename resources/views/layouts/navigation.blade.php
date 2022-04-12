@@ -97,7 +97,13 @@
                     {{ Auth::user()->imie }} {{ Auth::user()->nazwisko }}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="profile">
-                    <li><a class="dropdown-item" href="{{ route('uzytkownik.index') }}" aria-disabled="true">Profil</a></li>
+                    <li>
+                        @if(Auth::user()->hasRole('admin'))
+                        <a class="dropdown-item" href="{{ route('uzytkownik.index') }}" aria-disabled="true">Zarządzaj użytkownikami</a>
+                        @else
+                        <a class="dropdown-item" href="{{ route('uzytkownik.index') }}" aria-disabled="true">Profil</a>
+                        @endif
+                    </li>
                     <li><a class="dropdown-item disabled" href="">Ustawienia</a></li>
                     <li>
                         <hr class="dropdown-divider">
