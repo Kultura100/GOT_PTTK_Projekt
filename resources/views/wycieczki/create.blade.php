@@ -34,7 +34,7 @@
                                     $.each(data, function(key, pasmo) {
                                         $('select[name="pasmo"]').append('<option value="' +
                                             (key + 1) + '">' + pasmo.nazwa + '</option>'
-                                            );
+                                        );
                                     });
                                 } else {
                                     $('#wycieczki-pasmo').empty();
@@ -64,7 +64,7 @@
                                     $.each(data, function(key, odcinek) {
                                         $('select[name="odcinek"]').append(
                                             '<option value="' + (key +
-                                            1) + '"> z ' + odcinek.punktpocz.nazwa +
+                                                1) + '"> z ' + odcinek.punktpocz.nazwa +
                                             ' do ' + odcinek.punktkoncz.nazwa +
                                             '</option>' +
                                             '<option name="zmienione" value="' + (key +
@@ -139,13 +139,27 @@
                             </div>
                             @csrf
                             <div class="row mb-3">
+                                <label for="wycieczki-nazwa" class="col-sm-2 col-form-label">
+                                    {{ __('translations.wycieczki.attribute.nazwa') }}
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control @error('nazwa') is-invalid @enderror"
+                                        name="nazwa" id="wycieczki-nazwa" value="{{ old('nazwa') }}">
+                                    @error('nazwa')
+                                        <span class="invalid-feedback" role="alert">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mb-3">
                                 <label for="wycieczki-dataod" class="col-sm-2 col-form-label">
                                     {{ __('translations.wycieczki.attribute.dataod') }}
                                 </label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control @error('dataod') is-invalid @enderror"
                                         name="dataod" id="wycieczki-dataod"
-                                        value="@if(null !== old('dataod')){{old('dataod')}}@else{{date('Y-m-d')}}@endif"
+                                        value="@if (null !== old('dataod')) {{ old('dataod') }}@else{{ date('Y-m-d') }} @endif"
                                         min="{{ date('Y-m-d') }}">
                                     @error('dataod')
                                         <span class="invalid-feedback" role="alert">

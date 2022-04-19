@@ -23,7 +23,7 @@
                             <!-- tutaj zdjęcie -->
                         </div>
                         <div class="job-content">
-                            <h5 class="text-center text-md-left">Wycieczka {{ $wycieczka->id }}</h5>
+                            <h5 class="text-center text-md-left">{{ $wycieczka->nazwa }}</h5>
                             <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                 <li class="mr-md-4">
                                     <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp

@@ -12,7 +12,7 @@
             <div class="col-lg-6">
                 <div class="articles card">
                     <div class="card-header d-flex align-items-center">
-                        <h2 class="h3">Ranking</h2>
+                        <h2 class="h3">Ranking 10 najlepszych wspinaczy</h2>
                     </div>
                     <div class="card-body no-padding">
                         {{-- poczatek --}}

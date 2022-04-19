@@ -17,6 +17,7 @@ class WycieczkaFactory extends Factory
     public function definition()
     {
         return [
+            'nazwa' => $this->faker->text(10),
             'id_turysty' => User::select('id')->orderByRaw("RAND()")->first()->id,  
             'id_tworcy' => User::select('id')->orderByRaw("RAND()")->first()->id,  
             'dataod' => $this->faker->date($format = 'Y-m-d', $max = 'now'),

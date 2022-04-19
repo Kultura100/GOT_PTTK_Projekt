@@ -57,8 +57,12 @@
                     }
                     @endphp
                     </li>
+                 
                     @foreach (App\Models\Punkt::find($punkt->id)->punktnaliscie as $punkcik)
-                        <li class="list-group-item">{{ $punkcik->nazwa }}</li>
+                        <li class="list-group-item">
+                            {{ $punkcik->nazwa }}
+                            <span id='prawo'>{{$punkt->dajpunkty($punkcik->id,$punkt->id)}}</span>
+                        </li>
                     @endforeach
                 @endforeach
             @else

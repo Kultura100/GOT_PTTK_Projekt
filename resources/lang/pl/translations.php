@@ -68,7 +68,8 @@ return [
                 'punktkon' => 'Punkt kończący',
                 'status' => 'Status',
                 'iloscpunktow' => 'Ilość Punktów',
-                'punkty' => 'Punkty',                
+                'punkty' => 'Punkty',   
+                'nazwa' => 'Nazwa wycieczki'             
             ],
         'flashes' => 
         [

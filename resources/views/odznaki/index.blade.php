@@ -18,7 +18,7 @@
 
             <div class="container text-center py5">
                 <p class="display-4">Odznaki</p>
-                <p class="display-6">"W góry"</p>
+                <p class="display-6">W góry</p>
             </div>
             <div class="container">
                 <div class="row">

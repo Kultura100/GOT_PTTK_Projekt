@@ -61,6 +61,7 @@ class WycieczkiController extends Controller
 
         $wycieczka = Wycieczka::create(
         [
+            'nazwa' => $request->input('nazwa'),
             'id_turysty' => Auth::user()->id,
             'id_tworcy' => Auth::user()->id,
             'dataod' => $request->input('dataod'),
@@ -68,7 +69,6 @@ class WycieczkiController extends Controller
             'punkty' => 0,            
         ]);
 
-        $licznikpunktow = 0;
         $aktualnypunkt = 0;
         $zmienionykierunek;
         for ($i=0; $i < count($request->input('odcinekid')) ; $i++) { 
@@ -76,10 +76,9 @@ class WycieczkiController extends Controller
             $odcinekpunkty = Odcinek::find($request->input('odcinekid')[$i]);
             if($request->input('zmienione')[$i] == 1){
                 $zmienionykierunek = 1;
-                $licznikpunktow += $odcinekpunkty->punkty_od;
                 $aktualnypunkt =  $odcinekpunkty->punkty_do;
-                } else {$zmienionykierunek = 0;
-                    $licznikpunktow += $odcinekpunkty->punkty_do;
+                } else {
+                    $zmienionykierunek = 0;
                     $aktualnypunkt =  $odcinekpunkty->punkty_od;
                 }
 
@@ -94,7 +93,7 @@ class WycieczkiController extends Controller
                 ]);
 
                 $wycieczka->update([
-                    'punkty' => $licznikpunktow,
+                    'punkty' => $wycieczka->ilepunktow($wycieczka->id),
                 ]);
         }
     }

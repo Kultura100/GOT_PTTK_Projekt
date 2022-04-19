@@ -14,9 +14,10 @@ class Punkt extends Model
     [
         'nazwa'
     ]; 
-    public function punkt()
+    public function dajpunkty($punktid, $podpunktid)
     {
-        return $this->belongsTo('app\Models\Odcinek');        
+        $odcinek = Odcinek::where([['id_punkt_poczatek',$punktid],['id_punkt_koniec',$podpunktid]])->get();
+        return $odcinek->first()->punkty_od."/".$odcinek->first()->punkty_do;
     }
 
     public function punktnaliscie()

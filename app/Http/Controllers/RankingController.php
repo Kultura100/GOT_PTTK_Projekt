@@ -33,6 +33,7 @@ class RankingController extends Controller
         }
         $lista = array_intersect_key($kwerenda, array_flip($bialalista));
         $kwerenda=$lista;
+        $kwerenda = array_slice($kwerenda,0,10,true); //ograniczenie do 10 uzytkownikow
         return view('ranking.index',compact('kwerenda','uzytkownicy'));
     }
 }
