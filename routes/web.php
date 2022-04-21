@@ -26,8 +26,8 @@ use App\Http\Controllers\RejestracjaZamowienieController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('auth.login');
+})->name('auth.login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

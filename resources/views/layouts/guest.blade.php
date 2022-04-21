@@ -8,6 +8,7 @@
     <div class="form">
         {{ $slot }}
     </div>
+
     <x-slot name="scripts">
         {{ $scripts }}
     </x-slot>

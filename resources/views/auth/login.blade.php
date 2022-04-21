@@ -1,5 +1,6 @@
 <x-guest-layout>
     <x-auth-card>
+ 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -13,33 +14,23 @@
             {{-- <div>
                 <label for="email" class="form-label">{{ __('Email') }}</label>
                 <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required autofocus>
-            </div>             --}}           
+            </div> --}}
             <div>
                 <x-label for="email" :value="__('auth.inputs.email')" />
-                <x-input id="email"
-                    class=""  
-                    type="email" 
-                    name="email" 
-                    :value="old('email')" 
-                    required autofocus />
+                <x-input id="email" class="" type="email" name="email" :value="old('email')" required
+                    autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('auth.inputs.password')" />
-                <x-input id="password" 
-                    class=""
-                    type="password"
-                    name="password"
-                    required autocomplete="current-password" />
+                <x-input id="password" class="" type="password" name="password" required
+                    autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
             <div class="mt-3 form-check">
-                <input id="remember_me" 
-                    class="form-check-input"
-                    type="checkbox" 
-                    name="remember" >
+                <input id="remember_me" class="form-check-input" type="checkbox" name="remember">
                 <label for="remember_me" class="form-check-label text-sm">
                     {{ __('auth.inputs.remember_me') }}
                 </label>
@@ -51,6 +42,9 @@
                         {{ __('auth.other.forgot_password') }}
                     </a>
                 @endif
+                <a class="text-muted mt-3 me-3" href="{{ route('register') }}">
+                    Zarejestruj
+                </a>
                 <x-button>
                     {{ __('auth.buttons.login') }}
                 </x-button>

@@ -14,7 +14,6 @@
         {{ $styles }}
     </head>
     <body>
-
         {{ $slot }}
     </body>
     {{-- Globalne skrypty JS --}}
