@@ -70,7 +70,7 @@ class WycieczkiController extends Controller
         ]);
 
         $aktualnypunkt = 0;
-        $zmienionykierunek;
+        $zmienionykierunek =0;
         for ($i=0; $i < count($request->input('odcinekid')) ; $i++) { 
 
             $odcinekpunkty = Odcinek::find($request->input('odcinekid')[$i]);

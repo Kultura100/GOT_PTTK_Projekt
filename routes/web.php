@@ -67,6 +67,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('', [OsiagnieciaController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
+        Route::get('/search', [OsiagnieciaController::class, 'search'])
+            ->name('search')
+            ->middleware(['permission:klient.index']);
     });
 
     Route::name('szlak.')->prefix('szlak')->group(function () {
