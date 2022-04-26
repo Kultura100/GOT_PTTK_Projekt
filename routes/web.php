@@ -8,6 +8,7 @@ use App\Http\Controllers\KokpitController;
 use App\Http\Controllers\RaportController;
 use App\Http\Controllers\OdznakaController;
 use App\Http\Controllers\RankingController;
+use App\Http\Controllers\ObowiazkiController;
 use App\Http\Controllers\WycieczkiController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
@@ -139,6 +140,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
     Route::name('odznaki.')->prefix('odznaki')->group(function () {
         Route::get('', [OdznakaController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
+    });
+
+    Route::name('obowiazki.')->prefix('obowiazki')->group(function () {
+        Route::get('', [ObowiazkiController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
     });

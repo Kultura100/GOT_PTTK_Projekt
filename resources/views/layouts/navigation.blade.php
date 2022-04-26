@@ -65,6 +65,16 @@
                         {{ __('translations.szlak.title') }}
                     </x-nav-link>
                 </li>
+                @if(Auth::user()->hasRole('admin'))
+                <li class="nav-item">
+                    <x-nav-link :href="route('obowiazki.index')" :active="request()->routeIs('obowiazki.index')">
+                        <!-- obowiazki.index -->
+                        {{ __('translations.obowiazki.title') }}
+                    </x-nav-link>
+                </li>
+                @endif
+
+                
 
             </ul>
             <div class="navbar-nav dropdown">

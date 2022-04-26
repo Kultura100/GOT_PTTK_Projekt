@@ -149,6 +149,10 @@ return [
             ]
         ]
     ],
+    'obowiazki' =>
+    [
+        'title' => 'Obowiązki przodownika',
+    ],
 
     'odznaki' => 
     [
