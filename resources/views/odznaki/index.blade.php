@@ -26,7 +26,7 @@
                     @if($odznaka->id == 4)<hr class="rounded"> <p class="display-6 text-center">Popularna</p>@endif
                     @if($odznaka->id == 5)<hr class="rounded"> <p class="display-6 text-center">Małe</p>@endif
                     @if($odznaka->id == 8)<hr class="rounded"> <p class="display-6 text-center">Duże</p>@endif
-                    @if($odznaka->id == 11)<hr class="rounded"> <p class="display-6 text-center">Wytrwałosci</p>@endif
+                    @if($odznaka->id == 11)<hr class="rounded"> <p class="display-6 text-center">Wytrwałości</p>@endif
                     @if($odznaka->id == 12)<hr class="rounded"> <p class="display-6 text-center">Przodownika</p>@endif
                     <div class="col-md-6 col-lg-4">
                         <div class="card mb-3">

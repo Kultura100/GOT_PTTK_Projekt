@@ -57,9 +57,9 @@ header{
     <p class="display-4">Kolory szlaków górskich</p>
     <div class="text-left">
         <ul class="list-group list-group-flush ">
-            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czerwony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZERWONY</b> - to szlak główny, którym najprawdopodobniej wędrówka będzie najciekawsza. 
+            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czerwony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZERWONY</b> - To szlak główny, którym najprawdopodobniej wędrówka będzie najciekawsza. 
                 </li>
-            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Niebieski.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK NIEBIESKI</b> - to trasa długodystansowa, ale nie jest to główny szlak.</li>
+            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Niebieski.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK NIEBIESKI</b> - To trasa długodystansowa, ale nie jest to główny szlak.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Zielony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK ZIELONY</b> - Szlak doprowadzający do ciekawych lub charakterystycznych miejsc.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Zolty.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK ŻÓŁTY</b> - Kolor ten oznacza szlaki łącznikowe, czasami oznacza też szlaki dojściowe.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czarny.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZARNY</b> - Szlak dojściowy.</li>

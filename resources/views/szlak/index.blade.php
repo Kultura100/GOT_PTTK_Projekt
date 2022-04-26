@@ -21,7 +21,7 @@
                     <div>
                         <a href="{{ route('szlak.szczegoly', ['id' => $pasma->id]) }}">
                             <x-button class="hover:bg-green-700">
-                                Szczegoly
+                                Szczegóły
                             </x-button>
                         </a>
                     </div>
