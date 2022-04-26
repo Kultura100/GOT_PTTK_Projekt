@@ -12,6 +12,8 @@ use App\Http\Controllers\ObowiazkiController;
 use App\Http\Controllers\WycieczkiController;
 use App\Http\Controllers\ZamowienieController;
 use App\Http\Controllers\OsiagnieciaController;
+use App\Http\Controllers\ListaTurystowController;
+use App\Http\Controllers\PowiadomienieController;
 use App\Http\Controllers\RejestracjaZamowienieController;
 
 
@@ -30,9 +32,7 @@ Route::get('/', function () {
     return view('auth.login');
 })->name('auth.login');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard',[PowiadomienieController::class,'index'])->middleware(['auth'])->name('dashboard');
 
 //Route::get('osiagniecia',[OsiagnieciaController::class, 'index'])->name('index');  
 
@@ -146,6 +146,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::name('obowiazki.')->prefix('obowiazki')->group(function () {
         Route::get('', [ObowiazkiController::class, 'index'])
+            ->name('index')
+            ->middleware(['permission:klient.index']);
+    });
+    Route::name('listaturystow.')->prefix('listaturystow')->group(function () {
+        Route::get('', [ListaTurystowController::class, 'index'])
             ->name('index')
             ->middleware(['permission:klient.index']);
     });
