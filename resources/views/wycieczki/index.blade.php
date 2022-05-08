@@ -40,7 +40,6 @@
             <div class="col col-4">Ilość punktów</div>
             <div class="col col-6">Operacje</div>
         </li>
-
       
         @foreach ($wycieczki as $wycieczka)
         {{-- @dd($wycieczka->wieleodcinkow->first()->wycieczka_odcinek2->pasmo->nazwa) --}}
