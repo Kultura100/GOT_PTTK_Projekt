@@ -1,6 +1,14 @@
 <x-app-layout>
     <x-slot name="styles">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/szczegoly_wycieczki.css') }}">
+        <style>
+            #tekst{
+                background: cornsilk;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            </style>
     </x-slot>
     <x-slot name="scripts">
         <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
@@ -71,12 +79,12 @@
                                         <g>
                                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                                         <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                                        <text x="0" y="25" class="d-block ">{{ $odcineczek->status->nazwa }} </text>
                                         </g>
                                     </svg> 
+                                    <strong>- {{ $odcineczek->status->nazwa }}</strong>
                             @endif                        
                         </td>
-                        <td>
+                        <td style="text-align: right;">
                             {{ $odcineczek->liczba_punktow }}
                         </td>                                   
                     </tr>                    
@@ -88,7 +96,7 @@
                         
                     </th>
                     <th id="suma" style="text-align:left;">Suma: </th>
-                    <th>
+                    <th style="text-align: right;">
                         @php
                         $x = 0;
                             foreach ($wycieczki->wieleodcinkow as $odcineczek)
