@@ -6,7 +6,7 @@
         <script src="{{ asset('js/raport.js') }}"></script>
     </x-slot>
     <div class="container">
-        <h1 style="float:none;">{{ __('Lista Turystów') }}</h1>       
+        <h1 style="float:none;">{{ __('Lista zgłoszeń') }}</h1>       
         @if (session()->has('success'))
             <div class="alert alert-success">
                 {{ session()->get('success') }}
@@ -25,7 +25,7 @@
         @foreach ($uzytkownicy as $uzytkownik)
             <li class="table-row">
                 <div class="col col-1">
-                    {{ $uzytkownik->imie }}, {{ $uzytkownik->nazwisko}}
+                    {{ $uzytkownik->imie }} {{ $uzytkownik->nazwisko}}
                 </div>
                 <div class="col col-2">
                     {{ $uzytkownik->email }}

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Grupa;
 use App\Models\Pasmo;
 use App\Models\Punkt;
@@ -20,7 +21,8 @@ class WycieczkiController extends Controller
         
         return view('wycieczki.index',
         [
-            'wycieczki' => Wycieczka::get()
+            'wycieczki' => Wycieczka::where('dataod','>', Carbon::now())->get(),
+            'wycieczkiodbyte' => Wycieczka::where('dataod','<', Carbon::now())->get()
         ]);
     }
 

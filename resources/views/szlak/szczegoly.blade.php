@@ -67,7 +67,6 @@
                 @endforeach
             @else
                 <ul class="list-group">
-
                     <li class="list-group-item active"> Brak punktow</li>
                 </ul>
             @endif

@@ -9,7 +9,6 @@ class PowiadomienieController extends Controller
 {
     public function index()
     {
-        $powiadomienie = Powiadomienie::get();
-        return view('dashboard',compact('powiadomienie'));
+        return view('dashboard');
     }
 }
