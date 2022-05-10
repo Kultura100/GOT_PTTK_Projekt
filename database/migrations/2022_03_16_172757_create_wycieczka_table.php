@@ -16,10 +16,6 @@ class CreateWycieczkaTable extends Migration
         Schema::create('wycieczka', function (Blueprint $table) {
             $table->id();
             $table->string('nazwa');
-            $table->unsignedBigInteger('id_turysty');
-            $table->foreign('id_turysty')
-            ->references('id')
-            ->on('users');
             $table->unsignedBigInteger('id_tworcy');
             $table->foreign('id_tworcy')
             ->references('id')

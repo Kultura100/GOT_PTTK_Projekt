@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Wycieczka;
+use App\Models\Ksiazeczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,7 @@ class OsiagnieciaController extends Controller
     public function index()
     {
         return view('osiagniecia.index', [
-            'wycieczki' => Wycieczka::where('id_turysty', Auth::user()->id)->get(),
+            'ksiazeczka' => Ksiazeczka::where('id_turysty', Auth::user()->id)->first(),
             'odznaka' => Odznaka_Turysty::where('id_turysty', Auth::user()->id)->orderBy('id_odznaki', 'ASC')->get(),
         ]);
     }
@@ -21,9 +22,11 @@ class OsiagnieciaController extends Controller
     {
         if ($request->ajax()) {
             $output = "";
-            $wycieczki =  Wycieczka::where([['nazwa', 'LIKE', '%'. $request->search .'%'],['id_turysty', Auth::user()->id]])->get();
-            if ($wycieczki) {
-                foreach ($wycieczki as $key => $wycieczka) {
+            $ksiazeczka = Ksiazeczka::where('id_turysty', Auth::user()->id)->first();
+            
+            if ($ksiazeczka) {
+                foreach ($ksiazeczka->ksiazeczkawycieczki as $wycieczka) {
+                    $wycieczka->jakawycieczka->where(['nazwa', 'LIKE', '%'.$request->search.'%'])->get();
                     $output .= '
                         <div class="col-6">
                         <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
@@ -32,16 +35,16 @@ class OsiagnieciaController extends Controller
                                     <!-- tutaj zdjęcie -->
                                 </div>
                                 <div class="job-content">
-                                    <h5 class="text-center text-md-left">'.$wycieczka->nazwa.'</h5>
+                                    <h5 class="text-center text-md-left">'.$wycieczka->jakawycieczka->nazwa.'</h5>
                                     <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                         <li class="mr-md-4">
                                             <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp
                                         </li>
                                         <li class="mr-md-4">
-                                            <i class="zmdi zmdi-time mr-2"></i>'.$wycieczka->dataod.' do '.$wycieczka->datado.'
+                                            <i class="zmdi zmdi-time mr-2"></i>'.$wycieczka->jakawycieczka->dataod.' do '.$wycieczka->jakawycieczka->datado.'
                                         </li>&nbsp&nbsp
                                         <li class="mr-md-4">
-                                            <i class="zmdi zmdi-parking mr-2"> </i>'.$wycieczka->punkty.'
+                                            <i class="zmdi zmdi-parking mr-2"> </i>'.$wycieczka->jakawycieczka->punkty.'
                                         </li>
                                     </ul>
                                 </div>

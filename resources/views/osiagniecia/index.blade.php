@@ -36,7 +36,8 @@
                 aria-label="Szukaj wycieczki">
         </div>
         <div class="wycieczkizawartosc row">
-            @foreach ($wycieczki as $wycieczka)
+            {{-- @dd($ksiazeczki) --}}
+            @foreach ($ksiazeczka->ksiazeczkawycieczki as $wycieczka)
                 <div class="col-6">
                     <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
                         <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
@@ -44,17 +45,17 @@
                                 <!-- tutaj zdjęcie -->
                             </div>
                             <div class="job-content">
-                                <h5 class="text-center text-md-left">{{ $wycieczka->nazwa }}</h5>
+                                <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
                                 <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
                                     <li class="mr-md-4">
                                         <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp
                                     </li>
                                     <li class="mr-md-4">
-                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->dataod }} do
-                                        {{ $wycieczka->datado }}
+                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do
+                                        {{ $wycieczka->jakawycieczka->datado }}
                                     </li>&nbsp&nbsp
                                     <li class="mr-md-4">
-                                        <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->punkty }}
+                                        <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
                                     </li>
                                 </ul>
                             </div>

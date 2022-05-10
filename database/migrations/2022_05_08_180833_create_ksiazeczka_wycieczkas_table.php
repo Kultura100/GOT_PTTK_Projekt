@@ -13,7 +13,7 @@ class CreateKsiazeczkaWycieczkasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ksiazeczka_wycieczkas', function (Blueprint $table) {
+        Schema::create('ksiazeczka_wycieczka', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_ksiazeczki');
             $table->foreign('id_ksiazeczki')
@@ -35,6 +35,6 @@ class CreateKsiazeczkaWycieczkasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ksiazeczka_wycieczkas');
+        Schema::dropIfExists('ksiazeczka_wycieczka');
     }
 }

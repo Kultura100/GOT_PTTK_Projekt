@@ -5,6 +5,7 @@ namespace Database\Seeders\Auth;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Klient;
+use App\Models\Ksiazeczka;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
@@ -23,6 +24,9 @@ class UsersSeeder extends Seeder
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
+        Ksiazeczka::create([
+            'id_turysty' => $user->id
+        ]);
 
         $adminRole = Role::findByName(config('app.admin_role'));
         if (isset($adminRole)){
@@ -37,6 +41,10 @@ class UsersSeeder extends Seeder
             'telefon' => '123456789',
             'punkty' => 0,
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+
+        Ksiazeczka::create([
+            'id_turysty' => $user->id
         ]);
 
         $userRole = Role::findByName(config('app.user_role'));
@@ -54,6 +62,10 @@ class UsersSeeder extends Seeder
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
 
+        Ksiazeczka::create([
+            'id_turysty' => $user->id
+        ]);
+
         $userRole = Role::findByName(config('app.przodownik_role'));
         if (isset($userRole)){
             $user->assignRole($userRole);
@@ -68,6 +80,11 @@ class UsersSeeder extends Seeder
             'punkty' => 0,
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
+
+        Ksiazeczka::create([
+            'id_turysty' => $user->id
+        ]);
+        
         $userRole = Role::findByName(config('app.user_role'));
         if (isset($userRole)){
             $user->assignRole($userRole);

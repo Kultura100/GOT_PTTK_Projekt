@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\Ksiazeczka;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
@@ -46,11 +47,21 @@ class RegisteredUserController extends Controller
         //dd($request->imie);
         $user = User::create([
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
             'imie' => $request->imie,
             'nazwisko' => $request->nazwisko,
             'telefon' => $request->telefon,
         ]);
+
+        Ksiazeczka::create([
+            'id_turysty' => $user->id
+        ]);
+
+        $userRole = Role::findByName(config('app.user_role'));
+        if (isset($userRole)){
+            $user->assignRole($userRole);
+        }
+        
         event(new Registered($user));
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
