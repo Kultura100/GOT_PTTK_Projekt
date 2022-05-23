@@ -1,14 +1,14 @@
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div>
     <div class="toast-container">
       @if (session('success'))
         @if(is_array(session('success')))
           @foreach (session('success') as $message)
-            <div class="mb-4" type="success">
+            <div class="mb-4 alert alert-success" type="success">
               {{ $message }}
             </div>
           @endforeach
         @else
-          <div class="mb-4" type="success">
+          <div class="mb-4 alert alert-success" type="success">
             {{ session('success') }}
           </div>
         @endif
@@ -16,12 +16,12 @@
       @if (session('warning'))
         @if(is_array(session('warning')))
           @foreach (session('warning') as $message)
-            <div class="mb-4" type="warning">
+            <div class="mb-4 alert alert-warning" type="warning">
               {{ $message }}
             </div>
           @endforeach
         @else
-          <div class="mb-4" type="warning">
+          <div class="mb-4 alert alert-warning" type="warning">
             {{ session('warning') }}
           </div>
         @endif
@@ -29,12 +29,12 @@
       @if (session('danger'))
         @if(is_array(session('danger')))
           @foreach (session('danger') as $message)
-            <div class="mb-4" type="danger">
+            <div class="mb-4 alert alert-danger" type="danger">
               {{ $message }}
             </div>
           @endforeach
         @else
-          <div class="mb-4" type="danger">
+          <div class="mb-4 alert alert-danger" type="danger">
             {{ session('danger') }}
           </div>
         @endif
