@@ -52,7 +52,7 @@ class WycieczkiController extends Controller
             'id_wycieczki' => $id,
             'zatwierdzona' => 0,
         ]);
-        $wycieczka = Wycieczka::where('id',$id)->get();
+        $wycieczka = Wycieczka::where('id',$id)->first();
 
         return redirect()->route('wycieczki.index')
         ->with('success', __('translations.wycieczki.dolaczenie.success',[
