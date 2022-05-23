@@ -17,4 +17,8 @@ class Ksiazeczka extends Model
     {
         return $this->hasMany(Ksiazeczka_wycieczka::class, 'id_ksiazeczki', 'id');        
     }
+    public function jakiUser()
+    {
+        return $this->hasOne(User::class, 'id', 'id_turysty');        
+    }
 }

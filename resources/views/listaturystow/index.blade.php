@@ -17,23 +17,30 @@
         <li class="table-header">
             <div class="col col-1">Imię i Nazwisko</div>
             <div class="col col-2">E-mail</div>
-            <div class="col col-3">Punkty</div>
+            <div class="col col-3">Nazwa wycieczki</div>
             <div class="col col-4"></div>
         </li>
 
       
-        @foreach ($uzytkownicy as $uzytkownik)
+        @foreach ($wycieczkiZatw as $wycieczkiZatwierdzone)
             <li class="table-row">
                 <div class="col col-1">
-                    {{ $uzytkownik->imie }} {{ $uzytkownik->nazwisko}}
+                    {{ $wycieczkiZatwierdzone->jakaKsiazeczka->jakiUser->imie }} {{ $wycieczkiZatwierdzone->jakaKsiazeczka->jakiUser->nazwisko}}
                 </div>
                 <div class="col col-2">
-                    {{ $uzytkownik->email }}
-                </div>
+                    {{ $wycieczkiZatwierdzone->jakaKsiazeczka->jakiUser->email }}
+                </div>                
                 <div class="col col-3">
-                    {{ $uzytkownik->punkty}}
+                    {{ $wycieczkiZatwierdzone->jakaWycieczka->nazwa}}
                 </div>
                 <div class="col col-4">
+                    <a href="{{ route('listaturystow.szczegoly', ['id' => $wycieczkiZatwierdzone->id]) }}">                         
+                            <x-button class="hover:bg-green-700">
+                                Szczegóły
+                            </x-button>
+                      </a>
+                </div>
+                <div class="col col-5">
                   <a href="">
                     {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
                         <x-button class="hover:bg-green-700">

@@ -12,6 +12,7 @@ class Zdjecia extends Model
     protected $fillable = 
     [
         'id_wycieczka',
+        'id_tworcy',
         'zrodlo_zdjecia',
         'opis'
     ]; 

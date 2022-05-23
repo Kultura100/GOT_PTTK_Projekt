@@ -57,7 +57,13 @@
                                     <li class="mr-md-4">
                                         <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
                                     </li>
-                                </ul>
+                                    <li>
+                                        <a href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->id]) }}">                         
+                                        <x-button class="hover:bg-green-700">
+                                            Szczegóły
+                                        </x-button>
+                                  </a></li>
+                                </ul>                             
                             </div>
                         </div>
                     </div>
