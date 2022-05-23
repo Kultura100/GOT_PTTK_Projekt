@@ -54,7 +54,7 @@ header{
 
 <section>
 <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-left">
-    <p class="display-4">Kolory szlaków górskich</p>
+    <h1 class="mt-2">Kolory szlaków górskich</h1>
     <div class="text-left">
         <ul class="list-group list-group-flush ">
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czerwony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZERWONY</b> - To szlak główny, którym najprawdopodobniej wędrówka będzie najciekawsza. 
@@ -68,7 +68,7 @@ header{
 </div>
 
 {{-- <div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center"> --}}
-  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="80%" alt="szlaki">
+  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="72%" alt="szlaki">
     
     
 {{-- </div>  --}}
