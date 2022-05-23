@@ -19,14 +19,18 @@ class OsiagnieciaController extends Controller
     }
 
     public function search(Request $request)
-    {
+    { //naprawic 
+        
         if ($request->ajax()) {
             $output = "";
-            $ksiazeczka = Ksiazeczka::where('id_turysty', Auth::user()->id)->first();
-            
+            $ksiazeczka = Ksiazeczka::join('ksiazeczka_wycieczka', function($builder){
+                $builder->on('ksiazeczka_wycieczka.id_ksiazeczki', '=', 'ksiazeczka.id');
+            })->join('wycieczka', function($builder) {
+                $builder->on('wycieczka.id', '=', 'ksiazeczka_wycieczka.id_wycieczki');
+            })->where('nazwa', 'LIKE', '%'.$request->search.'%')->get();
+            //dd($ksiazeczka);
             if ($ksiazeczka) {
-                foreach ($ksiazeczka->ksiazeczkawycieczki as $wycieczka) {
-                    $wycieczka->jakawycieczka->where(['nazwa', 'LIKE', '%'.$request->search.'%'])->get();
+                foreach ($ksiazeczka as $wycieczka) {
                     $output .= '
                         <div class="col-6">
                         <div class="job-box d-md-flex align-items-center justify-content-between mb-30">

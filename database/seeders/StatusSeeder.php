@@ -23,8 +23,7 @@ class StatusSeeder extends Seeder
         $statusy = [
             1 => 'Ukończony odcinek',
             2 => 'Odcinek zablokowany przez PTTK',
-            3 => 'Nieodbyty odcinek',
-
+            3 => 'Odcinek nieprzebyty',
         ];
         
         foreach($statusy as $klucz => $status) {
