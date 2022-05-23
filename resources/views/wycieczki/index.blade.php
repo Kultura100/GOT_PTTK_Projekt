@@ -26,10 +26,7 @@
                 </label>
               </div>
         </div>
-        @if (session()->has('success'))
-            <div class="alert alert-success">
-                {{ session()->get('success') }}
-        @endif
+        <x-toasts />
     </div>
 
     <ul class="responsive-table">
@@ -58,13 +55,20 @@
                 </div>
 
                 <div class="col col-6">
-                  @if(null !== $wycieczka->wieleodcinkow->first())
+                @if(null !== $wycieczka->wieleodcinkow->first())
                     <a href="{{ route('wycieczki.szczegoly', ['id' => $wycieczka->id]) }}">
                         <x-button class="hover:bg-green-700">
                             Szczegóły
                         </x-button>
                     </a>
-                    @endif
+                @endif
+                @if(null !== $wycieczka->wieleodcinkow->first())
+                <a href="{{ route('wycieczki.zapisz', ['id' => $wycieczka->id]) }}">
+                    <x-button class="hover:bg-green-700">
+                        Zapisz się
+                    </x-button>
+                </a>
+                @endif
                 </div>
             </li>
         @endforeach
@@ -80,9 +84,7 @@
             <div class="col justify-center align-middle">Odbyte</div>
             <div class="col"></div>
             <div class="col"></div>
-
         </li>
-
       
         @foreach ($wycieczkiodbyte as $wycieczka)
         {{-- @dd($wycieczka->wieleodcinkow->first()->wycieczka_odcinek2->pasmo->nazwa) --}}

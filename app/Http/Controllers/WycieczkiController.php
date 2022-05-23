@@ -9,9 +9,11 @@ use App\Models\Punkt;
 use App\Models\Odcinek;
 use App\Models\Podpunkt;
 use App\Models\Wycieczka;
+use App\Models\Ksiazeczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
 use App\Models\Wycieczka_odcinek;
+use App\Models\Ksiazeczka_wycieczka;
 use Illuminate\Support\Facades\Auth;
 
 class WycieczkiController extends Controller
@@ -35,6 +37,28 @@ class WycieczkiController extends Controller
             'grupy' => Grupa::get(),
             'odcinki' => Odcinek::get(),
         ]);
+    }
+
+    public function zapisz($id){
+        $zapisz = Ksiazeczka::where('id_turysty',  Auth::user()->id)->first();
+        $sprawdzczyjest = Ksiazeczka_wycieczka::where([['id_wycieczki',$id],['id_ksiazeczki',$zapisz->id]])->get();
+        if($sprawdzczyjest->count() > 0){
+            return redirect()->route('wycieczki.index')
+            ->with('warning', __('translations.wycieczki.dolaczenie.error'));  
+        }else
+        {
+        Ksiazeczka_wycieczka::create([
+            'id_ksiazeczki' => $zapisz->id,
+            'id_wycieczki' => $id,
+            'zatwierdzona' => 0,
+        ]);
+        $wycieczka = Wycieczka::where('id',$id)->get();
+
+        return redirect()->route('wycieczki.index')
+        ->with('success', __('translations.wycieczki.dolaczenie.success',[
+            'name' => $wycieczka->nazwa,
+        ]));
+    }
     }
 
     public function szczegoly($id)
@@ -64,7 +88,6 @@ class WycieczkiController extends Controller
         $wycieczka = Wycieczka::create(
         [
             'nazwa' => $request->input('nazwa'),
-            'id_turysty' => Auth::user()->id,
             'id_tworcy' => Auth::user()->id,
             'dataod' => $request->input('dataod'),
             'datado' => $request->input('datado'),
