@@ -46,12 +46,12 @@
                             </div>
                             <div class="job-content">
                                 <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
-                                <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                <ul class="d-md-flex text-capitalize ff-open-sans">
                                     <li class="mr-md-4">
                                         <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp
                                     </li>
                                     <li class="mr-md-4">
-                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do
+                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do 
                                         {{ $wycieczka->jakawycieczka->datado }}
                                     </li>&nbsp&nbsp
                                     <li class="mr-md-4">
@@ -59,9 +59,9 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->id]) }}">                         
-                                        <x-button class="hover:bg-green-700">
+                                        <button class="btn btn-primary">
                                             Szczegóły
-                                        </x-button>
+                                        </button>
                                   </a></li>
                                 </ul>                             
                             </div>

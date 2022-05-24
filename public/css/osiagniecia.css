@@ -173,6 +173,6 @@ ul {
 }
 
 .btn {
-  font-size: 1.4rem;
-  text-transform: uppercase;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }

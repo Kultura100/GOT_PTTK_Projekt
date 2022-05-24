@@ -115,9 +115,7 @@
                 <input type="hidden" name="id_wycieczka" value="{{ $wycieczkiSzczeg->id }}">
                 <input type="hidden" name="id_tworcy" value="{{ $wycieczkiSzczeg->id_tworcy }}">
                 <input type="file" class="form-control" name="zrodlo_zdjecia">
-                <button class="btn btn-outline-secondary" type="submit">
-                    Button                
-                </button>
+                <button class="btn btn-primary float-left mt-2 mb-2" type="submit">Prześlij</button>
             </form>
         </div>
     </div>
