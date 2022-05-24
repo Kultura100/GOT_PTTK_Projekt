@@ -1,4 +1,4 @@
-<div>
+<div class="float-end">
     <div class="toast-container">
       @if (session('success'))
         @if(is_array(session('success')))
