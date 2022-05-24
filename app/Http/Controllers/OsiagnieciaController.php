@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Zdjecia;
 use App\Models\Wycieczka;
 use App\Models\Ksiazeczka;
 use Illuminate\Http\Request;
@@ -60,5 +61,36 @@ class OsiagnieciaController extends Controller
                 return Response($output);
             }
         }
+    }
+    public function szczegoly($id)
+    {    
+        $wycieczkiSzczeg = Wycieczka::find($id);         
+        return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg')        
+    );
+    }
+
+    public function dodajzdjecie(Request $request)
+    {  
+        $request->validate([
+            'id_tworcy' => 'required',
+            'id_wycieczka' => 'required',
+            'zrodlo_zdjecia' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        
+  
+        $input = $request->all();
+  
+        if ($image = $request->file('zrodlo_zdjecia')) {
+            $destinationPath = 'zrodlo_zdjecia/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['zrodlo_zdjecia'] = "$profileImage";
+        }
+    
+        Zdjecia::create($input);
+     
+        return redirect()->route('osiagniecia.index')
+            ->with('success','Product created successfully.');        
+    
     }
 }

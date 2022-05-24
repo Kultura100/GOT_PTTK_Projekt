@@ -71,6 +71,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/search', [OsiagnieciaController::class, 'search'])
             ->name('search')
             ->middleware(['permission:klient.index']);
+        Route::get('szczegoly/{id}', [OsiagnieciaController::class, 'szczegoly'])
+            ->name('szczegoly')
+            ->middleware(['permission:klient.index']);
+        Route::post('szczegoly/dodajzdjecie', [OsiagnieciaController::class, 'dodajzdjecie'])
+            ->name('dodajzdjecie')
+            ->middleware(['permission:klient.index']);
     });
 
     Route::name('szlak.')->prefix('szlak')->group(function () {
@@ -156,6 +162,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::name('listaturystow.')->prefix('listaturystow')->group(function () {
         Route::get('', [ListaTurystowController::class, 'index'])
             ->name('index')
+            ->middleware(['permission:klient.index']);
+        Route::get('szczegoly/{id}', [ListaTurystowController::class, 'szczegoly'])
+            ->where('id', '[0-9]+')
+            ->name('szczegoly')
             ->middleware(['permission:klient.index']);
     });
 

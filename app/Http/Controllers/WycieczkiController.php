@@ -44,7 +44,7 @@ class WycieczkiController extends Controller
         $sprawdzczyjest = Ksiazeczka_wycieczka::where([['id_wycieczki',$id],['id_ksiazeczki',$zapisz->id]])->get();
         if($sprawdzczyjest->count() > 0){
             return redirect()->route('wycieczki.index')
-            ->with('danger', __('translations.wycieczki.dolaczenie.error'));  
+            ->with('danger', __('translations.wycieczki.flashes.error.dolaczenie_error'));  
         }else
         {
         Ksiazeczka_wycieczka::create([
@@ -55,7 +55,7 @@ class WycieczkiController extends Controller
         $wycieczka = Wycieczka::where('id',$id)->first();
 
         return redirect()->route('wycieczki.index')
-        ->with('success', __('translations.wycieczki.dolaczenie.success',[
+        ->with('success', __('translations.wycieczki.flashes.error.dolaczenie_success',[
             'name' => $wycieczka->nazwa,
         ]));
     }

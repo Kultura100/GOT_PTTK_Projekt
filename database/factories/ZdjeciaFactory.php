@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Zdjecia;
 use App\Models\Wycieczka;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -17,7 +18,8 @@ class ZdjeciaFactory extends Factory
     public function definition()
     {
         return [
-            'id_wycieczka' => Wycieczka::select('id')->orderByRaw("RAND()")->first()->id,  
+            'id_wycieczka' => Wycieczka::select('id')->orderByRaw("RAND()")->first()->id, 
+            'id_tworcy' => User::select('id')->orderByRaw("RAND()")->first()->id,
             'zrodlo_zdjecia' => $this->faker->text(10),
             'opis' => $this->faker->text(50),
         ];

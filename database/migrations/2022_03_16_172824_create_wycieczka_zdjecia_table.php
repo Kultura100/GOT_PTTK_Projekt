@@ -16,11 +16,15 @@ class CreateWycieczkaZdjeciaTable extends Migration
         Schema::create('wycieczka_zdjecia', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_wycieczka');
+            $table->unsignedBigInteger('id_tworcy');
+            $table->foreign('id_tworcy')
+            ->references('id')
+            ->on('users');
             $table->foreign('id_wycieczka')
             ->references('id')
             ->on('wycieczka');
             $table->string('zrodlo_zdjecia');
-            $table->string('opis');
+            $table->string('opis')->nullable();
             $table->timestamps();
         });
     }

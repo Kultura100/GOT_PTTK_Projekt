@@ -79,10 +79,12 @@ return [
                 'updated' => 'Zaktualizowano wycieczke o numerze :id',
                 'nothing-changed' => 'Dane wycieczki :id nie zmieniły się'
             ],
-            /*'error' =>
+           'error' =>
             [
                 'duplicate_entry' => 'Dane Klienta :nazwisko nie zmieniły się przez wzgląd na wystepowanie takiego adresu Email.',
-            ]*/
+                'dolaczenie_error' => 'Nie udało się zapisać do wycieczki.',
+                'dolaczenie_success' => 'Zapisałeś się do wycieczki o nazwie :name'
+            ]
         ]
     ],
 
