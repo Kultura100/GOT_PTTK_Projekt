@@ -39,15 +39,7 @@
                                 Szczegóły
                             </x-button>
                       </a>
-                </div>
-                <div class="col col-5">
-                  <a href="">
-                    {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
-                        <x-button class="hover:bg-green-700">
-                            Przyznaj odznake
-                        </x-button>
-                  </a>
-                </div>
+                </div>                
             </li>
         @endforeach
     </ul>

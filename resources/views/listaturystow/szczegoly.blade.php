@@ -110,6 +110,20 @@
                </tfoot>      
         </table>  
     </div>
+    <div>
+        <a href="">
+          {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
+              <x-button class="hover:bg-green-700">
+                 Odrzuć
+              </x-button>
+        </a> 
+        <a href="">
+          {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
+              <x-button class="hover:bg-green-700">
+                Zaakceptuj
+              </x-button>
+        </a>
+      </div>
     <h2> Zdjęcia: </h2>
     <div class="container">
         @foreach($wycieczkiZdj as $wycieczkiZdjecia)
