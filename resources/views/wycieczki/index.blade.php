@@ -17,7 +17,7 @@
         <x-toasts />
         <h1 style="float:none;">{{ __('translations.wycieczki.title') }}</h1> 
         <div class="d-flex flex-row-reverse mb-4 justify-center">
-            <a href="{{ route('wycieczki.create') }}" type="button" class="btn btn-light" role="button">
+            <a href="{{ route('wycieczki.create') }}" type="button" class="btn btn-primary" role="button">
                 {{ __('translations.wycieczki.label.create') }}
             </a>
             <div class="form-check pt-2">
