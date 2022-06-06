@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="text-left mt-5 mb-3 d-flex flex-column">
-           <div> <strong>Imie i nazwisko:</strong> {{ $wycieczkiSzczeg->imie }} {{ $wycieczkiSzczeg->nazwisko}}</div>
+           <div> <strong>Imie i nazwisko:</strong> {{ $wycieczkiSzczeg->uzytkownikWycieczka->imie }} {{ $wycieczkiSzczeg->uzytkownikWycieczka->nazwisko}}</div>
             <div>
                 <strong>Punkt początkowy:</strong>
                 @if ($wycieczkiSzczeg->wieleodcinkow->first()->odwrocony == 1)

@@ -77,6 +77,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('szczegoly/dodajzdjecie', [OsiagnieciaController::class, 'dodajzdjecie'])
             ->name('dodajzdjecie')
             ->middleware(['permission:klient.index']);
+        Route::get('szczegolyzatw/{id}', [OsiagnieciaController::class, 'szczegolyzatw'])
+            ->where('id', '[0-9]+')
+            ->name('szczegolyzatw')
+            ->middleware(['permission:klient.index']);
     });
 
     Route::name('szlak.')->prefix('szlak')->group(function () {
@@ -167,6 +171,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->where('id', '[0-9]+')
             ->name('szczegoly')
             ->middleware(['permission:klient.index']);
+        Route::get('zapisz/{id}',[ListaTurystowController::class, 'zapisz'])
+            ->where('id', '[0-9]+')
+            ->name('zapisz')
+            ->middleware(['permission:klient.store']);
     });
 
 });
