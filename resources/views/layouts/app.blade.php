@@ -182,6 +182,14 @@
                 background-color: #BFBFBF;
             }
 
+            footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                min-height: 20px;
+            }
         </style>
         {{ $styles }}
     </x-slot>
