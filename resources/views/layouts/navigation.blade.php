@@ -24,6 +24,7 @@
                     </x-nav-link>
                 </li> --}}
 
+                
                 <li class="nav-item">
                     <x-nav-link :href="route('osiagniecia.index')" :active="request()->routeIs('osiagniecia.index')">
                         <!-- osiagniecia.index -->

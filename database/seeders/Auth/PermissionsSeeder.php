@@ -24,22 +24,57 @@ Class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'users.change_role']);
 
         Permission::create(['name' => 'klient.index']);
-        Permission::create(['name' => 'klient.store']);
+        //Permission::create(['name' => 'klient.store']);
+        Permission::create(['name' => 'admin.all']);
+        Permission::create(['name' => 'szlak.index']);
+        Permission::create(['name' => 'wycieczki.index']);
+        Permission::create(['name' => 'ranking.index']);
+        Permission::create(['name' => 'raport.index']);
+        Permission::create(['name' => 'obowiazki.index']);
+        Permission::create(['name' => 'listaturystow.index']);
+        Permission::create(['name' => 'osiagniecia.index']);
+        Permission::create(['name' => 'odznaki.index']);
 
+       
 
+       
         //Uzytkownik
         $userRole = Role::findByName(config('app.user_role'));
         $userRole->givePermissionTo('klient.index');
-        $userRole->givePermissionTo('klient.store');
+        $userRole->givePermissionTo('szlak.index');
+        $userRole->givePermissionTo('wycieczki.index');
+        $userRole->givePermissionTo('ranking.index');
+        $userRole->givePermissionTo('raport.index');
+        //$userRole->givePermissionTo('obowiazki.index');
+        //$userRole->givePermissionTo('listaturystow.index');
+        $userRole->givePermissionTo('osiagniecia.index');
+        $userRole->givePermissionTo('odznaki.index');
+
 
         //Przodownik
         $userRole = Role::findByName(config('app.przodownik_role'));
+        $userRole->givePermissionTo('klient.index');
+        $userRole->givePermissionTo('szlak.index');
+        $userRole->givePermissionTo('wycieczki.index');
+        $userRole->givePermissionTo('ranking.index');
+        $userRole->givePermissionTo('raport.index');
+        $userRole->givePermissionTo('obowiazki.index');
+        $userRole->givePermissionTo('listaturystow.index');
+        $userRole->givePermissionTo('osiagniecia.index');
+        $userRole->givePermissionTo('odznaki.index');
 
         //Administrator
         $userRole = Role::findByName(config('app.admin_role'));
-        $userRole->givePermissionTo('users.index');
-        $userRole->givePermissionTo('users.store');
-        $userRole->givePermissionTo('users.destroy');
-        $userRole->givePermissionTo('users.change_role');
+        $userRole->givePermissionTo('admin.all');        
+        $userRole->givePermissionTo('klient.index');
+        $userRole->givePermissionTo('szlak.index');
+        $userRole->givePermissionTo('wycieczki.index');
+        $userRole->givePermissionTo('ranking.index');
+        $userRole->givePermissionTo('raport.index');
+        $userRole->givePermissionTo('obowiazki.index');
+        $userRole->givePermissionTo('listaturystow.index');
+        $userRole->givePermissionTo('osiagniecia.index');
+        $userRole->givePermissionTo('odznaki.index');
+       
     }
 }
