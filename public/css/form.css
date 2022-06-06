@@ -1,18 +1,19 @@
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url("/images/tlo.jpg");
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("/images/tlo.jpg");
+    background-size: cover;
 }
 
 .form {
-  width: 100%;
-  max-width: 450px;
-  margin: auto;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
 }
