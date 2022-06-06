@@ -41,7 +41,7 @@ Route::get('/zarejestruj', function () {
 })->name('home');
 
 
-require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php'; 
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::name('uzytkownik.')->prefix('uzytkownik')->group(function () {
@@ -51,130 +51,129 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('create',[KlientController::class, 'create'])
             ->where('id', '[0-9]+')
             ->name('create')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:admin.all']);
         Route::post('', [KlientController::class, 'store'])
             ->name('store')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:admin.all']);
         Route::get('{id}/edit',[KlientController::class, 'edit'])
             ->where('id', '[0-9]+')
             ->name('edit')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:klient.index']);
         Route::patch('{id}', [KlientController::class, 'update'])
             ->name('update')
             ->where('id', '[0-9]+')
-            ->middleware(['permission:klient.store']);    
+            ->middleware(['permission:klient.index']);    
     });
     Route::name('osiagniecia.')->prefix('osiagniecia')->group(function () {
         Route::get('', [OsiagnieciaController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:osiagniecia.index']);            
         Route::get('/search', [OsiagnieciaController::class, 'search'])
             ->name('search')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:osiagniecia.index']);
         Route::get('szczegoly/{id}', [OsiagnieciaController::class, 'szczegoly'])
             ->name('szczegoly')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:osiagniecia.index']);
         Route::post('szczegoly/dodajzdjecie', [OsiagnieciaController::class, 'dodajzdjecie'])
             ->name('dodajzdjecie')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:osiagniecia.index']);
         Route::get('szczegolyzatw/{id}', [OsiagnieciaController::class, 'szczegolyzatw'])
             ->where('id', '[0-9]+')
             ->name('szczegolyzatw')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:osiagniecia.index']);
     });
 
     Route::name('szlak.')->prefix('szlak')->group(function () {
         Route::get('', [SzlakController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:szlak.index']);
         Route::get('{id}/szczegoly',[SzlakController::class, 'szczegoly'])
             ->where('id', '[0-9]+')
             ->name('szczegoly')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:szlak.index']);
     });
 
     Route::name('wycieczki.')->prefix('wycieczki')->group(function () {
         Route::get('', [WycieczkiController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:wycieczki.index']);
         Route::get('create',[WycieczkiController::class, 'create'])
             ->where('id', '[0-9]+')
             ->name('create')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
         Route::get('szczegoly/{id}',[WycieczkiController::class, 'szczegoly'])
             ->where('id', '[0-9]+')
             ->name('szczegoly')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
         Route::get('zapisz/{id}',[WycieczkiController::class, 'zapisz'])
             ->where('id', '[0-9]+')
             ->name('zapisz')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
         Route::get('create/{id}',[WycieczkiController::class, 'pokazPasma'])
             ->where('id', '[0-9]+')
             ->name('pokazPasma')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
         Route::get('odcinki/{id}',[WycieczkiController::class, 'pokazodcinki'])
             ->where('id', '[0-9]+')
             ->name('pokazodcinki')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
         Route::post('',[WycieczkiController::class, 'store'])
             ->name('store')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:wycieczki.index']);
     });
 
     Route::name('ranking.')->prefix('ranking')->group(function () {
         Route::get('', [RankingController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:ranking.index']);
     });
 
     Route::name('raport.')->prefix('raport')->group(function () {
         Route::get('raport', [RaportController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
-          
+            ->middleware(['permission:raport.index']);          
         Route::get('', [RaportController::class, 'create'])
             ->name('create')
-            ->middleware(['permission:klient.create']);
+            ->middleware(['permission:raport.index']);
         Route::post('', [RaportController::class, 'store'])
             ->name('store')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:raport.index']);
         Route::get('{raport}/edit', [RaportController::class, 'edit'])
            ->where('raport', '[0-9]+')
            ->name('edit')
-           ->middleware(['permission:klient.store']);
+           ->middleware(['permission:raport.index']);
         Route::patch('{raport}/edit', [RaportController::class, 'update'])
             ->where('raport', '[0-9]+')
             ->name('update')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:raport.index']);
         Route::get('', [RaportController::class, 'szczegoly'])
             ->name('szczegoly')
-            ->middleware(['permission:klient.szczegoly']);
+            ->middleware(['permission:raport.index']);
     });
     
     Route::name('odznaki.')->prefix('odznaki')->group(function () {
         Route::get('', [OdznakaController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:odznaki.index']);
     });
 
     Route::name('obowiazki.')->prefix('obowiazki')->group(function () {
         Route::get('', [ObowiazkiController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:obowiazki.index']);
     });
     Route::name('listaturystow.')->prefix('listaturystow')->group(function () {
         Route::get('', [ListaTurystowController::class, 'index'])
             ->name('index')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:listaturystow.index']);
         Route::get('szczegoly/{id}', [ListaTurystowController::class, 'szczegoly'])
             ->where('id', '[0-9]+')
             ->name('szczegoly')
-            ->middleware(['permission:klient.index']);
+            ->middleware(['permission:listaturystow.index']);
         Route::get('zapisz/{id}',[ListaTurystowController::class, 'zapisz'])
             ->where('id', '[0-9]+')
             ->name('zapisz')
-            ->middleware(['permission:klient.store']);
+            ->middleware(['permission:listaturystow.index']);
     });
 
 });

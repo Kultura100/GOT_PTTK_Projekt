@@ -64,7 +64,7 @@ class WycieczkiController extends Controller
 
     public function szczegoly($id)
     {        
-        $wycieczki = Wycieczka::find($id);        
+        $wycieczki = Wycieczka::find($id);  
         return view('wycieczki.szczegoly', compact('wycieczki')        
     );
     }

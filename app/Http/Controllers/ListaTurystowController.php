@@ -32,9 +32,6 @@ class ListaTurystowController extends Controller
         $sprawdzczyjest = Ksiazeczka_wycieczka::where('id_wycieczki',$id)->first();
         $sprawdzczyjest->zatwierdzona = 1;
         $sprawdzczyjest->save();
-
-        dd($sprawdzczyjest);
-
         return redirect()->route('listaturystow.index')
             ->with('success', __('Poprawnie zatwierdzoną wycieczke!')); 
     }

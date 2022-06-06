@@ -54,7 +54,7 @@
                                         <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
                                     </li>
                                     <li>
-                                        <a href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->id]) }}">                         
+                                        <a href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->jakawycieczka->id]) }}">                         
                                         <button class="btn btn-primary">
                                             Szczegóły
                                         </button>
@@ -105,7 +105,7 @@
                                         <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
                                     </li>
                                     <li>
-                                        <a href="{{ route('osiagniecia.szczegolyzatw', ['id' => $wycieczka->id]) }}">                         
+                                        <a href="{{ route('osiagniecia.szczegolyzatw', ['id' => $wycieczka->jakawycieczka->id]) }}">                         
                                         <button class="btn btn-primary">
                                             Szczegóły
                                         </button>
