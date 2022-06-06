@@ -7,6 +7,7 @@ use App\Models\Wycieczka;
 use App\Models\Ksiazeczka;
 use Illuminate\Http\Request;
 use App\Models\Odznaka_Turysty;
+use App\Models\Wycieczka_odcinek;
 use Illuminate\Support\Facades\Auth;
 
 class OsiagnieciaController extends Controller
@@ -67,6 +68,30 @@ class OsiagnieciaController extends Controller
         $wycieczkiSzczeg = Wycieczka::find($id);         
         return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg')        
     );
+    }
+
+    public function potwierdzenie(Request $request)
+    {    
+            //dd($request);
+        $odcinki = Wycieczka_odcinek::where('id_wycieczka',$request->id)->get();
+        $licznik = 0;
+        $iterator=0;
+        if(isset($request->postep)){
+            foreach ($odcinki as $odcinek) {
+                    $iterator++;
+                    if($odcinek->id_odcinek == $request->postep[$licznik]){
+                    $odcinek->id_status = 1;
+                    $odcinek->save();
+                    }
+                    if($iterator <= count($request->postep)-1) $licznik++;
+            }
+            return redirect()->route('osiagniecia.szczegoly', ['id' => $request->id])
+            ->with('success', __('Zmieniono status ukończenia odcinka'));
+        }else{
+            return redirect()->route('osiagniecia.szczegoly' , ['id' => $request->id])
+            ->with('danger', __('Nie wybrałeś zadnych postępów do zapisania.'));
+        }      
+    
     }
 
     public function dodajzdjecie(Request $request)

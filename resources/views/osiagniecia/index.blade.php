@@ -44,9 +44,6 @@
                                 <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
                                 <ul class="d-md-flex text-capitalize ff-open-sans">
                                     <li class="mr-md-4">
-                                        <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp
-                                    </li>
-                                    <li class="mr-md-4">
                                         <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do 
                                         {{ $wycieczka->jakawycieczka->datado }}
                                     </li>&nbsp&nbsp
@@ -91,12 +88,9 @@
                             <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
                                 <!-- tutaj zdjęcie -->
                             </div>
-                            <div class="job-content">
+                            <div class="job-content ">
                                 <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
                                 <ul class="d-md-flex text-capitalize ff-open-sans">
-                                    <li class="mr-md-4">
-                                        <i class="zmdi zmdi-pin mr-2"></i> lokalizacja &nbsp&nbsp&nbsp
-                                    </li>
                                     <li class="mr-md-4">
                                         <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do 
                                         {{ $wycieczka->jakawycieczka->datado }}
@@ -106,7 +100,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('osiagniecia.szczegolyzatw', ['id' => $wycieczka->jakawycieczka->id]) }}">                         
-                                        <button class="btn btn-primary">
+                                        <button class="btn btn-primary ">
                                             Szczegóły
                                         </button>
                                 </a></li>

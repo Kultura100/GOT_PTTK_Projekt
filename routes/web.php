@@ -77,6 +77,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('szczegoly/dodajzdjecie', [OsiagnieciaController::class, 'dodajzdjecie'])
             ->name('dodajzdjecie')
             ->middleware(['permission:osiagniecia.index']);
+        Route::post('szczegoly/potwierdzenie', [OsiagnieciaController::class, 'potwierdzenie'])
+            ->name('potwierdzenie')
+            ->middleware(['permission:osiagniecia.index']);
         Route::get('szczegolyzatw/{id}', [OsiagnieciaController::class, 'szczegolyzatw'])
             ->where('id', '[0-9]+')
             ->name('szczegolyzatw')
