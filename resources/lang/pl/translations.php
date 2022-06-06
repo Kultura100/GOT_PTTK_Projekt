@@ -82,7 +82,7 @@ return [
            'error' =>
             [
                 'duplicate_entry' => 'Dane Klienta :nazwisko nie zmieniły się przez wzgląd na wystepowanie takiego adresu Email.',
-                'dolaczenie_error' => 'Nie udało się zapisać do wycieczki.',
+                'dolaczenie_error' => 'Jesteś już zapisany na tę wycieczke!',
                 'dolaczenie_success' => 'Zapisałeś się do wycieczki o nazwie :name'
             ]
         ]

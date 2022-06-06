@@ -107,23 +107,23 @@
                         @endphp
                     </th>                   
                 </tr>
-               </tfoot>      
+            </tfoot>      
         </table>  
     </div>
-    <div>
-        <a href="">
-          {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
-              <x-button class="hover:bg-green-700">
-                 Odrzuć
-              </x-button>
-        </a> 
-        <a href="">
-          {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
-              <x-button class="hover:bg-green-700">
+    <div style="float:right">
+        {{-- <a href="">
+        {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} 
+            <x-button class="hover:bg-green-700">
+                Odrzuć
+            </x-button>
+        </a>  --}}
+        <a href="{{ route('listaturystow.zapisz', ['id' => $wycieczkiSzczeg->id]) }}">
+        {{-- {{ route('listaturystow.index', ['id' => $wycieczka->id]) }} --}}
+            <x-button class="hover:bg-green-700">
                 Zaakceptuj
-              </x-button>
+            </x-button>
         </a>
-      </div>
+    </div>
     <h2> Zdjęcia: </h2>
     <div class="container">
         @foreach($wycieczkiZdj as $wycieczkiZdjecia)

@@ -93,4 +93,11 @@ class OsiagnieciaController extends Controller
             ->with('success','Product created successfully.');        
     
     }
+
+    public function szczegolyzatw($id)
+    {    
+        $wycieczkiSzczeg = Wycieczka::find($id); 
+        $wycieczkiZdj = Zdjecia::where('id_wycieczka',$id)->get();
+        return view('osiagniecia.szczegolyzatw', compact('wycieczkiSzczeg','wycieczkiZdj'));
+    }
 }
