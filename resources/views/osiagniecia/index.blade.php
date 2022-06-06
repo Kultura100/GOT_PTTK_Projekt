@@ -109,7 +109,7 @@
                                         <button class="btn btn-primary">
                                             Szczegóły
                                         </button>
-                                  </a></li>
+                                </a></li>
                                 </ul>                             
                             </div>
                         </div>
