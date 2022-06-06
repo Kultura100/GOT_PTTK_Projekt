@@ -126,6 +126,7 @@
     </div>
     <h2> Zdjęcia: </h2>
     <div class="container">
+        {{-- @dd($wycieczkiZdj); --}}
         @foreach($wycieczkiZdj as $wycieczkiZdjecia)
         <img src="{{url('/zrodlo_zdjecia')}}/{{$wycieczkiZdjecia->zrodlo_zdjecia}}" class="img-thumbnail" alt="...">
         @endforeach

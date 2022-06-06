@@ -21,7 +21,6 @@
             <div class="col col-4"></div>
         </li>
 
-      
         @foreach ($wycieczkiZatw as $wycieczkiZatwierdzone)
             <li class="table-row">
                 <div class="col col-1">
@@ -34,11 +33,11 @@
                     {{ $wycieczkiZatwierdzone->jakaWycieczka->nazwa}}
                 </div>
                 <div class="col col-4">
-                    <a href="{{ route('listaturystow.szczegoly', ['id' => $wycieczkiZatwierdzone->id]) }}">                         
+                    <a href="{{ route('listaturystow.szczegoly', ['id' => $wycieczkiZatwierdzone->jakaWycieczka->id]) }}">                         
                             <x-button class="hover:bg-green-700">
                                 Szczegóły
                             </x-button>
-                      </a>
+                </a>
                 </div>                
             </li>
         @endforeach

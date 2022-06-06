@@ -70,16 +70,14 @@ class OsiagnieciaController extends Controller
     }
 
     public function dodajzdjecie(Request $request)
-    {  
+    { 
+
         $request->validate([
             'id_tworcy' => 'required',
             'id_wycieczka' => 'required',
             'zrodlo_zdjecia' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        
-  
         $input = $request->all();
-  
         if ($image = $request->file('zrodlo_zdjecia')) {
             $destinationPath = 'zrodlo_zdjecia/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -88,7 +86,6 @@ class OsiagnieciaController extends Controller
         }
     
         Zdjecia::create($input);
-     
         return redirect()->route('osiagniecia.index')
             ->with('success','Product created successfully.');        
     
