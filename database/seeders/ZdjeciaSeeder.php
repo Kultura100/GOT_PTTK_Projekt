@@ -14,6 +14,6 @@ class ZdjeciaSeeder extends Seeder
      */
     public function run()
     {
-        Zdjecia::factory()->count(20)->create();
+        //Zdjecia::factory()->count(20)->create();
     }
 }
