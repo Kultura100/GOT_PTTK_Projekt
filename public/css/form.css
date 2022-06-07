@@ -9,6 +9,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background-image: url("/images/tlo.jpg");
+  background-size: cover;
 }
 
 .form {
