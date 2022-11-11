@@ -183,27 +183,27 @@
             }
 
             footer{
-                position: relative;
+                position: fixed;
                 left: 0;
                 bottom: 0;
                 width: 100%;
                 text-align: center;
                 min-height: 20px;
                 z-index: 2;
-                
             }
         </style>
         {{ $styles }}
     </x-slot>
 
     @include('layouts.navigation')
-    <div class="container">
+    <div class="container" style="margin-bottom: 80px;">
     {{ $slot }}
     </div>
 
     <footer class="bg-dark text-light">
         <p class="py-4 mb-0 text-center">2022 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz,
             Danielak Bartosz</p>
+            <x-toasts/>
     </footer>
 
     <x-slot name="scripts">

@@ -65,8 +65,9 @@ class OsiagnieciaController extends Controller
     }
     public function szczegoly($id)
     {    
-        $wycieczkiSzczeg = Wycieczka::find($id);         
-        return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg')        
+        $wycieczkiSzczeg = Wycieczka::find($id);      
+        $wycieczkiZdj = Zdjecia::where('id_wycieczka',$id)->get();   
+        return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg','wycieczkiZdj')        
     );
     }
 
