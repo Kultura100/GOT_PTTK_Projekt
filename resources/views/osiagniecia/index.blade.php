@@ -84,13 +84,12 @@
             @foreach ($ksiazeczka->ksiazeczkawycieczki->where('zatwierdzona',1) as $wycieczka)
                 <div class="col-6">
                     <div class="job-box align-items-center justify-content-center mb-30">
-                        {{-- @dd($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia); --}}
                         @if(isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))                        
-                        <div class="background-img row align-items-center img-fluid" style="background-image: url('http://localhost:8000/zrodlo_zdjecia/{{$wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia}}'); border-radius: 25px;">
-                            @else
-                            <div class="background-img row align-items-center img-fluid" style="background-image: url('https://b.allegroimg.com/s512/012266/47959eb24f71a42f97d2bce4ce8b/Bokserki-dupa-smieszne-przebranie-prezent-Impreza'); border-radius: 25px;">
-                                @endif
-                            <div class="my-4 d-flex align-items-center flex-wrap justify-content-center" style="background-color: rgba(0, 0, 0, 0.5)">                            
+                        <div class="background-img row align-items-end img-fluid" style="height:400px ;background-image: url('http://localhost:8000/zrodlo_zdjecia/{{$wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia}}'); border-radius: 25px;">
+                        @else
+                        <div class="background-img row align-items-end img-fluid" style="height:400px ; background-image: url('https://b.allegroimg.com/s512/012266/47959eb24f71a42f97d2bce4ce8b/Bokserki-dupa-smieszne-przebranie-prezent-Impreza'); border-radius: 25px;">
+                        @endif
+                            <div class="my-4 d-flex align-items-end flex-wrap justify-content-center" style="background-color: rgba(0, 0, 0, 0.5)">                            
                                 <div class="job-content text-light" >
                                     <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
                                     <ul class="d-md-flex text-capitalize ff-open-sans">
