@@ -19,7 +19,7 @@ class Wycieczka_odcinek extends Model
         'id_odcinek',
         'data',
         'id_status',
-        'liczba_punktow'
+        'liczba_punktow',
     ]; 
     public function wycieczka_odcinek()
     {

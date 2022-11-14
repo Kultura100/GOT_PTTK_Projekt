@@ -73,8 +73,6 @@ class OsiagnieciaController extends Controller
 
     public function potwierdzenie(Request $request)
     {    
-        //do wycieczka odcinek dodac id uzytkownika kogo dotyczy ten odcinek i jakiego odcinka status zmienia, w tej chwili kazdy moze kazdemu zmienic do naprawy
-            //dd($request);
         $odcinki = Wycieczka_odcinek::where('id_wycieczka',$request->id)->get();
         $licznik = 0;
         $iterator=0;

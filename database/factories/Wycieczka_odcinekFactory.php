@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Status;
 use App\Models\Odcinek;
 use App\Models\Wycieczka;
+use App\Models\Ksiazeczka;
 use App\Models\Wycieczka_odcinek;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
