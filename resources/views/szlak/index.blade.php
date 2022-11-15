@@ -20,7 +20,7 @@
                     <div class="col col-1">{{ $pasma->nazwa }}</div>
                     <div>
                         <a href="{{ route('szlak.szczegoly', ['id' => $pasma->id]) }}">
-                            <x-button class="hover:bg-green-700">
+                            <x-button class="button-1 hover:bg-green-700">
                                 Szczegóły
                             </x-button>
                         </a>
