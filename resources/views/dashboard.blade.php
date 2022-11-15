@@ -3,6 +3,10 @@
     box-sizing: border-box;
 } */
 
+/* body{
+  background-image: url('/images/tlo.jpg');
+} */
+
 section{
     display: flex;
 }
@@ -10,6 +14,7 @@ section{
 header{
     margin: 0;
     padding: 0;
+    height: 50%;
 }
 
 .carousel-item{
@@ -35,7 +40,7 @@ header{
 .container {
   margin-right: 0 !important; 
   margin-left: 0 !important; 
-  padding: 0;
+  padding: 0 !important;
   box-sizing: 0 !important;
   max-width: 100% !important;
 } 
@@ -46,19 +51,79 @@ header{
     <x-slot name="styles">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
       </x-slot>
-{{-- <header>
-    <div class="container-fluid text-center mt-3 mb-3">
-            <img src="{{ URL::asset('/images/logo-pttk.png')}}" class="img-fluid fixed" width=20% height=20% alt="logo">
-    </div>
-</header> --}}
 
-<section>
+    <header class="d-flex justify-content-center py-5 bg-image-full">
+            <h1 class="align-middle fs-1 fw-bolder">GOT PPTK</h1>
+            <p class="text-white-50 mb-0"></p>
+    </header>
+    <section class="py-5">
+      <div class="container my-2">
+          <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- <section>
 <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-left">
     <h1 class="mt-2">Kolory szlaków górskich</h1>
     <div class="text-left">
         <ul class="list-group list-group-flush ">
-            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czerwony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZERWONY</b> - To szlak główny, którym najprawdopodobniej wędrówka będzie najciekawsza. 
-                </li>
+            <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Czerwony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK CZERWONY</b> - To szlak główny, którym najprawdopodobniej wędrówka będzie najciekawsza.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Niebieski.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK NIEBIESKI</b> - To trasa długodystansowa, ale nie jest to główny szlak.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Zielony.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK ZIELONY</b> - Szlak doprowadzający do ciekawych lub charakterystycznych miejsc.</li>
             <li class="list-group-item fs-4"><img src="{{ URL::asset('/images/szlaki/Zolty.png')}}" class="img-fluid" width=20% height=20% alt="logo"><b>SZLAK ŻÓŁTY</b> - Kolor ten oznacza szlaki łącznikowe, czasami oznacza też szlaki dojściowe.</li>
@@ -68,54 +133,7 @@ header{
 </div>
 
 {{-- <div class="container h-100 d-flex flex-column justify-content-center align-items-center  text-center"> --}}
-  <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="72%" alt="szlaki">
-    
-    
-{{-- </div>  --}}
-
-{{-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner text-light text-center">
-      <div class="carousel-item carousel-img-one active">
-          <img src="{{ URL::asset('/images/tatrys.jpg')}}" class="d-block w-100" alt="tatry">
-        <div class="carousel-caption h-100 p-5 d-flex flex-cloumn justify-content-end justify-content-md-center align-items-center">
-            <p class="display-3"></p>
-            <p class="d-none d-sm-mlock">opis</p>
-        </div>
-        <div class="hero-shadow"></div>
-      </div>
-      <div class="carousel-item carousel-img-two">
-        <img src="{{ URL::asset('/images/Bielskie.jpg')}}" class="d-block w-100" alt="tatry">
-        <div class="carousel-caption h-100 p-5 d-flex flex-cloumn justify-content-end justify-content-md-center align-items-center">
-            <p class="display-3"></p>
-            <p class="d-none d-sm-mlock">opis</p>
-        </div>
-        <div class="hero-shadow"></div>
-      </div>
-      <div class="carousel-item carousel-img-three">
-        <img src="{{ URL::asset('/images/tatry-zima.jpg')}}" class="d-block w-100" alt="tatry">
-        <div class="carousel-caption h-100 p-5 d-flex flex-cloumn justify-content-end justify-content-md-center align-items-center">
-            <p class="display-3"></p>
-            <p class="d-none d-sm-mlock">opis</p>
-        </div>
-        <div class="hero-shadow"></div>
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> --}}
-
+  {{-- <img src="{{ URL::asset('/images/Tatry_szlaki.png')}}" class="img-fluid d-flex flex-column justify-content-center" width="72%" alt="szlaki"> --}}
 
 </section>
 </x-app-layout>

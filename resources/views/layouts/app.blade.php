@@ -5,7 +5,6 @@
         <style type="text/css" media="screen">
             body {
                 padding-top: 4.5rem;
-                /* margin-bottom: 75px; */
             }
 
             a {
