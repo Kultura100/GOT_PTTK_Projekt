@@ -29,7 +29,7 @@
                                         {{ $imie = $uzytkownicy->where('id', key($kwerenda))->first()->imie }}
                                         {{ $nazwisko = $uzytkownicy->where('id', key($kwerenda))->first()->nazwisko }}
                                     </h3>
-                                    <small>Ilosc odznak: {{ $miejsca }}</small>
+                                    <small>Ilosc ukończonych wycieczek: {{ $miejsca }}</small>
                                     <input type="hidden" value="{{ $miejsca }}" name="wynik">
                                     <input type="hidden" value="{{ $imie }} {{ $nazwisko }}" name="imieinazwisko">
                                 </div>

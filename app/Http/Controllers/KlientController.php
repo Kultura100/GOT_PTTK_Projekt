@@ -15,7 +15,7 @@ class KlientController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
+        $user = User::find(Auth::user()->id);
             if ($user->cannot('log-viewer'))
             {
                 return view('uzytkownik.index',[
@@ -23,6 +23,7 @@ class KlientController extends Controller
                 ]);
             }
             else
+
             {
             return view(
                 'uzytkownik.index',

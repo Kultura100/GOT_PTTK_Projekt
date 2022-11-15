@@ -3,6 +3,11 @@ body {
   margin-top: 20px;
 }
 
+.background-img {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ===== Career ===== */
 .career-form {
   background-color: #4e63d7;
@@ -117,7 +122,6 @@ ul {
 
 @media (min-width: 992px) {
   .job-overview {
-    position: -webkit-sticky;
     position: sticky;
     top: 70px;
   }

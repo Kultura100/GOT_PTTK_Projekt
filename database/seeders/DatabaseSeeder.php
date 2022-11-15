@@ -30,24 +30,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(RolesSeeder::class);
-        $this->call(PermissionsSeeder::class);
-        $this->call(UsersSeeder::class);
-
-        $this->call(OdznakaSeeder::class);
-        $this->call(Odznaka_TurystySeeder::class);
-        $this->call(GrupaSeeder::class);
-        $this->call(Grupa_PrzodownikSeeder::class);
-        $this->call(PunktSeeder::class);
-        $this->call(PodPunktSeeder::class);
-   
-        //$this->call(ListaPodPunktSeeder::class);
-        $this->call(StatusSeeder::class);
-        $this->call(PasmoSeeder::class);
-        $this->call(OdcinekSeeder::class);
-        $this->call(WycieczkaSeeder::class);
-        $this->call(Wycieczka_odcinekSeeder::class);
-        $this->call(ZdjeciaSeeder::class);
- 
+        $this->call([
+            RolesSeeder::class,
+            PermissionsSeeder::class,
+            UsersSeeder::class,
+            OdznakaSeeder::class,
+            Odznaka_TurystySeeder::class,
+            GrupaSeeder::class,
+            Grupa_PrzodownikSeeder::class,
+            PunktSeeder::class,
+            PodPunktSeeder::class,
+            StatusSeeder::class,
+            PasmoSeeder::class,
+            OdcinekSeeder::class,
+            WycieczkaSeeder::class,
+            Wycieczka_odcinekSeeder::class,
+            ZdjeciaSeeder::class,
+        ]);
     }
 }

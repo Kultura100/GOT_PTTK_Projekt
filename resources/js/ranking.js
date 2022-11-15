@@ -36,10 +36,15 @@ const config = {
     type: 'bar',
     data: data,
     options: {
+        responsive:true,
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    callback: function (value) { if (Number.isInteger(value)) { return value; } },
+                    stepSize: 1
+                }
+            }],
         },
         plugins: {
             legend: {

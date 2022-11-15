@@ -23,7 +23,6 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View::composer(['dashboard','osiagniecia','odznaki','ranking','wycieczki','szlak'], function ($view) {
             $powiadomienie = Powiadomienie::where('id_turysta', Auth::user()->id)->get();
-            //dd($powiadomienie);
             $view->with(compact('powiadomienie'));
         });
     }

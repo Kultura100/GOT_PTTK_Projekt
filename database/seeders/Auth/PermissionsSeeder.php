@@ -34,6 +34,10 @@ Class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'listaturystow.index']);
         Permission::create(['name' => 'osiagniecia.index']);
         Permission::create(['name' => 'odznaki.index']);
+        Permission::create(['name' => 'log-viewer']);
+
+        
+
 
        
 
@@ -64,7 +68,8 @@ Class PermissionsSeeder extends Seeder
         $userRole->givePermissionTo('odznaki.index');
 
         //Administrator
-        $userRole = Role::findByName(config('app.admin_role'));
+        $userRole = Role::findByName(config('app.admin_role'));        
+        $userRole->givePermissionTo('log-viewer'); 
         $userRole->givePermissionTo('admin.all');        
         $userRole->givePermissionTo('klient.index');
         $userRole->givePermissionTo('szlak.index');
