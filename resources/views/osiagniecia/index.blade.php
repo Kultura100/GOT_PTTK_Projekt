@@ -8,19 +8,20 @@
         <script src="{{ asset('js/osiagniecia.js') }}"></script>
         <script>
             $('#search').on('keyup', function() {
-                        $value = $(this).val();
-                        $.ajax({
-                            type: 'get',
-                            // url: '{{ URL::to('search') }}',
-                            url: '/osiagniecia/search',
-                            data: {
-                                "_token": "{{ csrf_token() }}",
-                                'search': $value,},
-                            success: function(data) {
-                                $('.wycieczkizawartosc').html(data);
-                            }
-                        });
-                    })
+                $value = $(this).val();
+                $.ajax({
+                    type: 'get',
+                    // url: '{{ URL::to('search') }}',
+                    url: '/osiagniecia/search',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        'search': $value,
+                    },
+                    success: function(data) {
+                        $('.wycieczkizawartosc').html(data);
+                    }
+                });
+            })
         </script>
 
     </x-slot>
@@ -31,42 +32,48 @@
         </div>
     </div>
     <div class="row">
+
         <div class="wycieczkizawartosc row">
             {{-- @dd($ksiazeczki) --}}
-            @foreach ($ksiazeczka->ksiazeczkawycieczki->where('zatwierdzona',0) as $wycieczka)
+            @foreach ($ksiazeczka->ksiazeczkawycieczki->where('zatwierdzona', 0) as $wycieczka)
                 <div class="col-6">
-                    <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
-                        <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                            <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                <!-- tutaj zdjęcie -->
-                            </div>
-                            <div class="job-content">
+                    <div class="job-box align-items-center justify-content-center mb-30">
+                        @if (isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))
+                            <div class="background-img row align-items-end img-fluid"
+                                style="height:400px ;background-image: url('zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
+                            @else
+                                <div class="background-img row align-items-end img-fluid"
+                                    style="height:400px ; background-image: url('images/imageplaceholder.png'); border-radius: 25px;">
+                        @endif
+                        <div class="my-4 d-flex align-items-end flex-wrap justify-content-center"
+                            style="background-color: rgba(0, 0, 0, 0.5)">
+                            <div class="job-content text-light">
                                 <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
                                 <ul class="d-md-flex text-capitalize ff-open-sans">
                                     <li class="mr-md-4">
-                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do 
+                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do
                                         {{ $wycieczka->jakawycieczka->datado }}
                                     </li>&nbsp&nbsp
                                     <li class="mr-md-4">
                                         <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
                                     </li>
                                     <li>
-                                        <a href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->jakawycieczka->id]) }}">                         
-                                        <button class="btn btn-primary">
-                                            Szczegóły
-                                        </button>
-                                  </a></li>
-                                </ul>                             
+                                        <a
+                                            href="{{ route('osiagniecia.szczegoly', ['id' => $wycieczka->jakawycieczka->id]) }}">
+                                            <button class="btn btn-primary text-light">
+                                                Szczegóły
+                                            </button>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
+        </div>
+        @endforeach
         </div>
     </div>
-
-
-
 
     <div class="col-lg-10 mx-auto mb-4">
         <div class="section-title text-center ">
@@ -76,43 +83,47 @@
     </div>
     <div class="row">
         <div class="md-form mt-0 mb-30">
-            <input class="form-control" type="text" id="search" name="search" placeholder="Szukaj wycieczki"
-                aria-label="Szukaj wycieczki">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Szukaj wycieczki">
         </div>
         <div class="wycieczkizawartosc row">
             {{-- @dd($ksiazeczki) --}}
-            @foreach ($ksiazeczka->ksiazeczkawycieczki->where('zatwierdzona',1) as $wycieczka)
+            @foreach ($ksiazeczka->ksiazeczkawycieczki->where('zatwierdzona', 1) as $wycieczka)
                 <div class="col-6">
                     <div class="job-box align-items-center justify-content-center mb-30">
-                        @if(isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))                        
-                        <div class="background-img row align-items-end img-fluid" style="height:400px ;background-image: url('http://localhost:8000/zrodlo_zdjecia/{{$wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia}}'); border-radius: 25px;">
-                        @else
-                        <div class="background-img row align-items-end img-fluid" style="height:400px ; background-image: url('https://b.allegroimg.com/s512/012266/47959eb24f71a42f97d2bce4ce8b/Bokserki-dupa-smieszne-przebranie-prezent-Impreza'); border-radius: 25px;">
+                        @if (isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))
+                            <div class="background-img row align-items-end img-fluid"
+                                style="height:400px ;background-image: url('/zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
+                            @else
+                                <div class="background-img row align-items-end img-fluid"
+                                style="height:400px ; background-image: url('images/imageplaceholder.png'); border-radius: 25px;">
                         @endif
-                            <div class="my-4 d-flex align-items-end flex-wrap justify-content-center" style="background-color: rgba(0, 0, 0, 0.5)">                            
-                                <div class="job-content text-light" >
-                                    <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
-                                    <ul class="d-md-flex text-capitalize ff-open-sans">
-                                        <li class="mr-md-4">
-                                            <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do 
-                                            {{ $wycieczka->jakawycieczka->datado }}
-                                        </li>&nbsp&nbsp
-                                        <li class="mr-md-4">
-                                            <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('osiagniecia.szczegolyzatw', ['id' => $wycieczka->jakawycieczka->id]) }}">                         
+                        <div class="my-4 d-flex align-items-end flex-wrap justify-content-center"
+                            style="background-color: rgba(0, 0, 0, 0.5)">
+                            <div class="job-content text-light">
+                                <h5 class="text-center text-md-left">{{ $wycieczka->jakawycieczka->nazwa }}</h5>
+                                <ul class="d-md-flex text-capitalize ff-open-sans">
+                                    <li class="mr-md-4">
+                                        <i class="zmdi zmdi-time mr-2"></i> {{ $wycieczka->jakawycieczka->dataod }} do
+                                        {{ $wycieczka->jakawycieczka->datado }}
+                                    </li>&nbsp&nbsp
+                                    <li class="mr-md-4">
+                                        <i class="zmdi zmdi-parking mr-2"> </i> {{ $wycieczka->jakawycieczka->punkty }}
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="{{ route('osiagniecia.szczegolyzatw', ['id' => $wycieczka->jakawycieczka->id]) }}">
                                             <button class="btn btn-primary text-light">
                                                 Szczegóły
                                             </button>
-                                    </a></li>
-                                    </ul>                             
-                                </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
+        </div>
+        @endforeach
         </div>
     </div>
     <section class="py-5 mb-5">
@@ -126,8 +137,7 @@
                     @foreach ($odznaki->odznakaturysty_odznaka as $odznaczka)
                         <div class="col-md-6 col-lg-4">
                             <div class="card mb-3">
-                                <img src="{{ $odznaczka->zrodlo }}" class="OdznakiImg"
-                                    alt="{{ $odznaczka->nazwa }}">
+                                <img src="{{ $odznaczka->zrodlo }}" class="OdznakiImg" alt="{{ $odznaczka->nazwa }}">
                                 <div class="cart-body">
                                     <p class="p-3"><b>{{ $odznaczka->nazwa }}</b> <br>
                                         {{-- {{ intval($odznaczka->wymaganepunkty)? 'Wymagane punkty: ' . $odznaczka->wymaganepunkty: 'Wymagania: ' . $odznaczka->wymaganepunkty }} --}}

@@ -61,6 +61,20 @@ class SzlakController extends Controller
         $punkty = Punkt::whereBetween('id', [120, 125])->get();
         }elseif($id == 20){
         $punkty = Punkt::whereBetween('id', [126, 131])->get();
+        }elseif($id == 21){
+        $punkty = Punkt::whereBetween('id', [132, 137])->get();
+        }elseif($id == 22){
+        $punkty = Punkt::whereBetween('id', [138, 143])->get();
+        }elseif($id == 23){
+        $punkty = Punkt::whereBetween('id', [144, 149])->get();
+        }elseif($id == 24){
+        $punkty = Punkt::whereBetween('id', [150, 155])->get();
+        }elseif($id == 25){
+        $punkty = Punkt::whereBetween('id', [156, 161])->get();
+        }elseif($id == 26){
+        $punkty = Punkt::whereBetween('id', [162, 167])->get();
+        }elseif($id == 27){
+        $punkty = Punkt::whereBetween('id', [168, 176])->get();
         }
         return view('szlak.szczegoly',compact('punkty'));
     }

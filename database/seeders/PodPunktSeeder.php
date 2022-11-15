@@ -679,6 +679,229 @@ class PodPunktSeeder extends Seeder
             553 => 'Falkowej (506 m)',
             554 => 'Jasiennej',
 
+            555 => 'Tarnowa',
+            556 => 'Skrzyszowa',
+            557 => 'Tarnowca',
+            558 => 'Słonej Góry',
+
+            559 => 'Łowczówka - Pleśnej (PKP)',
+            560 => 'Piotrowic',
+            561 => 'Łowczów - Piotrowice',
+
+            562 => 'Góry św. Marcina (384 m)',
+            563 => 'Zalasowej',
+            564 => 'Tuchowa przez Las Tuchowsk',
+            565 => 'Ryglic przez Las Tuchowski',
+
+            566 => 'Zalesowej',
+            567 => 'Zwiernika',
+            568 => 'Pilzna',
+
+            569 => 'Ostrego Kamienia (527 m)',
+            570 => 'Kokocza (434 m)',
+            571 => 'Jodłowej Górnej',
+
+            572 => 'Gilowej Góry (506 m)',
+            573 => 'Brzyski',
+            574 => 'Kołaczyc',
+            575 => 'Jabłonicy',
+
+            576 => 'Jamnicy',
+            577 => 'Nawojowej',
+            578 => 'Kamionki Wielkiej',
+            579 => 'Frycowej',
+
+            580 => 'Kamionki Wielkiej',
+            581 => 'Boguszy',
+            582 => 'Łabowej',
+            583 => 'Maciejowej',
+
+            584 => 'Tokarni (828 m)',
+            585 => 'Boguszy',
+            586 => 'Kamiannej',
+            587 => 'Łabowej',
+
+            588 => 'Ptaszkowej',
+            589 => 'Kąclowej',
+            590 => 'Grybowa',
+            591 => 'Binczarowej',
+            592 => 'Przełęczy pod Binczarową',
+            593 => 'Boguszy',
+
+            594 => 'Przełęczy pod Binczarową',
+            595 => 'Florynki',
+            596 => 'Kamiannej',
+            597 => 'Czerszli (877 m)',
+
+            598 => 'Kamiannej',
+            599 => 'Nowej Wsi',
+            600 => 'Przełęczy Huta',
+            601 => 'Berestu',
+
+            602 => 'Hyrowej',
+            603 => 'Dukli',
+            604 => 'Pustelni św. Jana',
+            605 => 'Mszany',
+            606 => 'Trzciany',
+            607 => 'Nowej Wsi',
+            608 => 'Pustelnia św. Jana - Trzciana',
+
+            609 => 'Hyrowej',
+            610 => 'Tylawy',
+            611 => 'Polan',
+            612 => 'Olchowiec',
+
+            613 => 'Dukli',
+            614 => 'Lubatowej',
+            615 => 'Nowej Wsi',
+            616 => 'Jasionki',
+            617 => 'Trzciany',
+            618 => 'Zawadki Rymanowskiej',
+            619 => 'Osiecznika (633 m)',
+            620 => 'Zawadka Rymanowska - Trzciana',
+
+            621 => 'Lubatowej',
+            622 => 'Zawadki Rymanowskiej',
+            623 => 'Królika Polskiego',
+            624 => 'Szklar',
+
+            625 => 'Rymanowa Zdroju',
+            626 => 'Deszna',
+            627 => 'Iwonicza Zdroju',
+            628 => 'Lubatowej',
+            629 => 'Królika Polskiego',
+            630 => 'Osiecznika (633 m)',
+
+            631 => 'Rymanowa Zdroju',
+            632 => 'Iwonicza Zdroju',
+            633 => 'Przymiarki (Kopa)',
+            634 => 'Lubatowa - Iwonicz-Zdrój',
+
+            635 => 'Komańczy',
+            636 => 'Schroniska PTTK Komańczy-Letniska',
+            637 => 'Rzepedzi',
+            638 => 'Prełuk',
+            639 => 'Duszatyna',
+            640 => 'Jasieniowej (735 m)',
+            641 => 'Radoszyc (BW.02)',
+
+            642 => 'Komańczy',
+            643 => 'Duszatyna',
+            644 => 'Schroniska PTTK Komańczy-Letniska',
+
+            645 => 'Duszatyna',
+            646 => 'Smolnika',
+            647 => 'Nowego Łupkowa (PKP)',
+            648 => 'Radoszyc (BW.02)',
+            649 => 'Jasieniowej (735 m)',
+
+            650 => 'Jasieniowej (735 m)',
+            651 => 'Mikowa',
+            652 => 'Smolnika',
+            653 => 'Nowego Łupkowa (PKP)',
+
+            654 => 'Terpiaka (745 m) (BW.02)',
+            655 => 'Siwakowskiej Doliny (689 m) (BW.02)',
+
+            656 => 'Przełęczy Łupkowskiej (640 m) przez Koszarkę (794 m)',
+            657 => 'Łupkowa',
+            658 => 'Nowego Łupkowa (PKP)',
+            659 => 'Woli Michowej',
+            660 => 'Maniowa',
+
+            661 => 'Dębicy',
+            662 => 'Jaworza',
+
+            663 => 'Bieździadki',
+            664 => 'Kowalowego',
+            665 => 'Warzyc',
+
+            666 => 'Kołaczyc',
+            667 => 'Lublicy',
+            668 => 'Gogołowa',
+
+            669 => 'Koty nad Gogołowem',
+            670 => 'Kamienicy Górnej',
+            671 => 'Dębicy',
+            672 => 'Ropczyc',
+            673 => 'Brzeziny',
+            674 => 'Szufranowej',
+            675 => 'Wiśniowej',
+            676 => 'Frysztaku',
+            677 => 'Szufranowa - Tropie',
+
+            678 => 'Szkodnej',
+            679 => 'Wielopola Skrzyńskiego',
+            680 => 'Pstrągowej Górnej',
+            681 => 'Zawadki',
+
+            682 => 'Oparówki',
+            683 => 'Wiśniowej',
+            684 => 'Łęk Strzyżowskich',
+
+            685 => 'Łapajówki',
+            686 => 'Łuczyc',
+            687 => 'Grochowce - Łuczyce',
+
+            688 => 'Grochowiec',
+            689 => 'Przemyśla',
+            690 => 'Dybawki',
+            691 => 'Bryliniec',
+            692 => 'Krasiczyn - Dybawka',
+
+            693 => 'Bolestraszyc',
+            694 => 'Bażantarii',
+            695 => 'Kuńkowce - Bażantarnia',
+
+            696 => 'Łętowni',
+            697 => 'Wapowiec',
+            698 => 'Wapowiec przez przełom Holubki',
+
+            699 => 'Kaczmarowej',
+            700 => 'Holubli',
+            701 => 'Reczpola',
+            702 => 'Średniej',
+            703 => 'Helusza',
+
+            704 => 'Pruchnika',
+            705 => 'Helusza',
+            706 => 'Dubiecka',
+            707 => 'Kopcy',
+            708 => 'Nienadowa - Pruchnik',
+
+            709 => 'Gałki',
+            710 => 'Przysuchej',
+            711 => 'Ruskiego Brodu',
+            712 => 'Gałki - Guzdek',
+
+            713 => 'Ruskiego Brodu',
+            714 => 'Skłobów',
+
+            715 => 'Stefankowa',
+            716 => 'Chlewisk',
+            717 => 'Huty',
+            718 => 'Niekłania',
+            719 => 'Altany (408 m)',
+
+            720 => 'Końskich',
+            721 => 'Nakłania',
+
+            722 => 'Aleksandrowa',
+            723 => 'Pogorzałego',
+            724 => 'Mroczkowa',
+            725 => 'Szydłowca',
+            726 => 'Bliżyna',
+
+            727 => 'Bliżyna',
+            728 => 'Rejowa',
+            729 => 'Suchedniowa',
+            730 => 'Bartkowa (Ł04)',
+
+            731 => 'Skórkowic',
+            732 => 'Maleńca',
+
+            733 => 'Żarnowa',
+            734 => 'Maleńca',
         ];
 
         $licznik = 1;
@@ -688,7 +911,8 @@ class PodPunktSeeder extends Seeder
             || $klucz == 88 || $klucz == 93 || $klucz == 101 || $klucz == 107 || $klucz == 110 || $klucz == 113 || $klucz == 117  || $klucz == 123 || $klucz == 126 || $klucz == 129 || $klucz == 132 || $klucz == 135 || $klucz == 151 || $klucz == 181 || $klucz == 192 || $klucz == 206  || $klucz == 210 || $klucz == 213 || $klucz == 217 || $klucz == 222 || $klucz == 228 || $klucz == 235 || $klucz == 237 || $klucz == 246 || $klucz == 249 || $klucz == 254 || $klucz == 261  || $klucz == 263  || $klucz == 265 || $klucz == 267 
             || $klucz == 270 || $klucz == 274 || $klucz == 278 || $klucz == 283 || $klucz == 285 || $klucz == 291 || $klucz == 295 || $klucz == 299 || $klucz == 302 || $klucz == 307 || $klucz == 310 || $klucz == 312 || $klucz == 315 || $klucz == 318 || $klucz == 324 || $klucz == 328 || $klucz == 331 || $klucz == 339 || $klucz == 343|| $klucz == 346|| $klucz == 350|| $klucz == 357|| $klucz == 362 || $klucz == 364 || $klucz == 366 || $klucz == 369 || $klucz == 374 || $klucz == 377 || $klucz == 379 || $klucz == 381 || $klucz == 385
             || $klucz == 392 || $klucz == 400|| $klucz == 402|| $klucz == 404 || $klucz == 408 || $klucz == 410 || $klucz == 415 || $klucz == 418 || $klucz == 423 || $klucz == 427 || $klucz == 433 || $klucz == 438 || $klucz == 442 || $klucz == 448 || $klucz == 450 || $klucz == 452 || $klucz == 458 || $klucz == 460 || $klucz == 464 || $klucz == 468 || $klucz == 470 || $klucz == 473 || $klucz == 487 || $klucz == 490 || $klucz == 497 || $klucz == 501 || $klucz == 503 || $klucz == 510
-            || $klucz == 512 || $klucz == 515 || $klucz == 522 || $klucz == 525 || $klucz == 527 || $klucz == 529 || $klucz == 533 || $klucz == 538 || $klucz == 543 || $klucz == 545 || $klucz == 548 || $klucz == 555) {$licznik++;}
+            || $klucz == 512 || $klucz == 515 || $klucz == 522 || $klucz == 525 || $klucz == 527 || $klucz == 529 || $klucz == 533 || $klucz == 538 || $klucz == 543 || $klucz == 545 || $klucz == 548 || $klucz == 555 || $klucz == 559 || $klucz == 562 || $klucz == 566 || $klucz == 569 || $klucz == 572 || $klucz == 576 || $klucz == 580 || $klucz == 576 || $klucz == 584 || $klucz == 588 || $klucz == 594 || $klucz == 598 || $klucz == 602 || $klucz == 609 || $klucz == 613 || $klucz == 621 || $klucz == 625 || $klucz == 631 || $klucz == 635
+            || $klucz == 642 || $klucz == 645 || $klucz == 650 || $klucz == 654 || $klucz == 656 || $klucz == 661 || $klucz == 663 || $klucz == 666 || $klucz == 669 || $klucz == 678 || $klucz == 682 || $klucz == 685 || $klucz == 688 || $klucz == 693 || $klucz == 696 || $klucz == 699 || $klucz == 704 || $klucz == 709 || $klucz == 713 || $klucz == 715 || $klucz == 720 || $klucz == 722 || $klucz == 727 || $klucz == 731 || $klucz == 733 || $klucz == 735) {$licznik++;}
             DB::table('podpunkt')->insert([
                 'nazwa' => $punkt,
                 'id_punkt' => $licznik,
