@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<nav class="navbar navbar-expand-md navbar-light shadow-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ URL::asset('/images/logo-pttk.png') }}" width="50" height="50" alt="ikona">
