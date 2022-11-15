@@ -65,14 +65,14 @@ class OsiagnieciaController extends Controller
     }
     public function szczegoly($id)
     {    
-        $wycieczkiSzczeg = Wycieczka::find($id);         
-        return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg')        
+        $wycieczkiSzczeg = Wycieczka::find($id);      
+        $wycieczkiZdj = Zdjecia::where('id_wycieczka',$id)->get();   
+        return view('osiagniecia.szczegoly', compact('wycieczkiSzczeg','wycieczkiZdj')        
     );
     }
 
     public function potwierdzenie(Request $request)
     {    
-            //dd($request);
         $odcinki = Wycieczka_odcinek::where('id_wycieczka',$request->id)->get();
         $licznik = 0;
         $iterator=0;
@@ -96,13 +96,13 @@ class OsiagnieciaController extends Controller
 
     public function dodajzdjecie(Request $request)
     { 
-
         $request->validate([
             'id_tworcy' => 'required',
             'id_wycieczka' => 'required',
             'zrodlo_zdjecia' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $input = $request->all();
+
         if ($image = $request->file('zrodlo_zdjecia')) {
             $destinationPath = 'zrodlo_zdjecia/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -112,7 +112,7 @@ class OsiagnieciaController extends Controller
     
         Zdjecia::create($input);
         return redirect()->route('osiagniecia.index')
-            ->with('success','Product created successfully.');        
+            ->with('success','Poprawnie zaktualizowano zdjęcie.');        
     
     }
 

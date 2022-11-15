@@ -88,8 +88,18 @@
                         $('#wycieczki-odcinek').show();
                         $('#odcinek_label').show();
                         $('#guziczek').show();
+                        $('#wycieczki-pasmo').attr('disabled','disabled');
+
                     }
                 });
+
+                // $(".wrapper").on('change', function() {
+                //     console.log('asd');
+                //     if($(".wrapper").length() < 1)
+                //     {
+                //         $('#wycieczki-pasmo').removeAttr('disabled');
+                //     }
+                // });
 
 
 

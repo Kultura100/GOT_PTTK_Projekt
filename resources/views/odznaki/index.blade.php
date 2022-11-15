@@ -7,6 +7,9 @@
             border-top: 8px solid #304b5f;
             border-radius: 5px;
         }
+
+
+
         </style>
     </x-slot>
     <x-slot name="scripts">
@@ -15,7 +18,6 @@
     
     <main>
         <section class="py-5 mb-5">
-
             <div class="container text-center py5">
                 <p class="display-4">Odznaki</p>
                 <p class="display-6">W góry</p>

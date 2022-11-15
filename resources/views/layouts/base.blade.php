@@ -20,4 +20,11 @@
     <script src="{{ asset('js/app.js') }}"></script>
     {{-- Lokalne skrypty JS --}}
     {{ $scripts }} 
+    <script>
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl)
+        })
+        toastList.forEach(toast => toast.show())
+    </script>
 </html>

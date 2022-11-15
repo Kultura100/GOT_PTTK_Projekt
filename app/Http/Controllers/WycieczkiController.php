@@ -83,6 +83,7 @@ class WycieczkiController extends Controller
 
     public function store(Request $request)
     {
+       // dd(Auth::user()->getKsiazeczka->id);
         $przetestuj = $request->input('odcinekid');
         if(isset($przetestuj)){
 

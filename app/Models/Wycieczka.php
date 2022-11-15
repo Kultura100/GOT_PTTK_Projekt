@@ -4,6 +4,7 @@ namespace App\Models;
 
 use DateTime;
 use App\Models\User;
+use App\Models\Zdjecia;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -27,7 +28,7 @@ class Wycieczka extends Model{
 
     public function wycieczkazdjecia()
     {
-        return $this->hasMany('app\Models\Zdjecia');
+        return $this->hasMany(Zdjecia::class,'id_wycieczka','id');
     }
 
     public function wieleodcinkow(){

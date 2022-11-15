@@ -20,17 +20,14 @@
     </x-slot>
     <div class="container">
         <h1>Szczegóły wycieczki</h1>        
-        <div class="d-flex flex-row-reverse m-4">
+        <div class="d-flex flex-row-reverse m-3">
             <a href="{{ route('wycieczki.index') }}" type="button" class="btn btn-primary" role="button">
                 {{ __('translations.wycieczki.label.back') }}
             </a>
 
-            <div class="d-flex flex-row-reverse">
-                <button type="button" class="btn btn-info" id="raport">Raport</button>
-            </div>
         </div>
         <div class="text-left mt-5 mb-3 d-flex flex-column">
-           <div> <strong>Imie i nazwisko:</strong> {{ $wycieczki->uzytkownikWycieczka->imie }} {{ $wycieczki->uzytkownikWycieczka->nazwisko}}</div>
+            <div> <strong>Imie i nazwisko:</strong> {{ $wycieczki->uzytkownikWycieczka->imie }} {{ $wycieczki->uzytkownikWycieczka->nazwisko}}</div>
             <div>
                 <strong>Punkt początkowy:</strong>
                 @if ($wycieczki->wieleodcinkow->first()->odwrocony == 1)
@@ -73,7 +70,7 @@
                             @if ($odcineczek->id_status == 1)
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
                                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                              </svg>
+                            </svg>
                                 @else
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-exclamation-square" viewBox="0 0 16 16">
                                         <g>
@@ -107,7 +104,10 @@
                         @endphp
                     </th>                   
                 </tr>
-               </tfoot>      
+            </tfoot>      
         </table>
+        <div class="d-flex flex-row-reverse">
+            <button type="button" class="btn btn-info m-3" id="raport">Raport</button>
+        </div>
     </div>
 </x-app-layout>
