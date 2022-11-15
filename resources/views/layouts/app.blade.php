@@ -185,7 +185,7 @@
                 width: 100%;
                 text-align: center;
                 min-height: 20px;
-                z-index: 2;
+                z-index: 999;
             }
     </style>
         {{ $styles }}
