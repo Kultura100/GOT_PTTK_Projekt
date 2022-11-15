@@ -27,7 +27,7 @@
                 </div>
                 <div class="col col-4">
                     <a href="{{ route('listaturystow.szczegoly', ['id' => $wycieczkiZatwierdzone->jakaWycieczka->id]) }}">                         
-                            <x-button class="hover:bg-green-700">
+                            <x-button class="button-1 hover:bg-green-700">
                                 Szczegóły
                             </x-button>
                 </a>
