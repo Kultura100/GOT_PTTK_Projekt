@@ -7,7 +7,7 @@
     <x-slot name="scripts">
         <script src="{{ asset('js/obowiazki.js') }}"></script>
     </x-slot>
-    <div class="container">
+    <div class="container mt-3">
         <ul class="responsive-table mb-16">
             <li class="table-header">
                 <div class="col col-t">Instrukcja pracy Przodownika Turystyki Górskiej</div>

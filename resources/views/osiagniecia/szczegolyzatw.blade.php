@@ -37,9 +37,6 @@
                 {{ __('translations.wycieczki.label.back') }}
             </a>
 
-            <div class="d-flex flex-row-reverse">
-                <button type="button" class="btn btn-info" id="raport">Raport</button>
-            </div>
         </div>
         <div class="text-left mt-5 mb-3 d-flex flex-column">
             <div> <strong>Imie i nazwisko:</strong>
@@ -126,6 +123,9 @@
                 </tr>
             </tfoot>
         </table>
+        <div class="d-flex flex-row-reverse m-4">
+            <button type="button" class="btn btn-info" id="raport">Raport</button>
+        </div>
     </div>
     <h2> Zdjęcia: </h2>
     <div class="container">
