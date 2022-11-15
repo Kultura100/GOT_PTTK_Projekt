@@ -21,9 +21,9 @@ class ComposerServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        View::composer(['dashboard','osiagniecia','odznaki','ranking','wycieczki','szlak'], function ($view) {
-            $powiadomienie = Powiadomienie::where('id_turysta', Auth::user()->id)->get();
-            $view->with(compact('powiadomienie'));
-        });
+        // View::composer('*', function ($view) {
+        //     $powiadomienie = Powiadomienie::where('id_turysta', Auth::user()->id)->get();
+        //     $view->with(compact('powiadomienie'));
+        // });
     }
 }
