@@ -172,6 +172,59 @@ class PunktSeeder extends Seeder
             129 => 'Jodłowa (715 m)',
             130 => 'Rosochatka (753 m)',
             131 => 'Bukowiec (530 m)',
+
+            132 => 'Góra św. Marcina (384 m)',
+            133 => 'Słona Góra (403 m)',
+            134 => 'Trzemeska Góra (390 m)',
+            135 => 'Gilowa Góra (506 m)',
+            136 => 'Liwocz (562 m)',
+            137 => 'Ostry Kamień (527 m)',
+
+            138 => 'Margoń Wyżna (774 m)',
+            139 => 'Tokarnia (828 m)',
+            140 => 'Czerszla (877 m)',
+            141 => 'Jaworze (882 m)',
+            142 => 'Przełęcz pod Uboczem',
+            143 => 'Jaworynki (Sołtys - 756 m)',
+
+            144 => 'Grzbiet Hyrowej (694 m)',
+            145 => 'Mszana',
+            146 => 'Cergowa (716 m)',
+            147 => 'Osiecznik (633 m)',
+            148 => 'Przymiarki (Kopa) (640 m)',
+            149 => 'Sucha Góra (611 m)',
+
+            150 => 'Dyszowa (719 m)',
+            151 => 'Prełuki',
+            152 => 'Mików',
+            153 => 'Krasna (658 m)',
+            154 => 'Nowy Łupków (PKP)',
+            155 => 'Wysoki Groń (905 m)',
+
+            156 => 'Kałużówka',
+            157 => 'Babia Góra (387 m) Wzgórza nad Warzycami',
+            158 => 'Kota nad Gogołowem (454 m)',
+            159 => 'Klonowa Góra (534 m)',
+            160 => 'Kamieniec (442 m)',
+            161 => 'Czarnówka (592 m)',
+
+            162 => 'Jasmanice',
+            163 => 'Wapielnica (394 m)',
+            164 => 'Żurawica',
+            165 => 'Kaczmarowa (407 m)',
+            166 => 'Bukowy Garb (428 m)',
+            167 => 'kota nad Nienadową',
+
+            168 => 'Guzdek (350 m)',
+            169 => 'Sowia Góra (319 m)',
+            170 => 'Skłobska Góra (330 m)',
+            171 => 'Piekło Nakłańskie (363 m)',
+            172 => 'Stara Kuźnica',
+            173 => 'Altana (408 m)',
+            174 => 'Świnia Góra (390 m)',
+            175 => 'Diabla Góra (285 m)',
+            176 => 'Sielecka Góra (285 m)',
+
         ];
         
         foreach($punkty as $klucz => $punkt) {
