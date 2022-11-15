@@ -18,7 +18,7 @@ class Punkt extends Model
     {
         $odcinek = Odcinek::where([['id_punkt_poczatek',$punktid],['id_punkt_koniec',$podpunktid]])->get();
         if(isset($odcinek->first()->punkty_od) && isset($odcinek->first()->punkty_do)){
-        return $odcinek->first()->punkty_od."/".$odcinek->first()->punkty_do;
+        return $odcinek->first()->punkty_do."/".$odcinek->first()->punkty_od;
         }
         else{
             return $odcinek;
