@@ -6,7 +6,7 @@
         <script src="{{ asset('js/raport.js') }}"></script>
     </x-slot>
     
-    <ul class="responsive-table">
+    <ul class="responsive-table pt-5">
         <li class="table-header">
             <div class="col col-1">Imię i Nazwisko</div>
             <div class="col col-2">E-mail</div>
