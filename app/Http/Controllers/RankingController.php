@@ -23,8 +23,9 @@ class RankingController extends Controller
             $tablica[$key->jakaksiazeczka->jakiUser->id] = $key->test;
         }
 
+        arsort($tablica);//ustalanie najwiekszego
         $kwerenda = array_slice($tablica, 0, 10, true); //ograniczenie do 10 uzytkownikow
-        arsort($kwerenda);//ustalanie najwiekszego
+
         $uzytkownicy = User::get();
         return view('ranking.index', compact('kwerenda', 'uzytkownicy'));
     }
