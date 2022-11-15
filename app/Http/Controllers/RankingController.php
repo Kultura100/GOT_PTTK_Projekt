@@ -22,7 +22,9 @@ class RankingController extends Controller
             if($key->jakaksiazeczka->jakiUser->hasRole(['user','przodownik']))
             $tablica[$key->jakaksiazeczka->jakiUser->id] = $key->test;
         }
+
         $kwerenda = array_slice($tablica, 0, 10, true); //ograniczenie do 10 uzytkownikow
+        arsort($kwerenda);//ustalanie najwiekszego
         $uzytkownicy = User::get();
         return view('ranking.index', compact('kwerenda', 'uzytkownicy'));
     }
