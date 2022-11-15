@@ -3,9 +3,6 @@
 <x-base-layout>
     <x-slot name="styles">
         <style type="text/css" media="screen">
-            body {
-                padding-top: 4.5rem;
-            }
 
             a {
                 text-decoration: none;
@@ -190,7 +187,7 @@
                 min-height: 20px;
                 z-index: 999;
             }
-        </style>
+    </style>
         {{ $styles }}
     </x-slot>
 

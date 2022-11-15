@@ -105,7 +105,6 @@ h2 small {
   transition: color 100ms;
   vertical-align: baseline;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
