@@ -6,6 +6,7 @@
         {!! JsValidator::formRequest('App\Http\Requests\wycieczki\WycieczkiRequest') !!}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
         <script>
+            var Sklonowaneodcinki;
             $(document).ready(function() {
                 $('#pasmo_label').hide();
                 $('#wycieczki-pasmo').hide();
@@ -73,6 +74,7 @@
                                             '</option>'
                                         );
                                     });
+                                    Sklonowaneodcinki = $('#wycieczki-odcinek option').clone();
                                 } else {
                                     $('#wycieczki-odcinek').empty();
                                 }
@@ -93,14 +95,6 @@
                     }
                 });
 
-                // $(".wrapper").on('change', function() {
-                //     console.log('asd');
-                //     if($(".wrapper").length() < 1)
-                //     {
-                //         $('#wycieczki-pasmo').removeAttr('disabled');
-                //     }
-                // });
-
 
 
                 $.validator.addMethod("endDate", function(value, element) {
@@ -113,11 +107,19 @@
             const dragArea = document.querySelector(".wrapper");
             new Sortable(dragArea, {
                 animation: 350,
-                removeOnSpill: true
+                removeOnSpill: true,
+                disabled:true,
+
             });
 
             $("#guziczek").click(function() {
                 var nazwa = $("#wycieczki-odcinek option:selected").text();
+                var test = nazwa.substr(nazwa.indexOf("do") + 2);
+                var options = Sklonowaneodcinki;
+                $("#wycieczki-odcinek").empty();
+                    options.filter(function(id,el) {
+                        return $(el).text().startsWith(test,2) && $(el).text().indexOf(test) >= 0;
+                    }).appendTo("#wycieczki-odcinek");  
                 var tmp;
                 if ($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione') {
                     tmp = "<input type='hidden' name='zmienione[]' value='1'>"

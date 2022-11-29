@@ -927,29 +927,28 @@ class OdcinekSeeder extends Seeder
             ['id_punkt_poczatek' => 715,'id_punkt_koniec' => 170,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 27],
             ['id_punkt_poczatek' => 716,'id_punkt_koniec' => 170,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 27],
             ['id_punkt_poczatek' => 717,'id_punkt_koniec' => 170,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 718,'id_punkt_koniec' => 170,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 719,'id_punkt_koniec' => 170,'punkty_do' => 11,'punkty_od' => 12,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 718,'id_punkt_koniec' => 171,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 719,'id_punkt_koniec' => 171,'punkty_do' => 11,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 720,'id_punkt_koniec' => 171,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 721,'id_punkt_koniec' => 171,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 720,'id_punkt_koniec' => 172,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 721,'id_punkt_koniec' => 172,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 722,'id_punkt_koniec' => 172,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 723,'id_punkt_koniec' => 172,'punkty_do' => 17,'punkty_od' => 15,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 724,'id_punkt_koniec' => 172,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 725,'id_punkt_koniec' => 172,'punkty_do' => 19,'punkty_od' => 17,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 726,'id_punkt_koniec' => 172,'punkty_do' => 11,'punkty_od' => 10,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 722,'id_punkt_koniec' => 173,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 723,'id_punkt_koniec' => 173,'punkty_do' => 17,'punkty_od' => 15,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 724,'id_punkt_koniec' => 173,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 725,'id_punkt_koniec' => 173,'punkty_do' => 19,'punkty_od' => 17,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 726,'id_punkt_koniec' => 173,'punkty_do' => 11,'punkty_od' => 10,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 727,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 728,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 729,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 730,'id_punkt_koniec' => 173,'punkty_do' => 14,'punkty_od' => 13,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 727,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 728,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 729,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 730,'id_punkt_koniec' => 174,'punkty_do' => 14,'punkty_od' => 13,'id_pasma' => 27],
-
-            ['id_punkt_poczatek' => 731,'id_punkt_koniec' => 175,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 732,'id_punkt_koniec' => 175,'punkty_do' => 15,'punkty_od' => 14,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 731,'id_punkt_koniec' => 174,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 732,'id_punkt_koniec' => 174,'punkty_do' => 15,'punkty_od' => 14,'id_pasma' => 27],
             
-            ['id_punkt_poczatek' => 733,'id_punkt_koniec' => 176,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 734,'id_punkt_koniec' => 176,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 733,'id_punkt_koniec' => 175,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 734,'id_punkt_koniec' => 175,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
         ];
         DB::table('odcinek')->insert($dane);
     }
