@@ -85,6 +85,13 @@
                         </x-nav-link>
                     </li>
                 @endif
+                @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('przodownik'))
+                <li class="nav-item">
+                    <x-nav-link :href="route('obowiazki.listaOdznak')" :active="request()->routeIs('obowiazki.listaOdznak')">
+                        Lista odznak
+                    </x-nav-link>
+                </li>
+            @endif
 
 
 

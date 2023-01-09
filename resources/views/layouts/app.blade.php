@@ -6,11 +6,11 @@
 
             a {
                 text-decoration: none;
-                color: black;
+                
             }
 
             a:visited {
-                color: black;
+                
             }
 
             .box::-webkit-scrollbar-track {

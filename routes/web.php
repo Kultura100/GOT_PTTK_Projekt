@@ -142,9 +142,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('store')
             ->middleware(['permission:raport.index']);
         Route::get('{raport}/edit', [RaportController::class, 'edit'])
-           ->where('raport', '[0-9]+')
-           ->name('edit')
-           ->middleware(['permission:raport.index']);
+            ->where('raport', '[0-9]+')
+            ->name('edit')
+            ->middleware(['permission:raport.index']);
         Route::patch('{raport}/edit', [RaportController::class, 'update'])
             ->where('raport', '[0-9]+')
             ->name('update')
@@ -163,6 +163,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::name('obowiazki.')->prefix('obowiazki')->group(function () {
         Route::get('', [ObowiazkiController::class, 'index'])
             ->name('index')
+            ->middleware(['permission:obowiazki.index']);
+        Route::get('/listaOdznak', [ObowiazkiController::class, 'listaOdznak'])
+            ->name('listaOdznak')
             ->middleware(['permission:obowiazki.index']);
     });
     Route::name('listaturystow.')->prefix('listaturystow')->group(function () {
