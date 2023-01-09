@@ -346,7 +346,7 @@ class PunktSeeder extends Seeder
             //Pasmo 43
             266 => 'Stróża (636 m)',
             267 => 'Kortunał (675 m)',
-            268 => 'Srebrna Przełęcz) (586 m)',
+            268 => 'Srebrna Przełęcz (586 m)',
             269 => 'Słup (667 m)',
             270 => 'Przełęcz Wilcza (532 m)',
             271 => 'Ostróg (627 m)',
@@ -381,11 +381,11 @@ class PunktSeeder extends Seeder
             292 => 'Romanowo',
             293 => 'Mrówczyniec (487 m)',
             294 => 'Sędzisz (498 m)',
-            295 => 'Romanowo Górne (pod Skaleczną)',
+            295 => 'Romanowo Górne',
 
             //Pasmo 48
             296 => 'Olchówka (457 m)',
-            297 => ' Pustelnia (395 m)',
+            297 => 'Pustelnia (395 m)',
             298 => 'Haniak (540 m)',
             299 => 'Jawornik Mały (756 m)',
             300 => 'Jawornik Wielki (870 m)',
@@ -403,14 +403,14 @@ class PunktSeeder extends Seeder
             308 => 'Paszowice',
             309 => 'Czernicka Góra (514 m)',
             310 => 'Czeska Góra (321 m)',
-            311 => 'Góra św. Jerzego (Krzyżowa) (353 m)',
+            311 => 'Góra św. Jerzego (353 m)',
 
             //Pasmo 51
             312 => 'Kończyce',
             313 => 'Świdnica',
             314 => 'Bojanice',
             315 => 'Lutomia Dolna',
-            316 => 'Szczytna (Wzgórza Kiełczańskie) (466 m)',
+            316 => 'Szczytna (466 m)',
             317 => 'Przełęcz Tapadła (384 m)',
 
             //Pasmo 52
@@ -430,46 +430,46 @@ class PunktSeeder extends Seeder
             329 => 'Letanovský mlyn (513)',
 
             //Pasmo 54
-            330 => 'STARY HRAD (X C, N) (ok. 400 m) (Podhradske)',
-            331 => 'DÚBRAVY NAD CHATĄ FATRANKA (X Ż, Z) (545 m) (Pod Jedlovinou)',
-            332 => 'CHATA W DOLINIE KÚRU (X Ż, N)',
-            333 => 'CHATA POD SUCHÝM (ok. 1075 m) (X C, Ż, N)',
-            334 => 'SEDLO (PRZEŁĘCZ) BRESTOV (970 m) (X Ż, Z)',
-            335 => 'SEDLO (PRZEŁĘCZ) PRÍSLOP POD SUCHÝM (1202 m) (X Ż, C)',
+            330 => 'STARY HRAD (ok. 400 m)',
+            331 => 'DÚBRAVY NAD CHATĄ FATRANKA (545 m)',
+            332 => 'CHATA W DOLINIE KÚRU',
+            333 => 'CHATA POD SUCHÝM (ok. 1075 m)',
+            334 => 'SEDLO (PRZEŁĘCZ) BRESTOV (970 m)',
+            335 => 'SEDLO (PRZEŁĘCZ) PRÍSLOP POD SUCHÝM (1202 m)',
 
             //Pasmo 55
-            336 => 'SEDLO RAKYTIE (712 m) (X C, Ż)',
-            337 => 'KOJŠOVA (743 m) (X Ż, Z)',
-            338 => 'MALOFATRANSKÉ MÚZEUM (X Ż, Z)',
-            339 => 'SEDLO JAVORINA (980 m) (X C, Z, N)',
-            340 => 'MINĆOL (1364 m) (X Ż, C, N)',
-            341 => 'VELKÁ LÚKA (1476 m) (X N, C)',
+            336 => 'SEDLO RAKYTIE (712 m)',
+            337 => 'KOJŠOVA (743 m)',
+            338 => 'MALOFATRANSKÉ MÚZEUM',
+            339 => 'SEDLO JAVORINA (980 m)',
+            340 => 'MINĆOL (1364 m)',
+            341 => 'VELKÁ LÚKA (1476 m)',
 
             //Pasmo 56
-            342 => 'Kopa (1187 m) (X C, Ż)',
-            343 => 'LUBOCHNIANSKE SEDNO (762 m) (X N, C)',
-            344 => 'SEDLO PRISLOP (935 m) (X C, Z)',
-            345 => 'KLAK (1394 m) (X C, Ż, N)',
+            342 => 'Kopa (1187 m)',
+            343 => 'LUBOCHNIANSKE SEDNO (762 m)',
+            344 => 'SEDLO PRISLOP (935 m)',
+            345 => 'KLAK (1394 m)',
 
             //Pasmo 57
-            346 => 'SEDLO POD SVITKOVOU (940 m) (Przełęcz Przyslop)',
-            347 => 'RYCIEROVA HORA (1226 m) (Wielka Rycerzowa)',
-            348 => 'PRIEHYBOK (słupek graniczny III 158) (1226 m)',
-            349 => 'SEDLO POD ORLOM (X Z/C) (1064 m)',
+            346 => 'SEDLO POD SVITKOVOU (940 m)',
+            347 => 'RYCIEROVA HORA (1226 m)',
+            348 => 'PRIEHYBOK (1226 m)',
+            349 => 'SEDLO POD ORLOM(1064 m)',
 
             //Pasmo 58
             350 => 'BUKOVINA (1069 m)',
             351 => 'PRZEŁĘCZ MIĘDZY DRABIROVCEM A RABĆOVOU KYKULOU (ok. 930 m)',
-            352 => 'SEDLO PODÚŠUST (PRZEŁĘCZ PODOSZUS) (946 m) (X N, Ż)',
+            352 => 'SEDLO PODÚŠUST (PRZEŁĘCZ PODOSZUS) (946 m)',
             353 => 'ÚŠUST (WYSOKI BESKID, OSZUS) (1155 m)',
             354 => 'PRZEŁĘCZ GLINKA (UJSOLSKA) (847 m)',
-            355 => 'GRÚNIKY (KRAWCÓW WIERCH) (1080 m) (X N, Ż)',
+            355 => 'GRÚNIKY (KRAWCÓW WIERCH) (1080 m)',
 
             //Pasmo 59
-            356 => 'CERVENY KLASTOR (zespół zabytkowy) (458 m)',
-            357 => 'SEDLO CERLA (603 m) (X C, N)',
-            358 => 'VYHLIADKA (TARGOV 675 m) (X N, Ż)',
-            359 => 'DOLINA LESNICKY POTOK (X Z, N) (475 m)',
+            356 => 'CERVENY KLASTOR (458 m)',
+            357 => 'SEDLO CERLA (603 m)',
+            358 => 'VYHLIADKA (TARGOV 675 m)',
+            359 => 'DOLINA LESNICKY POTOK (475 m)',
         ];
         
         foreach($punkty as $klucz => $punkt) {

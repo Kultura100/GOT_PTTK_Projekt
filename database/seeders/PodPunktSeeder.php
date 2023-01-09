@@ -869,6 +869,7 @@ class PodPunktSeeder extends Seeder
             707 => 'Kopcy',
             708 => 'Nienadowa - Pruchnik',
 
+            //Pasmo 27
             709 => 'Gałki',
             710 => 'Przysuchej',
             711 => 'Ruskiego Brodu',
@@ -880,6 +881,7 @@ class PodPunktSeeder extends Seeder
             715 => 'Stefankowa',
             716 => 'Chlewisk',
             717 => 'Huty',
+
             718 => 'Niekłania',
             719 => 'Altany (408 m)',
 
@@ -1707,7 +1709,7 @@ class PodPunktSeeder extends Seeder
             || $klucz == 270 || $klucz == 274 || $klucz == 278 || $klucz == 283 || $klucz == 285 || $klucz == 291 || $klucz == 295 || $klucz == 299 || $klucz == 302 || $klucz == 307 || $klucz == 310 || $klucz == 312 || $klucz == 315 || $klucz == 318 || $klucz == 324 || $klucz == 328 || $klucz == 331 || $klucz == 339 || $klucz == 343|| $klucz == 346|| $klucz == 350|| $klucz == 357|| $klucz == 362 || $klucz == 364 || $klucz == 366 || $klucz == 369 || $klucz == 374 || $klucz == 377 || $klucz == 379 || $klucz == 381 || $klucz == 385
             || $klucz == 392 || $klucz == 400|| $klucz == 402|| $klucz == 404 || $klucz == 408 || $klucz == 410 || $klucz == 415 || $klucz == 418 || $klucz == 423 || $klucz == 427 || $klucz == 433 || $klucz == 438 || $klucz == 442 || $klucz == 448 || $klucz == 450 || $klucz == 452 || $klucz == 458 || $klucz == 460 || $klucz == 464 || $klucz == 468 || $klucz == 470 || $klucz == 473 || $klucz == 487 || $klucz == 490 || $klucz == 497 || $klucz == 501 || $klucz == 503 || $klucz == 510
             || $klucz == 512 || $klucz == 515 || $klucz == 522 || $klucz == 525 || $klucz == 527 || $klucz == 529 || $klucz == 533 || $klucz == 538 || $klucz == 543 || $klucz == 545 || $klucz == 548 || $klucz == 555 || $klucz == 559 || $klucz == 562 || $klucz == 566 || $klucz == 569 || $klucz == 572 || $klucz == 576 || $klucz == 580 || $klucz == 576 || $klucz == 584 || $klucz == 588 || $klucz == 594 || $klucz == 598 || $klucz == 602 || $klucz == 609 || $klucz == 613 || $klucz == 621 || $klucz == 625 || $klucz == 631 || $klucz == 635
-            || $klucz == 642 || $klucz == 645 || $klucz == 650 || $klucz == 654 || $klucz == 656 || $klucz == 661 || $klucz == 663 || $klucz == 666 || $klucz == 669 || $klucz == 678 || $klucz == 682 || $klucz == 685 || $klucz == 688 || $klucz == 693 || $klucz == 696 || $klucz == 699 || $klucz == 704 || $klucz == 709 || $klucz == 713 || $klucz == 715 || $klucz == 720 || $klucz == 722 || $klucz == 727 || $klucz == 731 || $klucz == 733 || $klucz == 735 || $klucz == 738 || $klucz == 741 || $klucz == 744 || $klucz == 746 || $klucz == 748
+            || $klucz == 642 || $klucz == 645 || $klucz == 650 || $klucz == 654 || $klucz == 656 || $klucz == 661 || $klucz == 663 || $klucz == 666 || $klucz == 669 || $klucz == 678 || $klucz == 682 || $klucz == 685 || $klucz == 688 || $klucz == 693 || $klucz == 696 || $klucz == 699 || $klucz == 704 || $klucz == 709 || $klucz == 713 || $klucz == 715 || $klucz == 718 || $klucz == 720 || $klucz == 722 || $klucz == 727 || $klucz == 731 || $klucz == 733 || $klucz == 735 || $klucz == 738 || $klucz == 741 || $klucz == 744 || $klucz == 746 || $klucz == 748
             || $klucz == 751 || $klucz == 754 || $klucz == 757 || $klucz == 759 || $klucz == 762 || $klucz == 764 || $klucz == 768 || $klucz == 771 || $klucz == 774 || $klucz == 777 || $klucz == 779 || $klucz == 783 || $klucz == 786 || $klucz == 788 || $klucz == 791 || $klucz == 794 || $klucz == 798 || $klucz == 802 || $klucz == 806 || $klucz == 808 || $klucz == 812 || $klucz == 815 || $klucz == 818 || $klucz == 822 || $klucz == 825 || $klucz == 828 || $klucz == 831 || $klucz == 835 || $klucz == 840 || $klucz == 841
             || $klucz == 846 || $klucz == 849 || $klucz == 853 || $klucz == 857 || $klucz == 862 || $klucz == 864 || $klucz == 867 || $klucz == 869 || $klucz == 873 || $klucz == 876 || $klucz == 878 || $klucz == 880 || $klucz == 882 || $klucz == 886 || $klucz == 891 || $klucz == 895 || $klucz == 898 || $klucz == 901 || $klucz == 904 || $klucz == 907 || $klucz == 910 || $klucz == 912 || $klucz == 916 || $klucz == 919 || $klucz == 923 || $klucz == 925 || $klucz == 927 || $klucz == 929 || $klucz == 932 || $klucz == 935
             || $klucz == 939 || $klucz == 942 || $klucz == 945 || $klucz == 948 || $klucz == 953 || $klucz == 958 || $klucz == 961 || $klucz == 966 || $klucz == 971 || $klucz == 974 || $klucz == 977 || $klucz == 980 || $klucz == 983 || $klucz == 986 || $klucz == 989 || $klucz == 993 || $klucz == 995 || $klucz == 998 || $klucz == 1003 || $klucz == 1006 || $klucz == 1009 || $klucz == 1011 || $klucz == 1016 || $klucz == 1019 || $klucz == 1024 || $klucz == 1027 || $klucz == 1029 || $klucz == 1032 || $klucz == 1036 || $klucz == 1038
