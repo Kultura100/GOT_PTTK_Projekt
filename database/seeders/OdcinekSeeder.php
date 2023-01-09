@@ -927,28 +927,823 @@ class OdcinekSeeder extends Seeder
             ['id_punkt_poczatek' => 715,'id_punkt_koniec' => 170,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 27],
             ['id_punkt_poczatek' => 716,'id_punkt_koniec' => 170,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 27],
             ['id_punkt_poczatek' => 717,'id_punkt_koniec' => 170,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 718,'id_punkt_koniec' => 170,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 719,'id_punkt_koniec' => 170,'punkty_do' => 11,'punkty_od' => 12,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 720,'id_punkt_koniec' => 171,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 721,'id_punkt_koniec' => 171,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 718,'id_punkt_koniec' => 171,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 719,'id_punkt_koniec' => 171,'punkty_do' => 11,'punkty_od' => 12,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 722,'id_punkt_koniec' => 172,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 723,'id_punkt_koniec' => 172,'punkty_do' => 17,'punkty_od' => 15,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 724,'id_punkt_koniec' => 172,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 725,'id_punkt_koniec' => 172,'punkty_do' => 19,'punkty_od' => 17,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 726,'id_punkt_koniec' => 172,'punkty_do' => 11,'punkty_od' => 10,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 720,'id_punkt_koniec' => 172,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 721,'id_punkt_koniec' => 172,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 727,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 728,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 729,'id_punkt_koniec' => 173,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 730,'id_punkt_koniec' => 173,'punkty_do' => 14,'punkty_od' => 13,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 722,'id_punkt_koniec' => 173,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 723,'id_punkt_koniec' => 173,'punkty_do' => 17,'punkty_od' => 15,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 724,'id_punkt_koniec' => 173,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 725,'id_punkt_koniec' => 173,'punkty_do' => 19,'punkty_od' => 17,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 726,'id_punkt_koniec' => 173,'punkty_do' => 11,'punkty_od' => 10,'id_pasma' => 27],
 
-            ['id_punkt_poczatek' => 731,'id_punkt_koniec' => 174,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 732,'id_punkt_koniec' => 174,'punkty_do' => 15,'punkty_od' => 14,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 727,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 728,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 729,'id_punkt_koniec' => 174,'punkty_do' => 13,'punkty_od' => 12,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 730,'id_punkt_koniec' => 174,'punkty_do' => 14,'punkty_od' => 13,'id_pasma' => 27],
+
+            ['id_punkt_poczatek' => 731,'id_punkt_koniec' => 175,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 732,'id_punkt_koniec' => 175,'punkty_do' => 15,'punkty_od' => 14,'id_pasma' => 27],
             
-            ['id_punkt_poczatek' => 733,'id_punkt_koniec' => 175,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 27],
-            ['id_punkt_poczatek' => 734,'id_punkt_koniec' => 175,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 733,'id_punkt_koniec' => 176,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 27],
+            ['id_punkt_poczatek' => 734,'id_punkt_koniec' => 176,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 27],
+
+            //Pasmo 28
+            ['id_punkt_poczatek' => 735,'id_punkt_koniec' => 177,'punkty_do' => 10,'punkty_od' => 9,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 736,'id_punkt_koniec' => 177,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 737,'id_punkt_koniec' => 177,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 28],
+
+            ['id_punkt_poczatek' => 738,'id_punkt_koniec' => 178,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 739,'id_punkt_koniec' => 178,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 740,'id_punkt_koniec' => 178,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 28],
+
+            ['id_punkt_poczatek' => 741,'id_punkt_koniec' => 179,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 742,'id_punkt_koniec' => 179,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 743,'id_punkt_koniec' => 179,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 28],
+
+            ['id_punkt_poczatek' => 744,'id_punkt_koniec' => 180,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 745,'id_punkt_koniec' => 180,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 28],
+
+            ['id_punkt_poczatek' => 746,'id_punkt_koniec' => 181,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 28],
+            ['id_punkt_poczatek' => 747,'id_punkt_koniec' => 181,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 28],
+
+            //Pasmo 29
+            ['id_punkt_poczatek' => 748,'id_punkt_koniec' => 182,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 749,'id_punkt_koniec' => 182,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 750,'id_punkt_koniec' => 182,'punkty_do' => 14,'punkty_od' => 14,'id_pasma' => 29],
+
+            ['id_punkt_poczatek' => 751,'id_punkt_koniec' => 183,'punkty_do' => 10,'punkty_od' => 8,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 752,'id_punkt_koniec' => 183,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 753,'id_punkt_koniec' => 183,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 29],
+
+            ['id_punkt_poczatek' => 754,'id_punkt_koniec' => 184,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 755,'id_punkt_koniec' => 184,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 756,'id_punkt_koniec' => 184,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 29],
+
+            ['id_punkt_poczatek' => 757,'id_punkt_koniec' => 185,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 758,'id_punkt_koniec' => 185,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 29],
+
+            ['id_punkt_poczatek' => 759,'id_punkt_koniec' => 186,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 760,'id_punkt_koniec' => 186,'punkty_do' => 9,'punkty_od' => 8,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 761,'id_punkt_koniec' => 186,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 29],
+
+            ['id_punkt_poczatek' => 762,'id_punkt_koniec' => 187,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 29],
+            ['id_punkt_poczatek' => 763,'id_punkt_koniec' => 187,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 29],
+
+            //Pasmo 30
+            ['id_punkt_poczatek' => 764,'id_punkt_koniec' => 188,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 765,'id_punkt_koniec' => 188,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 766,'id_punkt_koniec' => 188,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 767,'id_punkt_koniec' => 188,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+
+            ['id_punkt_poczatek' => 768,'id_punkt_koniec' => 189,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 769,'id_punkt_koniec' => 189,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 770,'id_punkt_koniec' => 189,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 30],
+
+            ['id_punkt_poczatek' => 771,'id_punkt_koniec' => 190,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 772,'id_punkt_koniec' => 190,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 773,'id_punkt_koniec' => 190,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 30],
+
+            ['id_punkt_poczatek' => 774,'id_punkt_koniec' => 191,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 775,'id_punkt_koniec' => 191,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 776,'id_punkt_koniec' => 191,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 30],
+
+            ['id_punkt_poczatek' => 777,'id_punkt_koniec' => 192,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 778,'id_punkt_koniec' => 192,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 30],
+
+            ['id_punkt_poczatek' => 779,'id_punkt_koniec' => 193,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 780,'id_punkt_koniec' => 193,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 781,'id_punkt_koniec' => 193,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 30],
+            ['id_punkt_poczatek' => 782,'id_punkt_koniec' => 193,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 30],
+
+            //Pasmo 31
+            ['id_punkt_poczatek' => 783,'id_punkt_koniec' => 194,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 784,'id_punkt_koniec' => 194,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 785,'id_punkt_koniec' => 194,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 31],
+
+            ['id_punkt_poczatek' => 786,'id_punkt_koniec' => 195,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 787,'id_punkt_koniec' => 195,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 31],
+
+            ['id_punkt_poczatek' => 788,'id_punkt_koniec' => 196,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 789,'id_punkt_koniec' => 196,'punkty_do' => 9,'punkty_od' => 8,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 790,'id_punkt_koniec' => 196,'punkty_do' => 9,'punkty_od' => 8,'id_pasma' => 31],
+
+            ['id_punkt_poczatek' => 791,'id_punkt_koniec' => 197,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 792,'id_punkt_koniec' => 197,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 793,'id_punkt_koniec' => 197,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 31],
+
+            ['id_punkt_poczatek' => 794,'id_punkt_koniec' => 198,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 795,'id_punkt_koniec' => 198,'punkty_do' => 12,'punkty_od' => 9,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 796,'id_punkt_koniec' => 198,'punkty_do' => 6,'punkty_od' => 3,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 797,'id_punkt_koniec' => 198,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 31],
+
+            ['id_punkt_poczatek' => 798,'id_punkt_koniec' => 199,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 799,'id_punkt_koniec' => 199,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 800,'id_punkt_koniec' => 199,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 31],
+            ['id_punkt_poczatek' => 801,'id_punkt_koniec' => 199,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 31],
+
+            //Pasmo 32
+            ['id_punkt_poczatek' => 802,'id_punkt_koniec' => 200,'punkty_do' => 10,'punkty_od' => 4,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 803,'id_punkt_koniec' => 200,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 804,'id_punkt_koniec' => 200,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 805,'id_punkt_koniec' => 200,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 32],
+
+            ['id_punkt_poczatek' => 806,'id_punkt_koniec' => 201,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 807,'id_punkt_koniec' => 201,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 32],
+
+            ['id_punkt_poczatek' => 808,'id_punkt_koniec' => 202,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 809,'id_punkt_koniec' => 202,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 810,'id_punkt_koniec' => 202,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 811,'id_punkt_koniec' => 202,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 32],
+
+            ['id_punkt_poczatek' => 812,'id_punkt_koniec' => 203,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 813,'id_punkt_koniec' => 203,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 814,'id_punkt_koniec' => 203,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 32],
+
+            ['id_punkt_poczatek' => 815,'id_punkt_koniec' => 204,'punkty_do' => 4,'punkty_od' => 5,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 816,'id_punkt_koniec' => 204,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 817,'id_punkt_koniec' => 204,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 32],
+
+            ['id_punkt_poczatek' => 818,'id_punkt_koniec' => 205,'punkty_do' => 9,'punkty_od' => 5,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 819,'id_punkt_koniec' => 205,'punkty_do' => 8,'punkty_od' => 4,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 820,'id_punkt_koniec' => 205,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 32],
+            ['id_punkt_poczatek' => 821,'id_punkt_koniec' => 205,'punkty_do' => 10,'punkty_od' => 10,'id_pasma' => 32],
+
+            //Pasmo 33
+            ['id_punkt_poczatek' => 822,'id_punkt_koniec' => 206,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 823,'id_punkt_koniec' => 206,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 824,'id_punkt_koniec' => 206,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 33],
+
+            ['id_punkt_poczatek' => 825,'id_punkt_koniec' => 207,'punkty_do' => 11,'punkty_od' => 9,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 826,'id_punkt_koniec' => 207,'punkty_do' => 9,'punkty_od' => 7,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 827,'id_punkt_koniec' => 207,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 33],
+
+            ['id_punkt_poczatek' => 828,'id_punkt_koniec' => 208,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 829,'id_punkt_koniec' => 208,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 830,'id_punkt_koniec' => 208,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 33],
+
+            ['id_punkt_poczatek' => 831,'id_punkt_koniec' => 209,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 832,'id_punkt_koniec' => 209,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 833,'id_punkt_koniec' => 209,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 834,'id_punkt_koniec' => 209,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 33],
+
+            ['id_punkt_poczatek' => 835,'id_punkt_koniec' => 210,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 836,'id_punkt_koniec' => 210,'punkty_do' => 9,'punkty_od' => 6,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 837,'id_punkt_koniec' => 210,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 838,'id_punkt_koniec' => 210,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 33],
+            ['id_punkt_poczatek' => 839,'id_punkt_koniec' => 210,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 33],
+
+            ['id_punkt_poczatek' => 840,'id_punkt_koniec' => 211,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 33],
+
+            //Pasmo 34
+            ['id_punkt_poczatek' => 841,'id_punkt_koniec' => 212,'punkty_do' => 10,'punkty_od' => 7,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 842,'id_punkt_koniec' => 212,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 843,'id_punkt_koniec' => 212,'punkty_do' => 6,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 844,'id_punkt_koniec' => 212,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 845,'id_punkt_koniec' => 212,'punkty_do' => 1,'punkty_od' => 2,'id_pasma' => 34],
+
+            ['id_punkt_poczatek' => 846,'id_punkt_koniec' => 213,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 847,'id_punkt_koniec' => 213,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 848,'id_punkt_koniec' => 213,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 34],
+
+            ['id_punkt_poczatek' => 849,'id_punkt_koniec' => 214,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 850,'id_punkt_koniec' => 214,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 851,'id_punkt_koniec' => 214,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 852,'id_punkt_koniec' => 214,'punkty_do' => 3,'punkty_od' => 5,'id_pasma' => 34],
+
+            ['id_punkt_poczatek' => 853,'id_punkt_koniec' => 215,'punkty_do' => 1,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 854,'id_punkt_koniec' => 215,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 855,'id_punkt_koniec' => 215,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 856,'id_punkt_koniec' => 215,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 34],
+
+            ['id_punkt_poczatek' => 857,'id_punkt_koniec' => 216,'punkty_do' => 9,'punkty_od' => 5,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 858,'id_punkt_koniec' => 216,'punkty_do' => 11,'punkty_od' => 6,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 859,'id_punkt_koniec' => 216,'punkty_do' => 11,'punkty_od' => 5,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 860,'id_punkt_koniec' => 216,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 861,'id_punkt_koniec' => 216,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 34],
+
+            ['id_punkt_poczatek' => 862,'id_punkt_koniec' => 217,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 34],
+            ['id_punkt_poczatek' => 863,'id_punkt_koniec' => 217,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 34],
+
+            //Pasmo 35
+            ['id_punkt_poczatek' => 864,'id_punkt_koniec' => 218,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 865,'id_punkt_koniec' => 218,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 866,'id_punkt_koniec' => 218,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 35],
+
+            ['id_punkt_poczatek' => 867,'id_punkt_koniec' => 219,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 868,'id_punkt_koniec' => 219,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 869,'id_punkt_koniec' => 219,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 35],
+
+            ['id_punkt_poczatek' => 870,'id_punkt_koniec' => 220,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 871,'id_punkt_koniec' => 220,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 872,'id_punkt_koniec' => 220,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 35],
+
+            ['id_punkt_poczatek' => 873,'id_punkt_koniec' => 221,'punkty_do' => 5,'punkty_od' => 6,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 874,'id_punkt_koniec' => 221,'punkty_do' => 3,'punkty_od' => 4,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 875,'id_punkt_koniec' => 221,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 35],
+
+            ['id_punkt_poczatek' => 876,'id_punkt_koniec' => 222,'punkty_do' => 4,'punkty_od' => 5,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 877,'id_punkt_koniec' => 222,'punkty_do' => 2,'punkty_od' => 4,'id_pasma' => 35],
+
+            ['id_punkt_poczatek' => 878,'id_punkt_koniec' => 223,'punkty_do' => 3,'punkty_od' => 4,'id_pasma' => 35],
+            ['id_punkt_poczatek' => 879,'id_punkt_koniec' => 223,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 35],
+
+            //Pasmo 36
+            ['id_punkt_poczatek' => 880,'id_punkt_koniec' => 224,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 881,'id_punkt_koniec' => 224,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 36],
+
+            ['id_punkt_poczatek' => 882,'id_punkt_koniec' => 225,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 883,'id_punkt_koniec' => 225,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 884,'id_punkt_koniec' => 225,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 885,'id_punkt_koniec' => 225,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 36],
+
+            ['id_punkt_poczatek' => 886,'id_punkt_koniec' => 226,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 887,'id_punkt_koniec' => 226,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 888,'id_punkt_koniec' => 226,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 889,'id_punkt_koniec' => 226,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 890,'id_punkt_koniec' => 226,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 36],
+
+            ['id_punkt_poczatek' => 891,'id_punkt_koniec' => 227,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 892,'id_punkt_koniec' => 227,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 893,'id_punkt_koniec' => 227,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 894,'id_punkt_koniec' => 227,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 36],
+
+            ['id_punkt_poczatek' => 895,'id_punkt_koniec' => 228,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 896,'id_punkt_koniec' => 228,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 897,'id_punkt_koniec' => 228,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 36],
+
+            ['id_punkt_poczatek' => 898,'id_punkt_koniec' => 229,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 899,'id_punkt_koniec' => 229,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 36],
+            ['id_punkt_poczatek' => 900,'id_punkt_koniec' => 229,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 36],
+
+            //Pasmo 37
+            ['id_punkt_poczatek' => 901,'id_punkt_koniec' => 230,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 902,'id_punkt_koniec' => 230,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 903,'id_punkt_koniec' => 230,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 37],
+
+            ['id_punkt_poczatek' => 904,'id_punkt_koniec' => 231,'punkty_do' => 9,'punkty_od' => 7,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 905,'id_punkt_koniec' => 231,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 906,'id_punkt_koniec' => 231,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 37],
+
+            ['id_punkt_poczatek' => 907,'id_punkt_koniec' => 232,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 908,'id_punkt_koniec' => 232,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 909,'id_punkt_koniec' => 232,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 37],
+
+            ['id_punkt_poczatek' => 910,'id_punkt_koniec' => 233,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 911,'id_punkt_koniec' => 233,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 37],
+
+            ['id_punkt_poczatek' => 912,'id_punkt_koniec' => 234,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 913,'id_punkt_koniec' => 234,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 914,'id_punkt_koniec' => 234,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 915,'id_punkt_koniec' => 234,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 37],
+
+            ['id_punkt_poczatek' => 916,'id_punkt_koniec' => 235,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 917,'id_punkt_koniec' => 235,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 37],
+            ['id_punkt_poczatek' => 918,'id_punkt_koniec' => 235,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 37],
+
+            //Pasmo 38
+            ['id_punkt_poczatek' => 919,'id_punkt_koniec' => 236,'punkty_do' => 10,'punkty_od' => 10,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 920,'id_punkt_koniec' => 236,'punkty_do' => 9,'punkty_od' => 9,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 921,'id_punkt_koniec' => 236,'punkty_do' => 9,'punkty_od' => 9,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 922,'id_punkt_koniec' => 236,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 38],
+
+            ['id_punkt_poczatek' => 923,'id_punkt_koniec' => 237,'punkty_do' => 10,'punkty_od' => 10,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 924,'id_punkt_koniec' => 237,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 38],
+
+            ['id_punkt_poczatek' => 925,'id_punkt_koniec' => 238,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 926,'id_punkt_koniec' => 238,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 38],
+
+            ['id_punkt_poczatek' => 927,'id_punkt_koniec' => 239,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 928,'id_punkt_koniec' => 239,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 38],
+
+            ['id_punkt_poczatek' => 929,'id_punkt_koniec' => 240,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 930,'id_punkt_koniec' => 240,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 931,'id_punkt_koniec' => 240,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 38],
+
+            ['id_punkt_poczatek' => 932,'id_punkt_koniec' => 241,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 933,'id_punkt_koniec' => 241,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 38],
+            ['id_punkt_poczatek' => 934,'id_punkt_koniec' => 241,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 38],
+
+            //Pasmo 39
+            ['id_punkt_poczatek' => 935,'id_punkt_koniec' => 242,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 936,'id_punkt_koniec' => 242,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 937,'id_punkt_koniec' => 242,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 938,'id_punkt_koniec' => 242,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 39],
+
+            ['id_punkt_poczatek' => 939,'id_punkt_koniec' => 243,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 940,'id_punkt_koniec' => 243,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 941,'id_punkt_koniec' => 243,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 39],
+
+            ['id_punkt_poczatek' => 942,'id_punkt_koniec' => 244,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 943,'id_punkt_koniec' => 244,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 944,'id_punkt_koniec' => 244,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 39],
+
+            ['id_punkt_poczatek' => 945,'id_punkt_koniec' => 245,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 946,'id_punkt_koniec' => 245,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 947,'id_punkt_koniec' => 245,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 39],
+
+            ['id_punkt_poczatek' => 948,'id_punkt_koniec' => 246,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 949,'id_punkt_koniec' => 246,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 950,'id_punkt_koniec' => 246,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 951,'id_punkt_koniec' => 246,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 952,'id_punkt_koniec' => 246,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 39],
+
+            ['id_punkt_poczatek' => 953,'id_punkt_koniec' => 247,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 954,'id_punkt_koniec' => 247,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 955,'id_punkt_koniec' => 247,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 956,'id_punkt_koniec' => 247,'punkty_do' => 6,'punkty_od' => 3,'id_pasma' => 39],
+            ['id_punkt_poczatek' => 957,'id_punkt_koniec' => 247,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 39],
+
+            //Pasmo 40
+            ['id_punkt_poczatek' => 958,'id_punkt_koniec' => 248,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 959,'id_punkt_koniec' => 248,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 960,'id_punkt_koniec' => 248,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 40],
+
+            ['id_punkt_poczatek' => 961,'id_punkt_koniec' => 249,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 962,'id_punkt_koniec' => 249,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 963,'id_punkt_koniec' => 249,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 964,'id_punkt_koniec' => 249,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 965,'id_punkt_koniec' => 249,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 40],
+
+            ['id_punkt_poczatek' => 966,'id_punkt_koniec' => 250,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 967,'id_punkt_koniec' => 250,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 968,'id_punkt_koniec' => 250,'punkty_do' => 9,'punkty_od' => 6,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 969,'id_punkt_koniec' => 250,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 970,'id_punkt_koniec' => 250,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 40],
+
+            ['id_punkt_poczatek' => 971,'id_punkt_koniec' => 251,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 972,'id_punkt_koniec' => 251,'punkty_do' => 6,'punkty_od' => 2,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 973,'id_punkt_koniec' => 251,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 40],
+
+            ['id_punkt_poczatek' => 974,'id_punkt_koniec' => 252,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 975,'id_punkt_koniec' => 252,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 976,'id_punkt_koniec' => 252,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 40],
+
+            ['id_punkt_poczatek' => 977,'id_punkt_koniec' => 253,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 978,'id_punkt_koniec' => 253,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 40],
+            ['id_punkt_poczatek' => 979,'id_punkt_koniec' => 253,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 40],
+
+            //Pasmo 41
+            ['id_punkt_poczatek' => 980,'id_punkt_koniec' => 254,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 981,'id_punkt_koniec' => 254,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 982,'id_punkt_koniec' => 254,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 41],
+
+            ['id_punkt_poczatek' => 983,'id_punkt_koniec' => 255,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 984,'id_punkt_koniec' => 255,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 985,'id_punkt_koniec' => 255,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 41],
+
+            ['id_punkt_poczatek' => 986,'id_punkt_koniec' => 256,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 987,'id_punkt_koniec' => 256,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 988,'id_punkt_koniec' => 256,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 41],
+
+            ['id_punkt_poczatek' => 989,'id_punkt_koniec' => 257,'punkty_do' => 5,'punkty_od' => 6,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 990,'id_punkt_koniec' => 257,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 991,'id_punkt_koniec' => 257,'punkty_do' => 5,'punkty_od' => 8,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 992,'id_punkt_koniec' => 257,'punkty_do' => 7,'punkty_od' => 10,'id_pasma' => 41],
+
+            ['id_punkt_poczatek' => 993,'id_punkt_koniec' => 258,'punkty_do' => 6,'punkty_od' => 10,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 994,'id_punkt_koniec' => 258,'punkty_do' => 6,'punkty_od' => 9,'id_pasma' => 41],
+
+            ['id_punkt_poczatek' => 995,'id_punkt_koniec' => 259,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 996,'id_punkt_koniec' => 259,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 41],
+            ['id_punkt_poczatek' => 997,'id_punkt_koniec' => 259,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 41],
+
+            //Pasmo 42
+            ['id_punkt_poczatek' => 998,'id_punkt_koniec' => 260,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 999,'id_punkt_koniec' => 260,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1000,'id_punkt_koniec' => 260,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1001,'id_punkt_koniec' => 260,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1002,'id_punkt_koniec' => 260,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 42],
+
+            ['id_punkt_poczatek' => 1003,'id_punkt_koniec' => 261,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1004,'id_punkt_koniec' => 261,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1005,'id_punkt_koniec' => 261,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 42],
+
+            ['id_punkt_poczatek' => 1006,'id_punkt_koniec' => 262,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1007,'id_punkt_koniec' => 262,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1008,'id_punkt_koniec' => 262,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 42],
+
+            ['id_punkt_poczatek' => 1009,'id_punkt_koniec' => 263,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1010,'id_punkt_koniec' => 263,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 42],
+            
+            ['id_punkt_poczatek' => 1011,'id_punkt_koniec' => 264,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1012,'id_punkt_koniec' => 264,'punkty_do' => 11,'punkty_od' => 9,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1013,'id_punkt_koniec' => 264,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1014,'id_punkt_koniec' => 264,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1015,'id_punkt_koniec' => 264,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 42],
+
+            ['id_punkt_poczatek' => 1016,'id_punkt_koniec' => 265,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1017,'id_punkt_koniec' => 265,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 42],
+            ['id_punkt_poczatek' => 1018,'id_punkt_koniec' => 265,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 42],
+
+            //Pasmo 43
+            ['id_punkt_poczatek' => 1019,'id_punkt_koniec' => 266,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1020,'id_punkt_koniec' => 266,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1021,'id_punkt_koniec' => 266,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1022,'id_punkt_koniec' => 266,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1023,'id_punkt_koniec' => 266,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 43],
+
+            ['id_punkt_poczatek' => 1024,'id_punkt_koniec' => 267,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1025,'id_punkt_koniec' => 267,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1026,'id_punkt_koniec' => 267,'punkty_do' => 9,'punkty_od' => 6,'id_pasma' => 43],
+
+            ['id_punkt_poczatek' => 1027,'id_punkt_koniec' => 268,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1028,'id_punkt_koniec' => 268,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 43],
+
+            ['id_punkt_poczatek' => 1029,'id_punkt_koniec' => 269,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1030,'id_punkt_koniec' => 269,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1031,'id_punkt_koniec' => 269,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 43],
+
+            ['id_punkt_poczatek' => 1032,'id_punkt_koniec' => 270,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1033,'id_punkt_koniec' => 270,'punkty_do' => 3,'punkty_od' => 4,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1034,'id_punkt_koniec' => 270,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1035,'id_punkt_koniec' => 270,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 43],
+
+            ['id_punkt_poczatek' => 1036,'id_punkt_koniec' => 271,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 43],
+            ['id_punkt_poczatek' => 1037,'id_punkt_koniec' => 271,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 43],
+
+            //Pasmo 44
+            ['id_punkt_poczatek' => 1038,'id_punkt_koniec' => 272,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1039,'id_punkt_koniec' => 272,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1040,'id_punkt_koniec' => 272,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 44],
+
+            ['id_punkt_poczatek' => 1041,'id_punkt_koniec' => 273,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1042,'id_punkt_koniec' => 273,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1043,'id_punkt_koniec' => 273,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 44],
+
+            ['id_punkt_poczatek' => 1044,'id_punkt_koniec' => 274,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1045,'id_punkt_koniec' => 274,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1046,'id_punkt_koniec' => 274,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 44],
+
+            ['id_punkt_poczatek' => 1047,'id_punkt_koniec' => 275,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1048,'id_punkt_koniec' => 275,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 44],
+
+            ['id_punkt_poczatek' => 1049,'id_punkt_koniec' => 276,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1050,'id_punkt_koniec' => 276,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 44],
+
+            ['id_punkt_poczatek' => 1051,'id_punkt_koniec' => 277,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1052,'id_punkt_koniec' => 277,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 44],
+            ['id_punkt_poczatek' => 1053,'id_punkt_koniec' => 277,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 44],
+
+            //Pasmo 45
+            ['id_punkt_poczatek' => 1054,'id_punkt_koniec' => 278,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1055,'id_punkt_koniec' => 278,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1056,'id_punkt_koniec' => 278,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1057,'id_punkt_koniec' => 278,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1058,'id_punkt_koniec' => 278,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 45],
+
+            ['id_punkt_poczatek' => 1059,'id_punkt_koniec' => 279,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1060,'id_punkt_koniec' => 279,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1061,'id_punkt_koniec' => 279,'punkty_do' => 3,'punkty_od' => 4,'id_pasma' => 45],
+
+            ['id_punkt_poczatek' => 1062,'id_punkt_koniec' => 280,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1063,'id_punkt_koniec' => 280,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 45],
+
+            ['id_punkt_poczatek' => 1064,'id_punkt_koniec' => 281,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1065,'id_punkt_koniec' => 281,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1066,'id_punkt_koniec' => 281,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 45],
+
+            ['id_punkt_poczatek' => 1067,'id_punkt_koniec' => 282,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 45],
+
+            ['id_punkt_poczatek' => 1068,'id_punkt_koniec' => 283,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 45],
+            ['id_punkt_poczatek' => 1069,'id_punkt_koniec' => 283,'punkty_do' => 10,'punkty_od' => 6,'id_pasma' => 45],
+
+            //Pasmo 46
+            ['id_punkt_poczatek' => 1070,'id_punkt_koniec' => 284,'punkty_do' => 7,'punkty_od' => 9,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1071,'id_punkt_koniec' => 284,'punkty_do' => 1,'punkty_od' => 2,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1072,'id_punkt_koniec' => 284,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 46],
+
+            ['id_punkt_poczatek' => 1073,'id_punkt_koniec' => 285,'punkty_do' => 6,'punkty_od' => 9,'id_pasma' => 46],
+
+            ['id_punkt_poczatek' => 1074,'id_punkt_koniec' => 286,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1075,'id_punkt_koniec' => 286,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 46],
+
+            ['id_punkt_poczatek' => 1076,'id_punkt_koniec' => 287,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1077,'id_punkt_koniec' => 287,'punkty_do' => 8,'punkty_od' => 13,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1078,'id_punkt_koniec' => 287,'punkty_do' => 5,'punkty_od' => 10,'id_pasma' => 46],
+
+            ['id_punkt_poczatek' => 1079,'id_punkt_koniec' => 288,'punkty_do' => 4,'punkty_od' => 6,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1080,'id_punkt_koniec' => 288,'punkty_do' => 10,'punkty_od' => 12,'id_pasma' => 46],
+
+            ['id_punkt_poczatek' => 1081,'id_punkt_koniec' => 289,'punkty_do' => 14,'punkty_od' => 12,'id_pasma' => 46],
+            ['id_punkt_poczatek' => 1082,'id_punkt_koniec' => 289,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 46],
+
+            //Pasmo 47
+            ['id_punkt_poczatek' => 1083,'id_punkt_koniec' => 290,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1084,'id_punkt_koniec' => 290,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1085,'id_punkt_koniec' => 290,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1086,'id_punkt_koniec' => 290,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 47],
+
+            ['id_punkt_poczatek' => 1087,'id_punkt_koniec' => 291,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1088,'id_punkt_koniec' => 291,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 47],
+
+            ['id_punkt_poczatek' => 1089,'id_punkt_koniec' => 292,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1090,'id_punkt_koniec' => 292,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 47],
+
+            ['id_punkt_poczatek' => 1091,'id_punkt_koniec' => 293,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1092,'id_punkt_koniec' => 293,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1093,'id_punkt_koniec' => 293,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 47],
+
+            ['id_punkt_poczatek' => 1094,'id_punkt_koniec' => 294,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1095,'id_punkt_koniec' => 294,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1096,'id_punkt_koniec' => 294,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 47],
+
+            ['id_punkt_poczatek' => 1097,'id_punkt_koniec' => 295,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1098,'id_punkt_koniec' => 295,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1099,'id_punkt_koniec' => 295,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 47],
+            ['id_punkt_poczatek' => 1100,'id_punkt_koniec' => 295,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 47],
+
+            //Pasmo 48
+            ['id_punkt_poczatek' => 1101,'id_punkt_koniec' => 296,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1102,'id_punkt_koniec' => 296,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 48],
+
+            ['id_punkt_poczatek' => 1103,'id_punkt_koniec' => 297,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1104,'id_punkt_koniec' => 297,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 48],
+
+            ['id_punkt_poczatek' => 1105,'id_punkt_koniec' => 298,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1106,'id_punkt_koniec' => 298,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1107,'id_punkt_koniec' => 298,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1108,'id_punkt_koniec' => 298,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 48],
+
+            ['id_punkt_poczatek' => 1109,'id_punkt_koniec' => 299,'punkty_do' => 10,'punkty_od' => 6,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1110,'id_punkt_koniec' => 299,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1111,'id_punkt_koniec' => 299,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 48],
+
+            ['id_punkt_poczatek' => 1112,'id_punkt_koniec' => 300,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1113,'id_punkt_koniec' => 300,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1114,'id_punkt_koniec' => 300,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1115,'id_punkt_koniec' => 300,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 48],
+
+            ['id_punkt_poczatek' => 1116,'id_punkt_koniec' => 301,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1117,'id_punkt_koniec' => 301,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1118,'id_punkt_koniec' => 301,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 48],
+            ['id_punkt_poczatek' => 1119,'id_punkt_koniec' => 301,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 48],
+
+            //Pasmo 49
+            ['id_punkt_poczatek' => 1120,'id_punkt_koniec' => 302,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1121,'id_punkt_koniec' => 302,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1122,'id_punkt_koniec' => 302,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 49],
+
+            ['id_punkt_poczatek' => 1123,'id_punkt_koniec' => 303,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1124,'id_punkt_koniec' => 303,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1125,'id_punkt_koniec' => 303,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1126,'id_punkt_koniec' => 303,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 49],
+
+            ['id_punkt_poczatek' => 1127,'id_punkt_koniec' => 304,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1128,'id_punkt_koniec' => 304,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 49],
+
+            ['id_punkt_poczatek' => 1129,'id_punkt_koniec' => 305,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1130,'id_punkt_koniec' => 305,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1131,'id_punkt_koniec' => 305,'punkty_do' => 6,'punkty_od' => 3,'id_pasma' => 49],
+
+            ['id_punkt_poczatek' => 1132,'id_punkt_koniec' => 306,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1133,'id_punkt_koniec' => 306,'punkty_do' => 0,'punkty_od' => 0,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1134,'id_punkt_koniec' => 306,'punkty_do' => 8,'punkty_od' => 4,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1135,'id_punkt_koniec' => 306,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 49],
+
+            ['id_punkt_poczatek' => 1136,'id_punkt_koniec' => 307,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 49],
+            ['id_punkt_poczatek' => 1137,'id_punkt_koniec' => 307,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 49],
+
+            //Pasmo 50
+            ['id_punkt_poczatek' => 1138,'id_punkt_koniec' => 308,'punkty_do' => 3,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1139,'id_punkt_koniec' => 308,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1140,'id_punkt_koniec' => 308,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 50],
+
+            ['id_punkt_poczatek' => 1141,'id_punkt_koniec' => 309,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1142,'id_punkt_koniec' => 309,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1143,'id_punkt_koniec' => 309,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1144,'id_punkt_koniec' => 309,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 50],
+
+            ['id_punkt_poczatek' => 1145,'id_punkt_koniec' => 310,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1146,'id_punkt_koniec' => 310,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1147,'id_punkt_koniec' => 310,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1148,'id_punkt_koniec' => 310,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1149,'id_punkt_koniec' => 310,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 50],
+
+            ['id_punkt_poczatek' => 1150,'id_punkt_koniec' => 311,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1151,'id_punkt_koniec' => 311,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1152,'id_punkt_koniec' => 311,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 50],
+            ['id_punkt_poczatek' => 1153,'id_punkt_koniec' => 311,'punkty_do' => 11,'punkty_od' => 11,'id_pasma' => 50],
+
+            //Pasmo 51
+            ['id_punkt_poczatek' => 1154,'id_punkt_koniec' => 312,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 51],
+
+            ['id_punkt_poczatek' => 1155,'id_punkt_koniec' => 313,'punkty_do' => 7,'punkty_od' => 8,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1156,'id_punkt_koniec' => 313,'punkty_do' => 6,'punkty_od' => 7,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1157,'id_punkt_koniec' => 313,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 51],
+
+            ['id_punkt_poczatek' => 1158,'id_punkt_koniec' => 314,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 51],
+
+            ['id_punkt_poczatek' => 1159,'id_punkt_koniec' => 315,'punkty_do' => 5,'punkty_od' => 7,'id_pasma' => 51],
+
+            ['id_punkt_poczatek' => 1160,'id_punkt_koniec' => 316,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1161,'id_punkt_koniec' => 316,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1162,'id_punkt_koniec' => 316,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1163,'id_punkt_koniec' => 316,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 51],
+
+            ['id_punkt_poczatek' => 1164,'id_punkt_koniec' => 317,'punkty_do' => 8,'punkty_od' => 6,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1165,'id_punkt_koniec' => 317,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 51],
+            ['id_punkt_poczatek' => 1166,'id_punkt_koniec' => 317,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 51],
+
+            //Pasmo 52
+            ['id_punkt_poczatek' => 1167,'id_punkt_koniec' => 318,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1168,'id_punkt_koniec' => 318,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 52],
+
+            ['id_punkt_poczatek' => 1169,'id_punkt_koniec' => 319,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1170,'id_punkt_koniec' => 319,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1171,'id_punkt_koniec' => 319,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 52],
+
+            ['id_punkt_poczatek' => 1172,'id_punkt_koniec' => 320,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1173,'id_punkt_koniec' => 320,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1174,'id_punkt_koniec' => 320,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1175,'id_punkt_koniec' => 320,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 52],
+
+            ['id_punkt_poczatek' => 1176,'id_punkt_koniec' => 321,'punkty_do' => 5,'punkty_od' => 5,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1177,'id_punkt_koniec' => 321,'punkty_do' => 11,'punkty_od' => 11,'id_pasma' => 52],
+
+            ['id_punkt_poczatek' => 1178,'id_punkt_koniec' => 322,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1179,'id_punkt_koniec' => 322,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1180,'id_punkt_koniec' => 322,'punkty_do' => 8,'punkty_od' => 7,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1181,'id_punkt_koniec' => 322,'punkty_do' => 9,'punkty_od' => 9,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1182,'id_punkt_koniec' => 322,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 52],
+
+            ['id_punkt_poczatek' => 1183,'id_punkt_koniec' => 323,'punkty_do' => 10,'punkty_od' => 8,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1184,'id_punkt_koniec' => 323,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1185,'id_punkt_koniec' => 323,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1186,'id_punkt_koniec' => 323,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1187,'id_punkt_koniec' => 323,'punkty_do' => 7,'punkty_od' => 7,'id_pasma' => 52],
+            ['id_punkt_poczatek' => 1188,'id_punkt_koniec' => 323,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 52],
+
+            //Pasmo 53
+            ['id_punkt_poczatek' => 1189,'id_punkt_koniec' => 324,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1190,'id_punkt_koniec' => 324,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 53],
+
+            ['id_punkt_poczatek' => 1191,'id_punkt_koniec' => 325,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1192,'id_punkt_koniec' => 325,'punkty_do' => 4,'punkty_od' => 6,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1193,'id_punkt_koniec' => 325,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 53],
+
+            ['id_punkt_poczatek' => 1194,'id_punkt_koniec' => 326,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1195,'id_punkt_koniec' => 326,'punkty_do' => 3,'punkty_od' => 5,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1196,'id_punkt_koniec' => 326,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 53],
+
+            ['id_punkt_poczatek' => 1197,'id_punkt_koniec' => 327,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1198,'id_punkt_koniec' => 327,'punkty_do' => 3,'punkty_od' => 5,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1199,'id_punkt_koniec' => 327,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1200,'id_punkt_koniec' => 327,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 53],
+
+            ['id_punkt_poczatek' => 1201,'id_punkt_koniec' => 328,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1202,'id_punkt_koniec' => 328,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1203,'id_punkt_koniec' => 328,'punkty_do' => 2,'punkty_od' => 4,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1204,'id_punkt_koniec' => 328,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1205,'id_punkt_koniec' => 328,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1206,'id_punkt_koniec' => 328,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1207,'id_punkt_koniec' => 328,'punkty_do' => 7,'punkty_od' => 4,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1208,'id_punkt_koniec' => 328,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1209,'id_punkt_koniec' => 328,'punkty_do' => 4,'punkty_od' => 0,'id_pasma' => 53],
+
+            ['id_punkt_poczatek' => 1210,'id_punkt_koniec' => 329,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1211,'id_punkt_koniec' => 329,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 53],
+            ['id_punkt_poczatek' => 1212,'id_punkt_koniec' => 329,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 53],
+
+            //Pasmo 54
+            ['id_punkt_poczatek' => 1213,'id_punkt_koniec' => 330,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 54],
+
+            ['id_punkt_poczatek' => 1214,'id_punkt_koniec' => 331,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 54],
+            ['id_punkt_poczatek' => 1215,'id_punkt_koniec' => 331,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 54],
+            ['id_punkt_poczatek' => 1216,'id_punkt_koniec' => 331,'punkty_do' => 2,'punkty_od' => 2,'id_pasma' => 54],
+
+            ['id_punkt_poczatek' => 1217,'id_punkt_koniec' => 332,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 54],
+
+            ['id_punkt_poczatek' => 1218,'id_punkt_koniec' => 333,'punkty_do' => 11,'punkty_od' => 4,'id_pasma' => 54],
+            ['id_punkt_poczatek' => 1219,'id_punkt_koniec' => 333,'punkty_do' => 11,'punkty_od' => 4,'id_pasma' => 54],
+            ['id_punkt_poczatek' => 1220,'id_punkt_koniec' => 333,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 54],
+            ['id_punkt_poczatek' => 1221,'id_punkt_koniec' => 333,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 54],
+
+            ['id_punkt_poczatek' => 1222,'id_punkt_koniec' => 334,'punkty_do' => 7,'punkty_od' => 2,'id_pasma' => 54],
+
+            ['id_punkt_poczatek' => 1223,'id_punkt_koniec' => 335,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 54],
+
+            //Pasmo 55
+            ['id_punkt_poczatek' => 1224,'id_punkt_koniec' => 336,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1225,'id_punkt_koniec' => 336,'punkty_do' => 6,'punkty_od' => 3,'id_pasma' => 55],
+
+            ['id_punkt_poczatek' => 1226,'id_punkt_koniec' => 337,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1227,'id_punkt_koniec' => 337,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 55],
+
+            ['id_punkt_poczatek' => 1228,'id_punkt_koniec' => 338,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1229,'id_punkt_koniec' => 338,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 55],
+
+            ['id_punkt_poczatek' => 1230,'id_punkt_koniec' => 339,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1231,'id_punkt_koniec' => 339,'punkty_do' => 9,'punkty_od' => 4,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1232,'id_punkt_koniec' => 339,'punkty_do' => 10,'punkty_od' => 5,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1233,'id_punkt_koniec' => 339,'punkty_do' => 6,'punkty_od' => 3,'id_pasma' => 55],
+
+            ['id_punkt_poczatek' => 1234,'id_punkt_koniec' => 340,'punkty_do' => 7,'punkty_od' => 2,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1235,'id_punkt_koniec' => 340,'punkty_do' => 13,'punkty_od' => 4,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1236,'id_punkt_koniec' => 340,'punkty_do' => 18,'punkty_od' => 8,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1237,'id_punkt_koniec' => 340,'punkty_do' => 19,'punkty_od' => 9,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1238,'id_punkt_koniec' => 340,'punkty_do' => 16,'punkty_od' => 7,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1239,'id_punkt_koniec' => 340,'punkty_do' => 18,'punkty_od' => 9,'id_pasma' => 55],
+
+            ['id_punkt_poczatek' => 1240,'id_punkt_koniec' => 341,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1241,'id_punkt_koniec' => 341,'punkty_do' => 5,'punkty_od' => 4,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1242,'id_punkt_koniec' => 341,'punkty_do' => 20,'punkty_od' => 10,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1243,'id_punkt_koniec' => 341,'punkty_do' => 20,'punkty_od' => 10,'id_pasma' => 55],
+            ['id_punkt_poczatek' => 1244,'id_punkt_koniec' => 341,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 55],
+
+            //Pasmo 56
+            ['id_punkt_poczatek' => 1245,'id_punkt_koniec' => 342,'punkty_do' => 15,'punkty_od' => 8,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1246,'id_punkt_koniec' => 342,'punkty_do' => 10,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1247,'id_punkt_koniec' => 342,'punkty_do' => 8,'punkty_od' => 4,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1248,'id_punkt_koniec' => 342,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1249,'id_punkt_koniec' => 342,'punkty_do' => 1,'punkty_od' => 2,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1250,'id_punkt_koniec' => 342,'punkty_do' => 18,'punkty_od' => 18,'id_pasma' => 56],
+
+            ['id_punkt_poczatek' => 1251,'id_punkt_koniec' => 343,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1252,'id_punkt_koniec' => 343,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1253,'id_punkt_koniec' => 343,'punkty_do' => 3,'punkty_od' => 6,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1254,'id_punkt_koniec' => 343,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1255,'id_punkt_koniec' => 343,'punkty_do' => 10,'punkty_od' => 4,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1256,'id_punkt_koniec' => 343,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 56],
+
+            ['id_punkt_poczatek' => 1257,'id_punkt_koniec' => 344,'punkty_do' => 4,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1258,'id_punkt_koniec' => 344,'punkty_do' => 3,'punkty_od' => 8,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1259,'id_punkt_koniec' => 344,'punkty_do' => 4,'punkty_od' => 8,'id_pasma' => 56],
+
+            ['id_punkt_poczatek' => 1260,'id_punkt_koniec' => 345,'punkty_do' => 12,'punkty_od' => 4,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1261,'id_punkt_koniec' => 345,'punkty_do' => 18,'punkty_od' => 9,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1262,'id_punkt_koniec' => 345,'punkty_do' => 16,'punkty_od' => 8,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1263,'id_punkt_koniec' => 345,'punkty_do' => 11,'punkty_od' => 8,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1264,'id_punkt_koniec' => 345,'punkty_do' => 6,'punkty_od' => 5,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1265,'id_punkt_koniec' => 345,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1266,'id_punkt_koniec' => 345,'punkty_do' => 10,'punkty_od' => 6,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1267,'id_punkt_koniec' => 345,'punkty_do' => 7,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1268,'id_punkt_koniec' => 345,'punkty_do' => 11,'punkty_od' => 6,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1270,'id_punkt_koniec' => 345,'punkty_do' => 12,'punkty_od' => 2,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1271,'id_punkt_koniec' => 345,'punkty_do' => 8,'punkty_od' => 3,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1272,'id_punkt_koniec' => 345,'punkty_do' => 7,'punkty_od' => 2,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1273,'id_punkt_koniec' => 345,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 56],
+            ['id_punkt_poczatek' => 1274,'id_punkt_koniec' => 345,'punkty_do' => 9,'punkty_od' => 5,'id_pasma' => 56],
+
+            //Pasmo 57
+            ['id_punkt_poczatek' => 1275,'id_punkt_koniec' => 346,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1276,'id_punkt_koniec' => 346,'punkty_do' => 5,'punkty_od' => 2,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1277,'id_punkt_koniec' => 346,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1278,'id_punkt_koniec' => 346,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1279,'id_punkt_koniec' => 346,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1280,'id_punkt_koniec' => 346,'punkty_do' => 13,'punkty_od' => 8,'id_pasma' => 57],
+
+            ['id_punkt_poczatek' => 1281,'id_punkt_koniec' => 347,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1282,'id_punkt_koniec' => 347,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 57],
+
+            ['id_punkt_poczatek' => 1283,'id_punkt_koniec' => 348,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1284,'id_punkt_koniec' => 348,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 57],
+
+            ['id_punkt_poczatek' => 1285,'id_punkt_koniec' => 349,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 57],
+            ['id_punkt_poczatek' => 1286,'id_punkt_koniec' => 349,'punkty_do' => 14,'punkty_od' => 8,'id_pasma' => 57],
+
+            //Pasmo 58
+            ['id_punkt_poczatek' => 1287,'id_punkt_koniec' => 350,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 58],
+            ['id_punkt_poczatek' => 1288,'id_punkt_koniec' => 350,'punkty_do' => 6,'punkty_od' => 6,'id_pasma' => 58],
+            ['id_punkt_poczatek' => 1289,'id_punkt_koniec' => 350,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 58],
+
+            ['id_punkt_poczatek' => 1290,'id_punkt_koniec' => 351,'punkty_do' => 8,'punkty_od' => 5,'id_pasma' => 58],
+            ['id_punkt_poczatek' => 1291,'id_punkt_koniec' => 351,'punkty_do' => 7,'punkty_od' => 6,'id_pasma' => 58],
+
+            ['id_punkt_poczatek' => 1292,'id_punkt_koniec' => 352,'punkty_do' => 6,'punkty_od' => 4,'id_pasma' => 58],
+
+            ['id_punkt_poczatek' => 1293,'id_punkt_koniec' => 353,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 58],
+            ['id_punkt_poczatek' => 1294,'id_punkt_koniec' => 353,'punkty_do' => 12,'punkty_od' => 9,'id_pasma' => 58],
+
+            ['id_punkt_poczatek' => 1295,'id_punkt_koniec' => 354,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 58],
+
+            ['id_punkt_poczatek' => 1296,'id_punkt_koniec' => 355,'punkty_do' => 5,'punkty_od' => 3,'id_pasma' => 58],
+            ['id_punkt_poczatek' => 1297,'id_punkt_koniec' => 355,'punkty_do' => 7,'punkty_od' => 5,'id_pasma' => 58],
+
+            //Pasmo 59
+            ['id_punkt_poczatek' => 1298,'id_punkt_koniec' => 356,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1299,'id_punkt_koniec' => 356,'punkty_do' => 3,'punkty_od' => 3,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1300,'id_punkt_koniec' => 356,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1301,'id_punkt_koniec' => 356,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1302,'id_punkt_koniec' => 356,'punkty_do' => 4,'punkty_od' => 4,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1303,'id_punkt_koniec' => 356,'punkty_do' => 8,'punkty_od' => 8,'id_pasma' => 59],
+
+            ['id_punkt_poczatek' => 1304,'id_punkt_koniec' => 357,'punkty_do' => 4,'punkty_od' => 5,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1305,'id_punkt_koniec' => 357,'punkty_do' => 2,'punkty_od' => 3,'id_pasma' => 59],
+
+            ['id_punkt_poczatek' => 1306,'id_punkt_koniec' => 358,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1307,'id_punkt_koniec' => 358,'punkty_do' => 3,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1308,'id_punkt_koniec' => 358,'punkty_do' => 3,'punkty_od' => 2,'id_pasma' => 59],
+
+            ['id_punkt_poczatek' => 1309,'id_punkt_koniec' => 359,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1310,'id_punkt_koniec' => 359,'punkty_do' => 1,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1311,'id_punkt_koniec' => 359,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1312,'id_punkt_koniec' => 359,'punkty_do' => 2,'punkty_od' => 1,'id_pasma' => 59],
+            ['id_punkt_poczatek' => 1313,'id_punkt_koniec' => 359,'punkty_do' => 4,'punkty_od' => 2,'id_pasma' => 59],
+
         ];
         DB::table('odcinek')->insert($dane);
     }
