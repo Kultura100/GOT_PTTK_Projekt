@@ -97,57 +97,6 @@
 
             </ul>
             <div class="navbar-nav dropdown">
-                <div class="notification">
-                    <div class="notBtn" href="#">
-                        @if(isset($powiadomienie))
-                        @if ($powiadomienie->count() > 0)
-                        {{-- @dd($powiadomienie) --}}
-                            @foreach ($powiadomienie as $powiadomienia)
-                                {{-- Jak chcesz bez powiadomienia wywalasz klase number --}}
-                                <div class="number">{{ $loop->iteration }}</div>
-                                <i class="fa-regular fa-bell"></i>
-                                <div class="box">
-                                    <div class="display">
-                                        <div class="cont">
-                                            @php
-                                                $dzisiaj = new DateTime();
-                                                $przodownikdata = new DateTime($powiadomienia->created_at);
-                                                if($dzisiaj->format('Y-m-d') == $przodownikdata->format('Y-m-d'))
-                                                {
-                                                    print(" <div class='sec new'> ");
-                                                }
-                                                else {
-                                                    print(" <div class='sec'> ");
-                                                }
-                                            @endphp
-                                                {{-- jak chcesz nowy to zrob sec new --}}
-                                                <div class="profCont">
-                                                    <img class="profile"
-                                                        src="https://bootdey.com/img/Content/avatar/avatar6.png">
-                                                </div>
-                                                <div class="txt">{{$powiadomienia->tekst}}</div>
-                                                {{-- <div class="txt sub">czas ble ble ble</div> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @else
-                            <i class="fa-regular fa-bell"></i>
-                            <div class="box">
-                                <div class="display">
-                                </div>
-                            </div>
-                        @endif
-                        @else
-                        <i class="fa-regular fa-bell"></i>
-                        <div class="box">
-                            <div class="display">
-                            </div>
-                        </div>
-                        @endif
-                    </div>
-                </div>
                 <a href="#" class="nav-link dropdown-toggle" id="profile" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <img src="{{ url('/images/avatars/blank.png') }}" alt="USER_NAME" width="32" height="32"
