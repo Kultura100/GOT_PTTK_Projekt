@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             PermissionsSeeder::class,
             UsersSeeder::class,
             OdznakaSeeder::class,
-            Odznaka_TurystySeeder::class,
+            //Odznaka_TurystySeeder::class,
             GrupaSeeder::class,
             Grupa_PrzodownikSeeder::class,
             PunktSeeder::class,

@@ -10,11 +10,7 @@ class Odznaka_Turysty extends Model
 {
     use HasFactory;    
     protected $table = 'odznaka_turysty';
-    protected $fillable = 
-    [
-        'id_turysty',
-        'id_odznaki'
-    ]; 
+    protected $guarded = []; 
     public function odznakaturysty()
     {
         return $this->belongsToMany(User::class);        

@@ -103,7 +103,6 @@ h2 small {
   transition: color 100ms;
   vertical-align: baseline;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -240,10 +239,8 @@ body {
 
 .switch {
   display: inline-block;
-  width: 50px;
-  /*=w*/
-  height: 20px;
-  /*=h*/
+  width: 50px; /*=w*/
+  height: 20px; /*=h*/
   margin: 4px;
   transform: translateY(50%);
   position: relative;
@@ -270,14 +267,12 @@ body {
   height: 100%;
   background-color: #777;
   border-radius: 30px;
-  transform: translateX(-30px);
-  /*translateX(-(w-h))*/
+  transform: translateX(-30px); /*translateX(-(w-h))*/
   transition: 0.2s;
 }
 
 input:checked + .slider:before {
-  transform: translateX(30px);
-  /*translateX(w-h)*/
+  transform: translateX(30px); /*translateX(w-h)*/
   background-color: limeGreen;
 }
 

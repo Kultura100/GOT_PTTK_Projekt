@@ -167,6 +167,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/listaOdznak', [ObowiazkiController::class, 'listaOdznak'])
             ->name('listaOdznak')
             ->middleware(['permission:obowiazki.index']);
+        Route::get('/akceptuj/{iduzytkownika}/{idodznaki}', [ObowiazkiController::class, 'akceptujodznake'])
+            ->name('akceptujodznake')
+            ->middleware(['permission:obowiazki.index']);
+        Route::get('/nieakceptuj/{iduzytkownika}/{idodznaki}', [ObowiazkiController::class, 'nieakceptuj'])
+            ->name('nieakceptuj')
+            ->middleware(['permission:obowiazki.index']);
     });
     Route::name('listaturystow.')->prefix('listaturystow')->group(function () {
         Route::get('', [ListaTurystowController::class, 'index'])
