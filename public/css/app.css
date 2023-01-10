@@ -1,5 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+<<<<<<< HEAD
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
 table.dataTable td.dt-control {
   text-align: center;
   cursor: pointer;
@@ -162,6 +164,8 @@ div.dataTables_processing > div:last-child > div:nth-child(4) {
 table.dataTable.nowrap th, table.dataTable.nowrap td {
   white-space: nowrap;
 }
+=======
+>>>>>>> c92a0880df5e959054acbdd8e4b2f17f83eca794
 table.dataTable th.dt-left,
 table.dataTable td.dt-left {
   text-align: left;
