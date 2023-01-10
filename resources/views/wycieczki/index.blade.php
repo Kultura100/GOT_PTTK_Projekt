@@ -14,17 +14,16 @@
         </script>
     
     <div class="container">
-        <h1 style="float:none;">{{ __('translations.wycieczki.title') }}</h1> 
+        <div>
+            <h1 class="text-center" style="float:none;">{{ __('translations.wycieczki.title') }}</h1> 
+        </div>
         <div class="d-flex flex-row-reverse mb-4 justify-center">
-            <a href="{{ route('wycieczki.create') }}" type="button" class="btn btn-primary" role="button">
-                {{ __('translations.wycieczki.label.create') }}
-            </a>
-            <div class="form-check pt-2">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="zmien()">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Pokaz odbyte
-                </label>
-              </div>
+            <div class="mx-3">
+                <label class="switch" for="flexCheckDefault">
+                <input type="checkbox" id="flexCheckDefault" onclick="zmien()">
+                <span class="slider"></span>
+                </label>Wyświetl Odbyte wycieczki
+            </div>
         </div>
     </div>
 
@@ -37,7 +36,6 @@
             <div class="col col-5"><strong>Ilość punktów</strong></div>
             <div class="col col-6"><strong>Operacje</strong></div>
         </li>
-      
         @foreach ($wycieczki as $wycieczka)
         {{-- @dd($wycieczka->wieleodcinkow->first()->wycieczka_odcinek2->pasmo->nazwa) --}}
             <li class="table-row">

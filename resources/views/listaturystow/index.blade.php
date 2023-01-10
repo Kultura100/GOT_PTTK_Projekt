@@ -6,7 +6,7 @@
         <script src="{{ asset('js/raport.js') }}"></script>
     </x-slot>
     
-    <ul class="responsive-table">
+    <ul class="responsive-table pt-5">
         <li class="table-header">
             <div class="col col-1">Imię i Nazwisko</div>
             <div class="col col-2">E-mail</div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="col col-4">
                     <a href="{{ route('listaturystow.szczegoly', ['id' => $wycieczkiZatwierdzone->jakaWycieczka->id]) }}">                         
-                            <x-button class="hover:bg-green-700">
+                            <x-button class="button-1 hover:bg-green-700">
                                 Szczegóły
                             </x-button>
                 </a>

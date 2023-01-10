@@ -51,11 +51,13 @@ return [
     [
         'title' => 'Wycieczki',
         'success' => 'Poprawnie utworzono wycieczke o id :name !',
+        'index' => 'Wyświetl',
+        'add' => 'Dodaj',
         'label' => 
             [
-              'create' => 'Dodanie nowej wycieczki',
-              'edit' => 'Edycja aktualnej wycieczki',
-              'back' => 'Powrót',
+                'create' => 'Dodanie nowej wycieczki',
+                'edit' => 'Edycja aktualnej wycieczki',
+                'back' => 'Powrót',
             ],
         'attribute' => 
             [

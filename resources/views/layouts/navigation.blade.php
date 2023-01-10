@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<nav class="navbar navbar-expand-md navbar-light shadow-sm bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ URL::asset('/images/logo-pttk.png') }}" width="50" height="50" alt="ikona">
@@ -25,12 +25,6 @@
                 </li> --}}
 
                 
-                <li class="nav-item">
-                    <x-nav-link :href="route('osiagniecia.index')" :active="request()->routeIs('osiagniecia.index')">
-                        <!-- osiagniecia.index -->
-                        {{ __('translations.osiagniecia.title') }}
-                    </x-nav-link>
-                </li>
 
                 <li class="nav-item">
                     <x-nav-link :href="route('odznaki.index')" :active="request()->routeIs('odznaki.index')">
@@ -53,19 +47,24 @@
                     </x-nav-link>
                 </li>
 
-                <li class="nav-item">
-                    <x-nav-link :href="route('wycieczki.index')" :active="request()->routeIs('wycieczki.index')">
+                {{-- <li class="nav-item dropdown">
+                    <x-nav-link  :href="route('wycieczki.index')" :active="request()->routeIs('wycieczki.index')">
                         <!-- wycieczki.index -->
                         {{ __('translations.wycieczki.title') }}
                     </x-nav-link>
+                </li> --}}
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ __('translations.wycieczki.title') }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('wycieczki.index') }}">{{ __('translations.wycieczki.index') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('wycieczki.create') }}">{{ __('translations.wycieczki.add') }}</a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <x-nav-link :href="route('szlak.index')" :active="request()->routeIs('szlak.index')">
-                        <!-- szlak.index -->
-                        {{ __('translations.szlak.title') }}
-                    </x-nav-link>
-                </li>
+                
                 @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('przodownik'))
                     <li class="nav-item">
                         <x-nav-link :href="route('obowiazki.index')" :active="request()->routeIs('obowiazki.index')">
@@ -81,6 +80,13 @@
                         </x-nav-link>
                     </li>
                 @endif
+                @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('przodownik'))
+                <li class="nav-item">
+                    <x-nav-link :href="route('obowiazki.listaOdznak')" :active="request()->routeIs('obowiazki.listaOdznak')">
+                        Lista odznak
+                    </x-nav-link>
+                </li>
+            @endif
 
 
 
@@ -153,7 +159,9 @@
                                 aria-disabled="true">Profil</a>
                         @endif
                     </li>
-                    <li><a class="dropdown-item disabled" href="">Ustawienia</a></li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('osiagniecia.index') }}">{{ __('translations.osiagniecia.title') }}</a>
+                    </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>

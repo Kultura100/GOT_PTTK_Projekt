@@ -7,7 +7,7 @@
         <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
         <script src="{{ asset('js/ranking.js') }}"></script>
     </x-slot>
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
             <div class="col-lg-6">
                 <div class="articles card">

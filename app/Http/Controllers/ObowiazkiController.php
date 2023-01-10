@@ -10,4 +10,9 @@ class ObowiazkiController extends Controller
     {
         return view('obowiazki.index');
     }
+
+    public function listaOdznak()
+    {
+        return view('obowiazki.listaOdznak');
+    }
 }

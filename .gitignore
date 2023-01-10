@@ -12,4 +12,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-public/zrodlo_zdjecia/*
+public/zrodlo_zdjecia/
+public/css/*
+public/js/*
+public/webfonts/*
+public/fonts/vendor/bootstrap-icons/*
+resources/views/vendor/jsvalidation/*

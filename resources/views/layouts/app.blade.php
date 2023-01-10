@@ -3,18 +3,14 @@
 <x-base-layout>
     <x-slot name="styles">
         <style type="text/css" media="screen">
-            body {
-                padding-top: 4.5rem;
-                /* margin-bottom: 75px; */
-            }
 
             a {
                 text-decoration: none;
-                color: black;
+                
             }
 
             a:visited {
-                color: black;
+                
             }
 
             .box::-webkit-scrollbar-track {
@@ -189,9 +185,9 @@
                 width: 100%;
                 text-align: center;
                 min-height: 20px;
-                z-index: 2;
+                z-index: 999;
             }
-        </style>
+    </style>
         {{ $styles }}
     </x-slot>
 
@@ -201,7 +197,7 @@
     </div>
 
     <footer class="bg-dark text-light">
-        <p class="py-4 mb-0 text-center">2022 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz,
+        <p class="py-4 mb-0 text-center">2023 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz,
             Danielak Bartosz</p>
             <x-toasts/>
     </footer>

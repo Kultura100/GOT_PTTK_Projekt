@@ -52,7 +52,7 @@ class KlientController extends Controller
 
     event(new Registered($klienci));
     
-     return redirect()->route('uzytkownik.index')
+    return redirect()->route('uzytkownik.index')
         ->with('success', __('translations.uzytkownik.flashes.success.stored', [
         'nazwisko' => $klienci->imie." ".$klienci->nazwisko,
     ]));
@@ -91,7 +91,7 @@ class KlientController extends Controller
         $klienci->telefon = $request->input('telefon');
         $klienci->save();
 
-     return redirect()->route('uzytkownik.index')
+    return redirect()->route('uzytkownik.index')
         ->with('success', __('translations.uzytkownik.flashes.success.updated', [
             'nazwisko' => $klienci->imie." ".$klienci->nazwisko,
     ]));
