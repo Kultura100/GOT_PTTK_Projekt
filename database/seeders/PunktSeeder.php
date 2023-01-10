@@ -225,6 +225,251 @@ class PunktSeeder extends Seeder
             175 => 'Diabla Góra (285 m)',
             176 => 'Sielecka Góra (285 m)',
 
+            177 => 'Fajna Ryba (347 m)',
+            178 => 'Buczyna (336 m)',
+            179 => 'Kozłowa (337 m)',
+            180 => 'Świdzyńska (311 m)',
+            181 => 'Święty Michał (332 m) Ł03',
+
+            //Pasmo 29
+            182 => 'Góra Dobrzeszowska (364 m)',
+            183 => 'Siniewska Góra (449 m)',
+            184 => 'Barania Góra (427 m)',
+            185 => 'Święty Michał (332 m)',
+            186 => 'Cieśle',
+            187 => 'Brodowica',
+
+            //Pasmo 30
+            188 => 'Patrol (388 m)',
+            189 => 'Brusznia (309 m)',
+            190 => 'Dalnia (310 m)',
+            191 => 'Biesak (337 m)',
+            192 => 'Bugalanka (366 m)',
+            193 => 'Pierścienica (367 m)',
+
+            //Pasmo 31
+            194 => 'Miejska Góra (426 m)',
+            195 => 'Sieradowska Góra (390 m)',
+            196 => 'Wykus',
+            197 => 'Kapliczka Świętego Mikołaja (535 m)',
+            198 => 'Łysiec (Święty Krzyż) (595 m)',
+            199 => 'Kobyla Góra (391 m)',
+
+            //Pasmo 32
+            200 => 'Smrek (TPG Stóg Izerski) (1124 m)',
+            201 => 'Czerniawska Kopa (776 m)',
+            202 => 'Łącznik (1066 m)',
+            203 => 'Stóg Izerski (1105 m)',
+            204 => 'Zajęcznik (595 m)',
+            205 => 'Sępia Góra (828 m)',
+
+            //Pasmo 33
+            206 => 'Witka',
+            207 => 'Grodziszcze (427 m)',
+            208 => 'Wysoka Stóża (427 m)',
+            209 => 'Kozub (1105 m)',
+            210 => 'Wojkowa (503 m)',
+            211 => 'Świecie',
+
+            //Pasmo 34
+            212 => 'Schronisko PTTK Hala Szrenicka (1195 m)',
+            213 => 'Szrenica (1362 m)',
+            214 => 'Przełęcz Mokra (940 m)',
+            215 => 'Wysoki Most',
+            216 => 'Schronisko PTTK Hala pod Łabskim Szczytem (1168 m)',
+            217 => 'Czarcia Ambona (1490 m) (Śnieżne Kotły)',
+
+            //Pasmo 35
+            218 => 'Stara Kamienica',
+            219 => 'Rybnica ruiny zamku',
+            220 => 'Wrzeszczyn',
+            221 => 'Siedlecin-Bóbr',
+            222 => 'Jeżów Sudecki',
+            223 => 'Dziwiszów',
+
+            //Pasmo 36
+            224 => 'Sokolik (642 m)',
+            225 => 'Przełęcz Przełączka',
+            226 => 'Schronisko PTTK Szwajcarka (520 m)',
+            227 => 'Rozdroże pod Jańską Górą',
+            228 => 'Strużnickie Skały',
+            229 => 'Starościńskie Skały',
+
+            //Pasmo 37
+            230 => 'Strzyżowiec',
+            231 => 'Płoszczynka',
+            232 => 'Stromiec (551 m)',
+            233 => 'Szybowisko (561 m)',
+            234 => 'Tarczynka (422 m)',
+            235 => 'Czernica',
+
+            //Pasmo 38
+            236 => 'Bolesławiec',
+            237 => 'Kraszowice',
+            238 => 'Nowe Jaroszowice',
+            239 => 'Wartowice',
+            240 => 'Skała',
+            241 => 'Dworek',
+
+            //Pasmo 39
+            242 => 'Szczepanowski Grzbiet',
+            243 => 'Opawa',
+            244 => 'Zameczek (595 m)',
+            245 => 'Lubawka',
+            246 => 'Zadzierna (724 m)',
+            247 => 'Świerczyna (ok. 635 m)',
+
+            //Pasmo 40
+            248 => 'Jański Wierch (697 m)',
+            249 => 'Bogaria (645 m)',
+            250 => 'Końska (813 m)',
+            251 => 'Szeroka (844 m)',
+            252 => 'Krzyżówka BHP',
+            253 => 'Rozdroże Trzech Buków',
+
+            //Pasmo 41
+            254 => 'Długa Góra (635 m)',
+            255 => 'Młynarka (539 m)',
+            256 => 'Góra Truskolas (613 m)',
+            257 => 'Wierzchosławice',
+            258 => 'Bolków',
+            259 => 'Krąglak (692 m)',
+
+            //Pasmo 42
+            260 => 'Góra Lipiec (511 m)',
+            261 => 'Cerekwica (555 m)',
+            262 => 'Bojanicka Struga',
+            263 => 'Michałkowa',
+            264 => 'Glinno',
+            265 => 'Kroacka Studzienka',
+
+            //Pasmo 43
+            266 => 'Stróża (636 m)',
+            267 => 'Kortunał (675 m)',
+            268 => 'Srebrna Przełęcz (586 m)',
+            269 => 'Słup (667 m)',
+            270 => 'Przełęcz Wilcza (532 m)',
+            271 => 'Ostróg (627 m)',
+
+            //Pasmo 44
+            272 => 'Zielona Dolina',
+            273 => 'Ptasznica (605 m)',
+            274 => 'Borowa (701 m)',
+            275 => 'Taszów',
+            276 => 'Miejski Lasek',
+            277 => 'Błonie (478 m)',
+
+            //Pasmo 45
+            278 => 'Przełęcz Polskie Wrota (660 m)',
+            279 => 'Miejski Lasek',
+            280 => 'Pańska Góra ( m)',
+            281 => 'TPG Duszniki Zdrój',
+            282 => 'Kozia Hala (700 do 740 m)',
+            283 => 'Sołtysia Kopa (896 m)',
+
+            //Pasmo 46
+            284 => 'Kłodzko',
+            285 => 'Jaszkowa Dolna',
+            286 => 'Sarnica (551 m)',
+            287 => 'Stara Łomnica',
+            288 => 'Bystrzyca Kłodzka',
+            289 => 'Marianówka',
+
+            //Pasmo 47
+            290 => 'Wapniarka (532 m)',
+            291 => 'Przełęcz Mielnicka (405 m)',
+            292 => 'Romanowo',
+            293 => 'Mrówczyniec (487 m)',
+            294 => 'Sędzisz (498 m)',
+            295 => 'Romanowo Górne',
+
+            //Pasmo 48
+            296 => 'Olchówka (457 m)',
+            297 => 'Pustelnia (395 m)',
+            298 => 'Haniak (540 m)',
+            299 => 'Jawornik Mały (756 m)',
+            300 => 'Jawornik Wielki (870 m)',
+            301 => 'Przełęcz pod Trzeboniem (679 m)',
+
+            //Pasmo 49
+            302 => 'Przednia Kopa (467 m)',
+            303 => 'Przełęcz Siodło (502 m)',
+            304 => 'Biskupia Kopa (889 m)',
+            305 => 'Przełęcz pod Kopą (711 m)',
+            306 => 'Schronisko pod Biskupią Kopą (850 m)',
+            307 => 'Rozdroże pod Piekiełkiem',
+
+            //Pasmo 50
+            308 => 'Paszowice',
+            309 => 'Czernicka Góra (514 m)',
+            310 => 'Czeska Góra (321 m)',
+            311 => 'Góra św. Jerzego (353 m)',
+
+            //Pasmo 51
+            312 => 'Kończyce',
+            313 => 'Świdnica',
+            314 => 'Bojanice',
+            315 => 'Lutomia Dolna',
+            316 => 'Szczytna (466 m)',
+            317 => 'Przełęcz Tapadła (384 m)',
+
+            //Pasmo 52
+            318 => 'Przełęcz Dębowe Góry',
+            319 => 'Zamkowa Góra ( m)',
+            320 => 'Gontowa (377 m)',
+            321 => 'Gilów',
+            322 => 'Ostra Góra (362 m)',
+            323 => 'Tylnia Dębowa Góra (334 m)',
+
+            //Pasmo 53
+            324 => 'Hrabušice (548)',
+            325 => 'Podlesok (545)',
+            326 => 'Nad Podleskom (700)',
+            327 => 'Hrdlo Hornádu (530)',
+            328 => 'Kláštorisko, chata (784)',
+            329 => 'Letanovský mlyn (513)',
+
+            //Pasmo 54
+            330 => 'STARY HRAD (ok. 400 m)',
+            331 => 'DÚBRAVY NAD CHATĄ FATRANKA (545 m)',
+            332 => 'CHATA W DOLINIE KÚRU',
+            333 => 'CHATA POD SUCHÝM (ok. 1075 m)',
+            334 => 'SEDLO (PRZEŁĘCZ) BRESTOV (970 m)',
+            335 => 'SEDLO (PRZEŁĘCZ) PRÍSLOP POD SUCHÝM (1202 m)',
+
+            //Pasmo 55
+            336 => 'SEDLO RAKYTIE (712 m)',
+            337 => 'KOJŠOVA (743 m)',
+            338 => 'MALOFATRANSKÉ MÚZEUM',
+            339 => 'SEDLO JAVORINA (980 m)',
+            340 => 'MINĆOL (1364 m)',
+            341 => 'VELKÁ LÚKA (1476 m)',
+
+            //Pasmo 56
+            342 => 'Kopa (1187 m)',
+            343 => 'LUBOCHNIANSKE SEDNO (762 m)',
+            344 => 'SEDLO PRISLOP (935 m)',
+            345 => 'KLAK (1394 m)',
+
+            //Pasmo 57
+            346 => 'SEDLO POD SVITKOVOU (940 m)',
+            347 => 'RYCIEROVA HORA (1226 m)',
+            348 => 'PRIEHYBOK (1226 m)',
+            349 => 'SEDLO POD ORLOM(1064 m)',
+
+            //Pasmo 58
+            350 => 'BUKOVINA (1069 m)',
+            351 => 'PRZEŁĘCZ MIĘDZY DRABIROVCEM A RABĆOVOU KYKULOU (ok. 930 m)',
+            352 => 'SEDLO PODÚŠUST (PRZEŁĘCZ PODOSZUS) (946 m)',
+            353 => 'ÚŠUST (WYSOKI BESKID, OSZUS) (1155 m)',
+            354 => 'PRZEŁĘCZ GLINKA (UJSOLSKA) (847 m)',
+            355 => 'GRÚNIKY (KRAWCÓW WIERCH) (1080 m)',
+
+            //Pasmo 59
+            356 => 'CERVENY KLASTOR (458 m)',
+            357 => 'SEDLO CERLA (603 m)',
+            358 => 'VYHLIADKA (TARGOV 675 m)',
+            359 => 'DOLINA LESNICKY POTOK (475 m)',
         ];
         
         foreach($punkty as $klucz => $punkt) {
