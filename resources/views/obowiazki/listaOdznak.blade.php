@@ -15,9 +15,7 @@
                     <div class="card-body shadow">
                         <h5 class="card-title">Nazwa gościa</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Liczba punktów?</h6>
-                        <p class="card-text">Jakiś opis?
-                            
-                        </p>
+                        <p class="card-text">Jakiś opis?</p>
                     </div>
                 </div>
                 <a class="btn btn-success mx-2 my-auto" style="height: 37px; ">Przyznaj</a>

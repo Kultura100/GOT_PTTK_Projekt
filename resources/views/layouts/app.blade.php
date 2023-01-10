@@ -197,7 +197,7 @@
     </div>
 
     <footer class="bg-dark text-light">
-        <p class="py-4 mb-0 text-center">2022 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz,
+        <p class="py-4 mb-0 text-center">2023 &copy; Kawczyński Andrzej, Kociński Maciej, Owczarek Tomasz, Dudek Łukasz,
             Danielak Bartosz</p>
             <x-toasts/>
     </footer>

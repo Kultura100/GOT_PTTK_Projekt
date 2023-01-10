@@ -64,12 +64,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <x-nav-link :href="route('szlak.index')" :active="request()->routeIs('szlak.index')">
-                        <!-- szlak.index -->
-                        {{ __('translations.szlak.title') }}
-                    </x-nav-link>
-                </li>
+                
                 @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('przodownik'))
                     <li class="nav-item">
                         <x-nav-link :href="route('obowiazki.index')" :active="request()->routeIs('obowiazki.index')">
