@@ -120,7 +120,7 @@ class WycieczkiController extends Controller
                 ]);
 
                 $wycieczka->update([
-                    'punkty' => $wycieczka->ilepunktow($wycieczka->id),
+                    'punkty' => $wycieczka->ilepunktow($wycieczka->id),                    
                 ]);
         }
     }
