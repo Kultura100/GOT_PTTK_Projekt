@@ -40,17 +40,10 @@
                     <div class="job-box align-items-center justify-content-center mb-30">
                         @if (isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))
                             <div class="background-img row align-items-end img-fluid"
-<<<<<<< HEAD
-                                style="height:400px ;background-image: url('http://localhost:8000/zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
-                            @else
-                                <div class="background-img row align-items-end img-fluid"
-                                    style="height:400px ; background-image: url('https://b.allegroimg.com/s512/012266/47959eb24f71a42f97d2bce4ce8b/Bokserki-dupa-smieszne-przebranie-prezent-Impreza'); border-radius: 25px;">
-=======
                                 style="height:400px ;background-image: url('zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
                             @else
                                 <div class="background-img row align-items-end img-fluid"
                                     style="height:400px ; background-image: url('images/imageplaceholder.png'); border-radius: 25px;">
->>>>>>> c92a0880df5e959054acbdd8e4b2f17f83eca794
                         @endif
                         <div class="my-4 d-flex align-items-end flex-wrap justify-content-center"
                             style="background-color: rgba(0, 0, 0, 0.5)">
@@ -99,17 +92,10 @@
                     <div class="job-box align-items-center justify-content-center mb-30">
                         @if (isset($wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia))
                             <div class="background-img row align-items-end img-fluid"
-<<<<<<< HEAD
-                                style="height:400px ;background-image: url('http://localhost:8000/zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
-                            @else
-                                <div class="background-img row align-items-end img-fluid"
-                                    style="height:400px ; background-image: url('https://b.allegroimg.com/s512/012266/47959eb24f71a42f97d2bce4ce8b/Bokserki-dupa-smieszne-przebranie-prezent-Impreza'); border-radius: 25px;">
-=======
                                 style="height:400px ;background-image: url('/zrodlo_zdjecia/{{ $wycieczka->jakawycieczka->wycieczkazdjecia->first()->zrodlo_zdjecia }}'); border-radius: 25px;">
                             @else
                                 <div class="background-img row align-items-end img-fluid"
                                 style="height:400px ; background-image: url('images/imageplaceholder.png'); border-radius: 25px;">
->>>>>>> c92a0880df5e959054acbdd8e4b2f17f83eca794
                         @endif
                         <div class="my-4 d-flex align-items-end flex-wrap justify-content-center"
                             style="background-color: rgba(0, 0, 0, 0.5)">
