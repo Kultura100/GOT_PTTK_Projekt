@@ -13,7 +13,7 @@
             <h3 class="text-center mt-3 mb-1">{{ $kolekcja->first()->odznaka->nazwa }}</h3>
             <h5 class="text-center mt-1 mb-3">Liczba punktów potrzebnych do zdobycia: {{ $kolekcja->first()->odznaka->wymaganepunkty }}</h5>
             <div class="d-flex flex-row justify-content-center">
-                <a href="#" class="btn btn-danger mx-2 my-auto" style="height: 37px; color:white">Odrzuć</a>
+                {{-- <a href="#" class="btn btn-danger mx-2 my-auto" style="height: 37px; color:white">Odrzuć</a> --}}
                 <div class="card" style="width: 18rem;">
                     <div class="card-body shadow">
                         <h5 class="card-title">{{$kolekcja->first()->imie}} {{$kolekcja->first()->nazwisko}}</h5>

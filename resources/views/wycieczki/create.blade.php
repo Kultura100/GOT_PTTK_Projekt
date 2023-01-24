@@ -34,7 +34,7 @@
                                         '<option hidden>Wybierz pasmo</option>');
                                     $.each(data, function(key, pasmo) {
                                         $('select[name="pasmo"]').append('<option value="' +
-                                            (key + 1) + '">' + pasmo.nazwa + '</option>'
+                                            pasmo.id + '">' + pasmo.nazwa + '</option>'
                                         );
                                     });
                                 } else {
@@ -64,11 +64,11 @@
                                         '<option hidden>Wybierz odcinek</option>');
                                     $.each(data, function(key, odcinek) {
                                         $('select[name="odcinek"]').append(
-                                            '<option value="' + (key +
+                                            '<option value="' + (odcinek.id +
                                                 1) + '"> z ' + odcinek.punktpocz.nazwa +
                                             ' do ' + odcinek.punktkoncz.nazwa +
                                             '</option>' +
-                                            '<option name="zmienione" value="' + (key +
+                                            '<option name="zmienione" value="' + (odcinek.id +
                                                 1) + '"> z ' + odcinek.punktkoncz
                                             .nazwa + ' do ' + odcinek.punktpocz.nazwa +
                                             '</option>'
@@ -115,12 +115,12 @@
             $("#guziczek").click(function() {
                 var nazwa = $("#wycieczki-odcinek option:selected").text();
                 var test = nazwa.substr(nazwa.indexOf("do") + 2);
-                var options = Sklonowaneodcinki;
-                $("#wycieczki-odcinek").empty();
-                    options.filter(function(id,el) {
-                        return $(el).text().startsWith(test,2) && $(el).text().indexOf(test) >= 0;
-                    }).appendTo("#wycieczki-odcinek");  
-                var tmp;
+                // var options = Sklonowaneodcinki;
+                // $("#wycieczki-odcinek").empty();
+                //     options.filter(function(id,el) {
+                //         return $(el).text().startsWith(test,2) && $(el).text().indexOf(test) >= 0;
+                //     }).appendTo("#wycieczki-odcinek");  
+                // var tmp;
                 if ($("#wycieczki-odcinek option:selected").attr('name') == 'zmienione') {
                     tmp = "<input type='hidden' name='zmienione[]' value='1'>"
                 } else

@@ -31,6 +31,9 @@ class ListaTurystowController extends Controller
         $zapisz = Ksiazeczka::where('id_turysty',  Auth::user()->id)->first();
         $sprawdzczyjest = Ksiazeczka_wycieczka::where('id_wycieczki',$id)->first();
         $sprawdzczyjest->zatwierdzona = 1;
+        $user = User::where('id',Auth::user()->id)->first();
+        $user->punkty += $sprawdzczyjest->jakawycieczka->punkty;
+        $user->save(); 
         $sprawdzczyjest->save();
         return redirect()->route('listaturystow.index')
             ->with('success', __('Poprawnie zatwierdzoną wycieczke!')); 
